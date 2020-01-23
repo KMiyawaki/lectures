@@ -1,7 +1,7 @@
-# ロボットと周辺技術の勉強資料
+# Lecture notes
 
 ## [Linux](unix/basics_01)
 
-## [Python](python/Home)
+## [Python](python/Home.md)
 
-## [ROS](ros/Home)
+## [ROS](ros/Home.md)
