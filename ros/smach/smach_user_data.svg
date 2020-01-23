@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   style="overflow:hidden"
+   id="svg77"
+   version="1.1"
+   overflow="hidden"
+   height="463.5426"
+   width="1069.972">
+  <metadata
+     id="metadata81">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5" />
+  <path
+     d="m 1.5,141.5426 c 0,-32.861 67.8289,-59.4999 151.4999,-59.4999 83.671,0 151.5,26.6389 151.5,59.4999 0,32.861 -67.829,59.5 -151.5,59.5 -83.671,0 -151.4999,-26.639 -151.4999,-59.5 z"
+     stroke-miterlimit="10"
+     id="path9"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="137.5426"
+     x="56.604401"
+     font-weight="400"
+     font-size="24"
+     id="text13"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">ロボットの移動先<tspan
+   x="68.597702"
+   y="164.5426"
+   id="tspan11">を決定する対話</tspan>
+</text>
+  <path
+     d="m 338.4999,332.5426 c 0,-32.861 68.5,-59.5 153,-59.5 84.5,0 153,26.639 153,59.5 0,32.861 -68.5,59.5 -153,59.5 -84.5,0 -153,-26.639 -153,-59.5 z"
+     stroke-miterlimit="10"
+     id="path15"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="326.5426"
+     x="406.9599"
+     font-weight="400"
+     font-size="24"
+     id="text19"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">ロボットをある<tspan
+   x="394.96661"
+   y="355.5426"
+   id="tspan17">座標に移動させる</tspan>
+</text>
+  <rect
+     x="439.49991"
+     y="72.042702"
+     width="162"
+     height="107"
+     stroke-miterlimit="10"
+     id="rect21"
+     style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="132.5426"
+     x="454.70691"
+     font-weight="400"
+     font-size="24"
+     id="text23"
+     style="font-weight:400;font-size:24px;font-family:'Yu Gothic', 'Yu Gothic_MSFontService', sans-serif">target_pose</text>
+  <rect
+     x="439.49991"
+     y="28.0427"
+     width="162"
+     height="45"
+     stroke-miterlimit="10"
+     id="rect25"
+     style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="57.542599"
+     x="471.35294"
+     font-weight="400"
+     font-size="24"
+     id="text27"
+     style="font-weight:400;font-size:24px;font-family:'Yu Gothic', 'Yu Gothic_MSFontService', sans-serif">userdata</text>
+  <path
+     d="m 267.4439,115.9766 6.563,-6.5 7.815,-6.873 8.974,-6.642 10.168,-6.2592 11.265,-5.3883 6.187,-2.3027 6.394,-1.9652 6.668,-1.5283 7.032,-1.1434 7.234,-0.6386 7.606,-0.1305 7.438,0.1877 6.94,0.1876 6.532,0.3137 6.221,0.4395 11.634,1.3818 10.985,2.1423 10.881,3.1568 11.136,4.4215 5.9,2.7883 6.108,3.147 1.414,0.81 -1.492,2.602 -1.297,-0.745 -6.016,-3.103 -5.726,-2.712 -10.864,-4.3281 -10.619,-3.0932 -10.765,-2.1076 -11.491,-1.3683 -6.153,-0.4355 -6.469,-0.3113 -6.935,-0.1874 -7.312,-0.1873 -7.394,0.1195 -7.016,0.6114 -6.843,1.1066 -6.457,1.4717 -6.231,1.9098 -5.938,2.1973 -10.985,5.2364 -9.957,6.116 -8.776,6.483 -7.685,6.752 -6.562,6.5 z m 172.783,-26.345 9.273,13.974 -16.743,-0.966 z"
+     id="path29" />
+  <path
+     d="m 128.0969,12.0001 c 0,-5.7991 4.701,-10.5001 10.5,-10.5001 h 132.417 v 0 h 61.25 30.333 c 5.799,0 10.5,4.701 10.5,10.5001 v 26.2499 0 15.7501 -3e-4 c 0,5.7991 -4.701,10.5002 -10.5,10.5002 h -30.333 l 6.246,12.8745 L 271.0139,64.5 h -132.417 c -5.799,0 -10.5,-4.7011 -10.5,-10.5002 v 3e-4 -15.7501 0 z"
+     stroke-miterlimit="10"
+     id="path31"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="28.149412"
+     x="143.5779"
+     font-weight="400"
+     font-size="24"
+     id="text35"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">決定された座標や姿<tspan
+   x="143.5779"
+   y="55.14941"
+   id="tspan33">勢データを書き込む</tspan>
+</text>
+  <path
+     d="m 260.4749,182.9026 113.738,97.228 -1.949,2.28 -113.739,-97.228 z m 116.497,91.692 6.528,15.448 -16.275,-4.046 z"
+     id="path37" />
+  <g
+     transform="translate(7.7119,-8.3064)"
+     id="g120">
+    <path
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10"
+       id="path39"
+       stroke-miterlimit="10"
+       d="m 410.5,207.667 c 0,-5.615 4.552,-10.167 10.167,-10.167 h 93.666 v 0 h 44.5 19.5 c 5.615,0 10.167,4.552 10.167,10.167 v 25.416 l 22.366,5.934 -22.366,9.316 v 0 c 0,5.615 -4.552,10.167 -10.167,10.167 h -19.5 -44.5 v 0 h -93.666 c -5.615,0 -10.167,-4.552 -10.167,-10.167 v 0 -15.25 0 z" />
+    <text
+       style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif"
+       id="text43"
+       font-size="24"
+       font-weight="400"
+       x="427.12701"
+       y="224">座標や姿勢を<tspan
+   id="tspan41"
+   y="251"
+   x="463.10699">読込む</tspan>
+</text>
+  </g>
+  <path
+     d="m 572.8519,163.2576 8.3,5.424 8.629,6.29 8.418,7.112 7.772,8.051 3.494,4.328 3.206,4.545 2.771,4.808 2.312,4.973 1.799,5.155 1.217,5.4 0.564,5.632 -0.09,5.78 -0.471,5.636 -0.576,5.2 -1.484,9.497 -2.209,8.711 -3.277,8.263 -2.135,4.033 -2.496,4.023 -2.945,4.064 -3.313,4.085 -3.823,4.243 -4.33,4.34 -1.457,1.339 -1.803,-1.964 1.373,-1.26 4.237,-4.24 3.732,-4.138 3.226,-3.972 2.838,-3.905 2.406,-3.866 2.012,-3.768 3.17,-7.934 2.159,-8.466 1.469,-9.379 0.569,-5.13 0.462,-5.457 0.102,-5.474 -0.513,-5.311 -1.133,-5.106 -1.7,-4.909 -2.204,-4.766 -2.639,-4.601 -3.102,-4.408 -3.338,-4.151 -7.573,-7.865 -8.269,-6.994 -8.515,-6.212 -8.301,-5.424 z m 24.445,133.988 -14.352,4.032 5.385,-13.901 z"
+     id="path45" />
+  <path
+     d="m 218.4999,212.7096 c 0,-4.234 3.433,-7.667 7.667,-7.667 h 110.666 c 4.235,0 7.667,3.433 7.667,7.667 v 30.666 c 0,4.235 -3.432,7.667 -7.667,7.667 h -110.666 c -4.234,0 -7.667,-3.432 -7.667,-7.667 z"
+     stroke-miterlimit="10"
+     id="path47"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="237.5426"
+     x="233.00591"
+     font-weight="400"
+     font-size="24"
+     id="text49"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">対話成功</text>
+  <path
+     d="m 158.4009,201.2116 1.625,7.188 1.082,7.17 0.697,7.013 0.257,6.968 -0.251,6.736 -0.567,6.512 -2.269,12.39 -3.545,11.244 -2.243,5.149 -2.411,4.764 -2.753,4.428 -2.878,3.91 -3.086,3.481 -3.292,3.044 -3.79,2.631 c -0.065,0.045 -0.133,0.084 -0.204,0.118 l -4.438,2.125 -5.152,1.813 -5.616,1.473 -6.053,1.088 -6.35,0.702 -12.995,0.383 -12.864,-1.13 -6.144,-1.145 -5.72,-1.458 -5.326,-1.918 -4.646,-2.249 -4.0321,-2.589 c -0.0849,-0.054 -0.1641,-0.118 -0.2363,-0.188 l -3,-2.938 c -0.0609,-0.059 -0.1166,-0.124 -0.1666,-0.193 l -2.4375,-3.375 -2.3258,-3.929 -2.0139,-4.46 -1.7327,-4.862 -1.4115,-5.306 -1.0264,-5.681 -0.7008,-5.902 -0.3209,-6.288 0.1233,-6.604 0.5039,-6.771 1.0112,-7.039 1.4523,-7.148 1.9582,-7.338 2.4624,-7.459 1.1572,-2.759 2.7648,1.165 -1.0735,2.536 -2.4126,7.291 -1.9168,7.162 -1.4227,6.978 -0.9888,6.835 -0.4961,6.604 -0.1267,6.396 0.3041,6.087 0.6742,5.723 0.9736,5.444 1.3385,5.069 1.6423,4.638 1.8611,4.165 2.1742,3.696 2.4375,3.375 -0.1666,-0.193 3,2.937 -0.2363,-0.188 3.7178,2.411 4.354,2.126 5.049,1.832 5.53,1.417 5.856,1.105 12.511,1.12 12.755,-0.367 6.15,-0.673 5.822,-1.037 5.384,-1.402 4.848,-1.687 4.437,-2.125 -0.204,0.118 3.461,-2.368 3.082,-2.832 2.914,-3.268 2.747,-3.716 2.623,-4.197 2.338,-4.611 2.132,-4.851 3.455,-10.881 2.231,-12.11 0.558,-6.363 0.25,-6.514 -0.244,-6.782 -0.678,-6.862 -1.043,-6.955 -1.625,-7.187 z m -115.7532,0.53 12.9148,-10.699 0.8099,16.751 z"
+     id="path51" />
+  <path
+     d="m 9.5,234.5426 c 0,-4.142 3.3579,-7.5 7.5002,-7.5 h 110.9997 c 4.142,0 7.5,3.358 7.5,7.5 v 30 c 0,4.142 -3.358,7.5 -7.5,7.5 H 17.0002 c -4.1423,0 -7.5002,-3.358 -7.5002,-7.5 z"
+     stroke-miterlimit="10"
+     id="path53"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="258.5426"
+     x="24.224998"
+     font-weight="400"
+     font-size="24"
+     id="text55"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">対話失敗</text>
+  <path
+     d="m 310.4999,423.7096 c 0,-4.234 3.433,-7.667 7.667,-7.667 h 76.666 c 4.235,0 7.667,3.433 7.667,7.667 v 30.666 c 0,4.234 -3.432,7.667 -7.667,7.667 h -76.666 c -4.234,0 -7.667,-3.433 -7.667,-7.667 z"
+     stroke-miterlimit="10"
+     id="path57"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="448.5426"
+     x="332.3569"
+     font-weight="400"
+     font-size="24"
+     id="text59"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">成功</text>
+  <path
+     d="m 600.4999,423.7096 c 0,-4.234 3.433,-7.667 7.667,-7.667 h 76.666 c 4.235,0 7.667,3.433 7.667,7.667 v 30.666 c 0,4.234 -3.432,7.667 -7.667,7.667 h -76.666 c -4.234,0 -7.667,-3.433 -7.667,-7.667 z"
+     stroke-miterlimit="10"
+     id="path61"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="448.5426"
+     x="622.0199"
+     font-weight="400"
+     font-size="24"
+     id="text63"
+     style="font-weight:400;font-size:24px;font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">失敗</text>
+  <path
+     d="m 382.24714,374.21761 -19.57514,29.72519 2.5055,1.65 19.57516,-29.72521 z m -23.76114,25.17249 -1.9861,16.6525 14.5136,-8.4026 z"
+     id="path65" />
+  <path
+     d="m 600.4859,373.9126 36.827,32.125 -1.972,2.261 -36.827,-32.126 z m 39.641,26.618 6.373,15.512 -16.234,-4.209 z"
+     id="path67" />
+  <path
+     d="m 702.25039,67.0427 c -36.6132,0 -73.18862,6.8601 -73.18862,13.7579 v 10.328 10.365 14.022 l -27.50712,10.441 27.50712,10.253 c 0,6.898 36.57542,13.795 73.18862,13.795 h 54.86419 54.82641 74.64388 54.82642 54.86631 c 36.5754,0 73.1823,-6.897 73.1823,-13.795 v -10.328 -10.366 -14.022 -10.365 -10.328 c 0,-6.8978 -36.6069,-13.7579 -73.1823,-13.7579 h -54.86631 -54.82642 -74.64388 -54.82641 -54.86419"
+     stroke-miterlimit="10"
+     id="path69"
+     style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.02430904;stroke-linejoin:round;stroke-miterlimit:10" />
+  <text
+     y="117.5426"
+     x="644.38885"
+     font-weight="400"
+     font-size="24"
+     id="text73"
+     style="font-weight:400;font-size:24px;font-family:Arial, Arial_MSFontService, sans-serif">geometry_msgs.msg.PoseStamped<tspan
+   x="1024.0018"
+   y="117.5426"
+   id="tspan71"
+   style="font-family:'MS Gothic', 'MS Gothic_MSFontService', sans-serif">型</tspan>
+</text>
+</svg>
