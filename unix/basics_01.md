@@ -1,6 +1,6 @@
 # UNIX 入門
 
-[Home](../Home.md)
+[Home](../README.md)
 
 ---
 
@@ -393,4 +393,4 @@ which ls
 
 ---
 
-[Home](../Home.md)
+[Home](../README.md)

@@ -3,7 +3,7 @@
 ロボカップ@ホーム学生プロジェクト勉強会  
 IM 宮脇
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)
 
 ---
 
@@ -163,4 +163,4 @@ Happy Halloween
 * [ROSのサービスとパラメータを理解する](http://wiki.ros.org/ja/ROS/Tutorials/UnderstandingServicesParams)
 
 ---
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)

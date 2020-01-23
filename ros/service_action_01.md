@@ -1,6 +1,6 @@
 # ROS サービスとアクション（１）
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)
 
 ---
 
@@ -214,4 +214,4 @@ catkin_make
 
 ---
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)

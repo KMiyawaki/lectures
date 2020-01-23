@@ -1,6 +1,6 @@
 # ROS(1)
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)
 
 ---
 
@@ -437,4 +437,4 @@ def callbackInt32(data): # 追記
 
 ---
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)

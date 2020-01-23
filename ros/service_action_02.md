@@ -1,6 +1,6 @@
 # ROS サービスとアクション（１）
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)
 
 * 参考
   * [ja/actionlib](http://wiki.ros.org/ja/actionlib)
@@ -247,4 +247,4 @@ if goal.dishwasher_id >= len(DoDishesServer.WASHERS) :
   
 ---
 
-[ros/Home.md](Home.md)
+[ros/Home](Home.md)

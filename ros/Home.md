@@ -1,6 +1,6 @@
 # ロボカップ・ROS 関連勉強会資料
 
-[Home.md](../Home.md)
+[Home](../README.md)
 
 ---
 
@@ -12,4 +12,4 @@
   
 ---
 
-[Home.md](../Home.md)
+[Home](../README.md)
