@@ -62,9 +62,9 @@
 roscore
 ```
 
-* 出力されたメッセージを確認。`kinetic`という文字が出ているはず。
+* 出力されたメッセージを確認。`melodic`という文字が出ているはず。
 
-### Kinetic KAME
+### Melodic Morenia
 
 * ROS の LTS (Long Term Support) バージョンの一つ。
 * 確認できたら、`Ctrl+C`で終了させておく。
@@ -283,13 +283,13 @@ if __name__ == '__main__':
 
 ## 他のPCとの通信
 
-* 誰かと二人組みになりなさい。
+* 誰かと二人組になりなさい。
 
 ### 問題（４）
 
 * `ifconfig`コマンドで自 PC の IP アドレスを調べ、パートナーに教えなさい。
 * パートナーと相互に通信できることを`ping`コマンドで確認しなさい。
- * 参考:[ロボット理工学科 演習](http://robot.isc.chubu.ac.jp/?p=538)
+  * 参考:[ロボット理工学科 演習](http://robot.isc.chubu.ac.jp/?p=538)
 
 ## ping [IPアドレス]
 
@@ -358,7 +358,7 @@ rosrun beginner_tutorials listener.py
 ## 応用問題（２）
 
 * ROS の`std_msg`について調べなさい。
- * `String`以外にどのような型が用意されているか、[std_msgs](http://wiki.ros.org/std_msgs)を参考に調べなさい。
+  * `String`以外にどのような型が用意されているか、[std_msgs](http://wiki.ros.org/std_msgs)を参考に調べなさい。
 
 ---
 
@@ -428,7 +428,7 @@ def callbackInt32(data): # 追記
 ## 後始末
 
 * 任意のエディタで`~/.bashrc`を編集し、`ROS_IP`と`ROS_MASTER_URI`の`export`をコメントアウトしておくこと。
- * 行の先頭に「#」をつける。
+  * 行の先頭に「#」をつける。
 
 ```shell
 # export ROS_IP=〇〇〇.〇〇〇.〇〇〇.〇〇〇

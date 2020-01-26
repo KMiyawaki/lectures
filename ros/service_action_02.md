@@ -1,4 +1,4 @@
-# ROS サービスとアクション（１）
+# ROS サービスとアクション（２）
 
 [ros/Home](Home.md)
 
@@ -24,7 +24,7 @@
 
 ## アクションを作る
 
-* アクションの`Goal、Result、Feedback`を表す型を`.action`ファイルに記述する。
+* アクションの`Goal`、`Result`、`Feedback`を表す型を`.action`ファイルに記述する。
 * 今回は皿洗いをする装置を制御するノードを想定し`DoDishes.action`ファイルを作成して編集する。エディタは何でも良い。
 
 ```shell
@@ -107,7 +107,7 @@ add_action_files(
 
 ---
 
-## package.xml を修正する。
+## package.xml を修正する
 
 ```shell
 roscd beginner_tutorials
