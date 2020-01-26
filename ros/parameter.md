@@ -1,8 +1,5 @@
 # ROS のパラメータ
 
-ロボカップ@ホーム学生プロジェクト勉強会  
-IM 宮脇
-
 [ros/Home](Home.md)
 
 ---
@@ -10,10 +7,10 @@ IM 宮脇
 ## 問題（1）（復習）ROS の node の起動
 
 * `beginner_tutorials`パッケージの`talker.py`を起動し、動作が確認できたら終了させなさい。
-  * 忘れた人は [2017/10/19(木) 勉強会＠HRC](http://l512-02.is.oit.ac.jp/oit-trial/index.php?2017/10/19%28%E6%9C%A8%29%20%E5%8B%89%E5%BC%B7%E4%BC%9A%EF%BC%A0HRC) を参照しなさい。
+  * 忘れた人は [ROS(1)](basics_01.md) を参照しなさい。
 * `talker.py`や`listener.py`に変更を加えている人は、下記をダウンロードし、上書きして使いなさい。
-  * https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/talker.py
-  * https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/listener.py
+  * [talker.py](https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/talker.py)
+  * [listener.py](https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/listener.py)
   * **実行権限の付与を忘れないように。** `chmod u+x ファイル名`
 * 出力例
 
@@ -141,7 +138,7 @@ Happy Halloween
 
 ---
 
-## どんなものがパラメータになるのか。
+## どんなものがパラメータになるのか
 
 * 複数接続されたデバイスの識別子。
   * （例）カメラの番号

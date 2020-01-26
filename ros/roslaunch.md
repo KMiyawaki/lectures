@@ -9,21 +9,17 @@
 ## 一つのシステムに必要な node 数は膨大
 
 * ROS は複数の`node`を連携させて一つのシステムとして動作させる。
-* 2018年のシステムで作成したパッケージ
-  * `oit_robocup`：全体の統合 
-  * `oit_sound`：音声対話
-  * `oit_roboclaw`：台車のモータコントローラの ROS ドライバ
-  * `oit_pololu_tic_controller`：ステッピングモータコントローラの ROS ドライバ
-  * `oit_navigation`：台車のナビゲーション（目的地への経路生成など）
-
----
-
-* 2018年のシステムで作成したパッケージ
-  * `oit_dynamixel_moveit_config`：アームの逆運動学計算
-  * `oit_dynamixel`：アームのモータの制御
-  * `oit_vision_openpose`：人間の姿勢推定と動作認識
-  * `oit_vision_object`：物体の認識
-  * `oit_vision_human`：人間の顔、性別、年齢認識
+* 一つのロボットを動作させるノード群の構成例。
+  * ロボット全体の統合＝状態遷移に基づくタスク遂行
+  * 音声対話
+  * 台車のモータコントローラの ROS ドライバ
+  * ステッピングモータ・サーボモータの ROS ドライバ
+  * 台車のナビゲーション（目的地への経路生成など）
+  * アームの逆運動学計算
+  * 画像認識
+    * 物体の認識
+    * 人間の姿勢推定と動作認識
+    * 人間の顔、性別、年齢認識
 
 * 各パッケージに複数の`node`が含まれる。他の ROS の`node`に依存するものもある。
 * **一つのシステムにつき大量の`node`を実行する必要がある。全ての`node`を逐一`rosrun`することは不可能。**
@@ -83,7 +79,7 @@ emacs turtle.launch &
 * 次のコマンドを実行して、実習（１）と同様に矢印キーで亀をコントロールできることを確認しなさい。
 
 ```shell
-roslaunch beginner_tutorials turtle.launch 
+roslaunch beginner_tutorials turtle.launch
 ```
 
 * **roslaunch した端末をクリックしてからでないと矢印キーでのコントロールはできない。**
@@ -93,7 +89,7 @@ roslaunch beginner_tutorials turtle.launch
 
 ```shell
 roscd beginner_tutorials/launch
-roslaunch turtle.launch 
+roslaunch turtle.launch
 ```
 
 * 亀の移動ができたら`Ctrl+C`で終了させ、端末を閉じなさい。
@@ -116,7 +112,7 @@ roslaunch turtle.launch
 
 ```xml
 終了タグ省略の例。
-<node name="teleop_key" type="turtle_teleop_key" pkg="turtlesim" /> 
+<node name="teleop_key" type="turtle_teleop_key" pkg="turtlesim" />
 ```
 
 ---
@@ -176,9 +172,8 @@ data: "Good Bye 1535068295.05"
 ```
 
 * データが流れていることを確認したら、`Ctrl+C`で終了させなさい。
- 
----
 
+---
 
 * `rqt_console`コマンドを実行し、トピックが流れていることを GUI でも確認しなさい。
 
@@ -231,7 +226,7 @@ roslaunch beginner_tutorials pair.launch
 ```
 
 * 動作が確認できたら`Ctrl+C`で終了させ、端末を閉じなさい。
- 
+
 ---
 
 * `talker_param.py`を起動している`node`タグを次のように変更しなさい。
