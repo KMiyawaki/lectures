@@ -1,4 +1,4 @@
-# ロボカップ・ROS 関連勉強会資料
+# ROS
 
 [Home](../README.md)
 
