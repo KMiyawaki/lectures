@@ -9,7 +9,7 @@ SMACH から Action を使う
 ## 実習（１）
 
 * 次のファイルを`smach_tutorials/example`にダウンロードし，シミュレータの`navigation.launch`を起動してから実行しなさい。
-  * [state_machine_action_1.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/fb12cedebf41f99d5f007384b540c7c6b737937a/actuator/smach_04/state_machine_action_1.py)
+  * [state_machine_action_1.py](state_machine_action_1.py)
 
 ## [SimpleActionState](http://wiki.ros.org/smach/Tutorials/Calling%20Actions)
 
@@ -56,7 +56,7 @@ rostopic echo /clicked_point
 
 * RViz 上で`Publish Point`ボタンを押し、地図上の任意の場所をクリックする。
 
-![Screenshot from 2018-11-10 17-12-28.png](2411696271-Screenshot%20from%202018-11-10%2017-12-28.png)
+![2018-11-10_17-12-28.png](2018-11-10_17-12-28.png)
 
 * `rostopic echo /clicked_point`を実行したターミナル上にクリックした場所の座標が表示される。この情報の`x`と`y`を使えば良い。
 

@@ -9,7 +9,7 @@ SMACH の状態に外部からデータを与える
 ## 実習（１）
 
 * 次のファイルを`smach_tutorials/example`にダウンロードし，`roscore`を起動してから実行しなさい。
-  * [user_data_sample_1.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/1da9f2aa7508082772fb8aa61ed314c2f4e487ba/actuator/smach_05/user_data_sample_1.py)
+  * [user_data_sample_1.py](user_data_sample_1.py)
 * 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell
@@ -31,14 +31,14 @@ rosrun smach_viewer smach_viewer.py
 ## 実習（２）
 
 * 次のファイルを`smach_tutorials/example`にダウンロードし，`roscore`を起動してから実行しなさい。
-  * [user_data_sample_2.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/1da9f2aa7508082772fb8aa61ed314c2f4e487ba/actuator/smach_05/user_data_sample_2.py)
+  * [user_data_sample_2.py](user_data_sample_2.py)
 * 次にプログラムの一番下にある`main_1`を`main_2`に変更して再度実行し、何が違うかを検証しなさい。
 
 ## 問題（１）
 
 * 上記のプログラムが何を行っているか類推してから、
   * `main_2`のコーヒーを緑茶に変更して再度実行しなさい。エラーが発生しプログラムが停止するはずなので、それを防ぎなさい。
-    * `GetObjectPositionDummy`が`ng`を返すようにする。 
+    * `GetObjectPositionDummy`が`ng`を返すようにする。
   * `GrabItemDummy`は現状ではいかなる場合も把持成功するようになっている。
     * 高さ（z座標）が1.0より大きいとき、把持失敗というメッセージを出して、`ng`を返すようにしなさい。
     * 完成したら、`main_1`を使って動作確認しなさい。

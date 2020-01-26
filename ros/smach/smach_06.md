@@ -9,7 +9,7 @@
 ## 実習（１）
 
 * 次のファイルを`smach_tutorials/example`にダウンロードし，`navigation`のシミュレータを起動してから実行しなさい。
-  * [state_machine_action_3.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/ab097abdee506d2c613cedb9f6dc64e28215f9c4/actuator/smach_06/state_machine_action_3.py)
+  * [state_machine_action_3.py](state_machine_action_3.py)
 * 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell

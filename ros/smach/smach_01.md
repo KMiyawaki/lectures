@@ -9,8 +9,8 @@
 ## インストール
 
 ```shell
-sudo apt-get install ros-kinetic-smach
-sudo apt-get install ros-kinetic-smach-viewer
+sudo apt-get install ros-melodic-smach
+sudo apt-get install ros-melodic-smach-viewer
 ```
 
 * `ros-kinetic-smach-viewer`をインストールする際にスクリプトが入らない場合があるので、一度`rosrun`して確認する。
@@ -25,7 +25,7 @@ rosrun smach_viewer smach_viewer.py
 
 ![Screenshot from 2018-09-12 13-03-06.png](./2018-09-12_13-03-06.png)
 
-* インストールされていない場合は[smach_viewer.py](https://github.com/ros-visualization/executive_smach_visualization/blob/indigo-devel/smach_viewer/scripts/smach_viewer.py)をダウンロードし、`/opt/ros/kinetic/share/smach_viewer/scripts`に配置する。
+* インストールされていない場合は[smach_viewer.py](https://github.com/ros-visualization/executive_smach_visualization/blob/indigo-devel/smach_viewer/scripts/smach_viewer.py)をダウンロードし、`/opt/ros/melodic/share/smach_viewer/scripts`に配置する。
 * ただし、`mkdir`、`mv`などのコマンドは`sudo`でないと失敗するので注意。
 
 ## チュートリアル
@@ -67,7 +67,7 @@ cd examples
 
 ## 可視化
 
-* 参考 
+* 参考
   * [Viewing State Machines (ROS)](http://wiki.ros.org/smach/Tutorials/Smach%20Viewer)
 * `state_machine_simple.py`の以下の部分を変更。
 * まず、先頭に`# -*- coding: utf-8 -*-`を以下のように追記。

@@ -9,7 +9,7 @@ SMACH からセンサデータを使う
 ## 実習
 
 * 次のファイルを`smach_tutorials/example`にダウンロードし，シミュレータの`navigation.launch`を起動してから実行しなさい。
-  * [state_machine_wait_for_msg.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/7d1afc86347b436127d096fbfc44ded183672011/actuator/smach_03/state_machine_wait_for_msg.py)
+  * [state_machine_wait_for_msg.py](state_machine_wait_for_msg.py)
 
 ## 問題（１）
 
@@ -24,7 +24,7 @@ SMACH からセンサデータを使う
 
 ## 問題（２）
 
-* ドアオープンを検出し，前進させなさい。
+* ロボット前方に何か障害物を置いて、レーザでそれを検出し、障害物が除去されたら前進させなさい。
   * 上記で利用した`nav_msgs/Odometry`を使い，数メートル進ませるようにしなさい。
   * `WaitForLaserScanState`とは別に`WaitForDoorOpen`などを実装することが理想です。
 
