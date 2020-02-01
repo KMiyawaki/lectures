@@ -5,7 +5,8 @@
 ---
 
 * [Python(1)](python_01.md)
-  
+* [Python(2)](python_02.md)
+
 ---
 
 [Home](../README.md)
