@@ -1,7 +1,5 @@
 # Stage Simulator （２）
 
-2次元平面上を動くロボットのシミュレーション
-
 [stage_simulator/Home.md](Home.md)
 
 ---
