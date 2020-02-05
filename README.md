@@ -1,6 +1,6 @@
 # Lecture notes
 
-## [Linux](unix/basics_01.md)
+## [Linux](unix/Home.md)
 
 ## [Python](python/Home.md)
 
