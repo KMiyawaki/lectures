@@ -2,10 +2,7 @@
 
 ちょっと便利なプログラミング用エディタ。
 
-ロボカップ@ホーム学生プロジェクト勉強会  
-IM 宮脇
-
-[Home.md](../Home.md)
+[Home.md](../README.md)
 
 ---
 
@@ -109,7 +106,7 @@ code . （ピリオドを忘れないように）
 
 ![code_09.png](431370141-code_09.png)
 
-## 再度 .gitignore 
+## 再度`.gitignore`
 
 ### 問題（1）
 
@@ -123,13 +120,13 @@ code . （ピリオドを忘れないように）
 
 ![code_15.png](151952059-code_15.png)
 
-* これも`.gitignore`に含めるべきファイル。 
+* これも`.gitignore`に含めるべきファイル。
 
-### ROS 標準の .gitignore への追記
+### `ROS`標準の`.gitignore`への追記
 
-* Visual Studio Code や emacs での編集も考えると、 https://github.com/github/gitignore/blob/master/ROS.gitignore に最低限下記を追加しておく必要がある。
+* Visual Studio Code や`emacs`での編集も考えると、 https://github.com/github/gitignore/blob/master/ROS.gitignore に最低限下記を追加しておく必要がある。
 
-```
+```text
 # Emacs
 \#*\#
 
@@ -141,12 +138,13 @@ code . （ピリオドを忘れないように）
 
 ---
 
-# 参考文献
+## 参考文献
 
 * [ROS Python スタイルガイド](http://wiki.ros.org/ja/PyStyleGuide)
-    * [pep8-ja](https://pep8-ja.readthedocs.io/ja/latest/)
+  * [pep8-ja](https://pep8-ja.readthedocs.io/ja/latest/)
 * https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 * https://github.com/github/gitignore/blob/master/Global/Emacs.gitignore
 
 ---
-[Home.md](Home.md)
+
+[Home.md](../README.md)
