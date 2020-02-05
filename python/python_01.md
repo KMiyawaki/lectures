@@ -1,5 +1,9 @@
 # Python(1)
 
+[python/Home](Home.md)
+
+---
+
 ## Python とは
 
 * いわゆるスクリプト言語のひとつ。
@@ -503,3 +507,7 @@ for s in ifp: # 各行を順に読み込み
 ifp.close() # ファイルをクローズ
 ofp.close() # ファイルをクローズ
 ```
+
+---
+
+[python/Home](Home.md)

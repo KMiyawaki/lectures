@@ -1,6 +1,6 @@
 # Python オブジェクト指向（再）（１）
 
-[python/Home.md](Home.md)
+[python/oop/Home.md](Home.md)
 
 ---
 
@@ -18,4 +18,4 @@
 
 ---
 
-[python/Home.md](Home.md)
+[python/oop/Home.md](Home.md)

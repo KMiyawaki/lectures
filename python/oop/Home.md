@@ -1,6 +1,6 @@
 # Python
 
-[Home](../Home.md)
+[python/Home](../Home.md)
 
 ---
 
@@ -10,4 +10,4 @@
 
 ---
 
-[Home](../Home.md)
+[python/Home](../Home.md)

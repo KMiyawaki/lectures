@@ -1,5 +1,9 @@
 # Python(2)
 
+[python/Home](Home.md)
+
+---
+
 ## 前回の復習
 
 * pythonとは
@@ -324,3 +328,7 @@ ITEM : coffee tea apple
 * ダウンロードファイル
   * [音声認識結果のサンプルファイル](./python_02/input_sample.txt)
   * [タスク定義ファイルの例](./python_02/task_list.tar.gz)
+
+---
+
+[python/Home](Home.md)
