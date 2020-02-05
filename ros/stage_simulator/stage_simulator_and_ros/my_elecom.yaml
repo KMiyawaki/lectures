@@ -1,0 +1,9 @@
+axis_linear: 1  # Forward/Back
+scale_linear: 0.4
+scale_linear_turbo: 0.8
+
+axis_angular: 0  # Left/Right
+scale_angular: 1
+
+enable_button: 0  # Trigger
+enable_turbo_button: 1  # Button 2 aka thumb button

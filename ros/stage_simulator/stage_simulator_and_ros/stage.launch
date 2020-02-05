@@ -1,0 +1,7 @@
+<launch>
+  <param name="/use_sim_time" value="true"/>
+  <arg name="world" default="$(find oit_navigation_test)/launch/simulation/worlds/HRC.world"/>
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(arg world)" respawn="false" >
+    <param name="base_watchdog_timeout" value="0.2"/>
+  </node>
+</launch>

@@ -1,0 +1,29 @@
+include "../includes/map.inc"
+include "../includes/device.inc"
+
+# set the resolution of the underlying raytrace model in meters
+resolution 0.02
+
+interval_sim 100  # simulation timestep in milliseconds
+
+# configure the GUI window
+window
+( 
+   size [700.000 700.000] 
+   scale 20
+)
+
+# load an environment bitmap
+floorplan
+(
+   bitmap "../../../maps/HRC.pgm"
+   size [29.3 24.5 0.5]
+   pose [9.4 -7.4 0 0 0]
+)
+
+robot
+(
+  # can refer to the robot by this name
+  name "r0"
+  pose [1 0 0 0] 
+)

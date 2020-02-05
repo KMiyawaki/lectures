@@ -1,0 +1,7 @@
+NavfnROS:
+  allow_unknown: false
+  visualize_potential: false
+
+GlobalPathLoader:
+  way_point_file: /home/oit/catkin_ws/src/oit_navigation/waypoints/2gou4f_test.csv
+  

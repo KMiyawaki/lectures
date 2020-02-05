@@ -9,7 +9,8 @@
 * [ROS Service and Action(2)](service_action_02.md)
 * [ROS Parameter](parameter.md)
 * [roslaunch](roslaunch.md)
-* [SMACH](smach/Home.md)
+* [Stage simulator](./stage_simulator/Home.md)
+* [SMACH](./smach/Home.md)
   
 ---
 

@@ -1,0 +1,17 @@
+<launch>
+  <!-- Check simulation world and amcl_map for localization. They should be same. -->
+  <arg name="oit_navigation_dir" value="$(find oit_navigation_test)" />
+  <arg name="simulation_world" default="$(arg oit_navigation_dir)/launch/simulation/worlds/HRC.world"/>
+  <arg name="map_name" default="$(arg oit_navigation_dir)/maps/HRC.yaml"/>
+
+  <include file="$(arg oit_navigation_dir)/launch/simulation/stage.launch">
+    <arg name="world" value="$(arg simulation_world)"/>
+  </include>
+  <include file="$(arg oit_navigation_dir)/launch/includes/teleop_joy.launch"/>
+  
+  <node name="rviz" pkg="rviz" type="rviz" required="true" />
+  
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_name)" respawn="false" />
+
+  <include file="$(arg oit_navigation_dir)/launch/includes/amcl.launch"/>  
+</launch>
