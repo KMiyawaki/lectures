@@ -1,12 +1,12 @@
 # ROS navigation の Action Server を使う
 
-[actuator/Home.md](Home.md)
+[ros/navigation/Home.md](Home.md)
 
 ---
 
 ## move_base にコマンドを送る
 
-* `move_base`は ROS Navigation メタパッケージの全体 ( SLAM 以外) を束ねるものである。
+* `move_base`は`ROS navigation`メタパッケージの全体 ( SLAM 以外) を束ねるものである。
   * [move_base](http://wiki.ros.org/move_base)
   * 現状でも`/cmd_vel`に速度をパブリッシュすればロボットを動かせる。しかし今やりたいのは、`move_base`が持つ、大域的・局所的な経路計画と障害物回避機能である。
 
@@ -19,7 +19,7 @@ mkdir scripts
 ```
 
 * 作成した`scripts`に下記ファイルをダウンロード
-  * [simple_navigation_local_goals.py](https://bitbucket.org/oit-trial/robocup_lectures/raw/d497cebb76dcf555a65d7f8e3caeac0e1153b903/actuator/navigation_action_server/simple_navigation_local_goals.py)
+  * [simple_navigation_local_goals.py](./simple_navigation_local_goals.py)
   * 実行権限を付けておくこと。
 * [Stage Simulator と ROS navigation](stage_simulator_and_ros_navigation)で作成した`navigation.launch`を起動しておく。
 * スクリプトを実行する。
@@ -47,7 +47,7 @@ GOAL.target_pose.pose.position.x = 5.5 （x 座標変更）
 GOAL.target_pose.pose.position.y = -1.8 (y 座標追記)
 ```
 
-## Stage のシミュレータ上に障害物を置く
+## `Stage`のシミュレータ上に障害物を置く
 
 * 地図を編集して障害物を作っているのではない点に注意。
 

@@ -1,10 +1,10 @@
 # 実機を動かす（1）
 
-[actuator/Home.md](Home.md)
+[ros/navigation/Home.md](Home.md)
 
 ---
 
-## oit_navigation パッケージ
+## `oit_navigation`パッケージ
 
 [oit_navigation](https://bitbucket.org/oit-trial/oit_navigation/src/master/)は台車と北陽の URG を使い、 ROS のナビゲーションメタパッケージを起動する。
 このチュートリアルで扱う台車は [RoboClaw](http://www.ionmc.com/RoboClaw-2x30A-Motor-Controller_p_9.html) コントローラを使った２輪ロボットである。
@@ -89,4 +89,4 @@ roslaunch navigation.launch
 
 ---
 
-[actuator/Home.md](Home.md)
+[ros/navigation/Home.md](Home.md)
