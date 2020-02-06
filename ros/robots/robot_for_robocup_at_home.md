@@ -1,6 +1,6 @@
 # 実機を動かす（1）
 
-[ros/navigation/Home.md](Home.md)
+[ros/robots/Home](Home.md)
 
 ---
 
@@ -89,4 +89,4 @@ roslaunch navigation.launch
 
 ---
 
-[ros/navigation/Home.md](Home.md)
+[ros/robots/Home](Home.md)

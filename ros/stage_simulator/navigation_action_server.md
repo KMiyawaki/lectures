@@ -1,6 +1,6 @@
 # ROS navigation の Action Server を使う
 
-[ros/navigation/Home.md](Home.md)
+[ros/stage_simulator/Home](Home.md)
 
 ---
 
@@ -20,7 +20,7 @@ mkdir scripts
 ```
 
 - 作成した`scripts`に下記ファイルをダウンロード
-  - [simple_navigation_local_goals.py](./simple_navigation_local_goals.py)
+  - [simple_navigation_local_goals.py](./navigation_action_server/simple_navigation_local_goals.py)
   - 実行権限を付けておくこと。
 - [Stage Simulator と ROS navigation](stage_simulator_and_ros_navigation)で作成した`navigation.launch`を起動しておく。
 - スクリプトを実行する。
@@ -88,4 +88,4 @@ block( pose [ 3 -1 0 0] color "blue")
 
 ---
 
-[actuator/Home.md](Home.md)
+[ros/stage_simulator/Home](Home.md)

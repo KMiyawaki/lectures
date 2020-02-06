@@ -10,7 +10,7 @@
 - [ROS Parameter](parameter.md)
 - [roslaunch](roslaunch.md)
 - [Stage simulator](./stage_simulator/Home.md)
-- [ROS navigation](./navigation/Home.md)
+- [ROS Robots](./robots/Home.md)
 - [SMACH](./smach/Home.md)
 
 ---
