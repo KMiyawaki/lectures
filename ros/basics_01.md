@@ -59,10 +59,36 @@
 - ROS マスターの起動。ターミナルで下記コマンドを実行。
 
 ```shell
-roscore
+$ roscore
+... logging to /home/***/.ros/log/9474a7ce-4941-11ea-a3d0-000c2924787d/roslaunch-ubuntu-7288.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://ubuntu:34303/
+ros_comm version 1.14.3
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: melodic
+ * /rosversion: 1.14.3
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [7299]
+ROS_MASTER_URI=http://ubuntu:11311/
+
+setting /run_id to 9474a7ce-4941-11ea-a3d0-000c2924787d
+process[rosout-1]: started with pid [7310]
+started core service [/rosout]
 ```
 
-- 出力されたメッセージを確認。`melodic`という文字が出ているはず。
+- 出力されたメッセージを確認すること。
+  - `melodic`という文字が出ているはず。
 
 ### Melodic Morenia
 
@@ -74,16 +100,31 @@ roscore
 ## ワークスペースの作成
 
 ```shell
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-catkin_init_workspace
-cd ~/catkin_ws/
-catkin_make
+$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/src
+$ catkin_init_workspace
+Creating symlink "/home/oit/catkin_ws/src/CMakeLists.txt" pointing to "/opt/ros/melodic/share/catkin/cmake/toplevel.cmake"
+$ cd ~/catkin_ws/
+$ catkin_make
+Base path: /home/oit/catkin_ws
+Source space: /home/oit/catkin_ws/src
+Build space: /home/oit/catkin_ws/build
+Devel space: /home/oit/catkin_ws/devel
+Install space: /home/oit/catkin_ws/install
+####
+#### Running command: "cmake /home/oit/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/oit/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/oit/catkin_ws/install -G Unix Makefiles" in "/home/oit/catkin_ws/build"
+####
+-- The C compiler identification is GNU 7.4.0
+...
+-- Build files have been written to: /home/oit/catkin_ws/build
+####
+#### Running command: "make -j2 -l2" in "/home/oit/catkin_ws/build"
+####
 ```
 
 - 任意のエディタで`~/.bashrc`を開き、ファイル最下段に下記を追記。
 
-```shell
+```text
 source ~/catkin_ws/devel/setup.bash
 ```
 
@@ -101,10 +142,15 @@ source ~/catkin_ws/devel/setup.bash
 - 第二引数以降：使用する機能（例：`std_msgs rospy roscpp`）を指定。
 
 ```shell
-cd ~/catkin_ws/src
-catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
-cd ~/catkin_ws
-catkin_make
+$ cd ~/catkin_ws/src
+$ catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
+Created file beginner_tutorials/CMakeLists.txt
+Created file beginner_tutorials/package.xml
+Created folder beginner_tutorials/include/beginner_tutorials
+Created folder beginner_tutorials/src
+Successfully created files in /home/oit/catkin_ws/src/beginner_tutorials. Please adjust the values in package.xml.
+$ cd ~/catkin_ws
+$ catkin_make
 ```
 
 - ここでターミナルを閉じる
@@ -118,7 +164,7 @@ catkin_make
 - ターミナルを開き、次のコマンドを実行
 
 ```shell
-roscd beginner_tutorials
+$ roscd beginner_tutorials
 ```
 
 ### 問題（１）
@@ -134,11 +180,13 @@ roscd beginner_tutorials
 - 下記のコマンドでその他のパッケージを見に行こう。
 
 ```shell
-roscd turtlesim
-pwd
-roscd rviz
-pwd
-roscd beginner_tutorial
+$ roscd turtlesim
+$ pwd
+/opt/ros/melodic/share/turtlesim
+$ roscd rviz
+$ pwd
+/opt/ros/melodic/share/rviz
+$ roscd beginner_tutorials
 ```
 
 ---
@@ -146,9 +194,10 @@ roscd beginner_tutorial
 ## 簡単なパブリッシャとサブスクライバの作成（２）
 
 ```shell
-mkdir scripts
-cd scripts
-pwd
+$ roscd beginner_tutorials
+$ mkdir scripts
+$ cd scripts
+$ pwd
 /home/ユーザ名/catkin_ws/src/beginner_tutorials/scripts
 ```
 
@@ -163,8 +212,8 @@ pwd
 ---
 
 ```shell
-chmod u+x talker.py
-chmod u+x listener.py
+$ chmod u+x talker.py
+$ chmod u+x listener.py
 ```
 
 - 権限が付与されたことを`ls -l`で確認すること。
@@ -176,13 +225,14 @@ chmod u+x listener.py
 ## talker.py の実行
 
 ```shell
-cd ~/catkin_ws
-catkin_make
-rosrun beginner_tutorials talker.py
+$ cd ~/catkin_ws
+$ catkin_make
+$ rosrun beginner_tutorials talker.py
 ```
 
 - エラーが出て何も起きないはず。
   - どんなメッセージか確認する。
+  - `Ctrl+C`でプログラムを終了させる。
 - エラーが出ずに無事実行できた人は手順を飛ばしているか、勘の良い人。
 
 ---
@@ -195,13 +245,21 @@ rosrun beginner_tutorials talker.py
 - さらに別のターミナルを開き次のコマンドを実行。
 
 ```shell
-rosrun beginner_tutorials talker.py
+$ rosrun beginner_tutorials talker.py
+[INFO] [1581037099.621621]: hello world 1581037099.62
+[INFO] [1581037099.722943]: hello world 1581037099.72
+[INFO] [1581037099.822706]: hello world 1581037099.82
+...
 ```
 
 - さらに別のターミナルを開き次のコマンドを実行。
 
 ```shell
-rosrun beginner_tutorials listener.py
+$ rosrun beginner_tutorials listener.py
+[INFO] [1581037131.453663]: /listener_8862_1581037131191I heard hello world 1581037131.45
+[INFO] [1581037131.555024]: /listener_8862_1581037131191I heard hello world 1581037131.55
+[INFO] [1581037131.658074]: /listener_8862_1581037131191I heard hello world 1581037131.65
+...
 ```
 
 - 二つのノードを動かしたまま、次項のコマンドを実行すること。
@@ -212,11 +270,22 @@ rosrun beginner_tutorials listener.py
 
 - ROS のノード同士のつながりを可視化する。
 
+```shell
+$ rqt_graph
+```
+
 ![rqt-min.png](rqt-min.png)
 
 ## rostopic list
 
 - 現在流れているトピックのリストを得る。
+
+```shell
+$ rostopic list
+/chatter
+/rosout
+/rosout_agg
+```
 
 ---
 
@@ -226,10 +295,25 @@ rosrun beginner_tutorials listener.py
 - 例:`rostopic echo /chatter`
   - トピック名は`tab`キー補完可能
 
+```shell
+$ rostopic echo /chatter
+data: "hello world 1581037256.15"
+---
+data: "hello world 1581037256.25"
+---
+data: "hello world 1581037256.35"
+...
+```
+
 ## rostopic type [トピック名]
 
 - [トピック名]の型を表示する。
 - 例:`rostopic type /chatter`
+
+```shell
+$ rostopic type /chatter
+std_msgs/String
+```
 
 ---
 
@@ -291,10 +375,6 @@ if __name__ == '__main__':
 - パートナーと相互に通信できることを`ping`コマンドで確認しなさい。
   - 参考:[ロボット理工学科 演習](http://robot.isc.chubu.ac.jp/?p=538)
 
-## ping [IP アドレス]
-
-- 指定した IP アドレスに接続できるかどうかを調べる。
-
 ---
 
 ## ifconfig
@@ -304,6 +384,24 @@ if __name__ == '__main__':
   - 有線と無線が接続されている場合は両方のアドレスが出ることがある。
 
 ![console_02-min.png](console_02-min.png)
+
+---
+
+## ping [IP アドレス]
+
+- 指定した IP アドレスに接続できるかどうかを調べる。
+
+```shell
+$ ping 192.168.***.*** # 接続先のIPアドレスを指定する。
+# ネットワーク接続に問題がない場合は次のような応答がある。
+PING 192.168.***.*** (192.168.***.***) 56(84) bytes of data.
+64 bytes from 192.168.***.***: icmp_seq=1 ttl=64 time=0.018 ms
+64 bytes from 192.168.***.***: icmp_seq=2 ttl=64 time=0.065 ms
+64 bytes from 192.168.***.***: icmp_seq=3 ttl=64 time=0.050 ms
+...
+# 接続できない場合は次のようなメッセージが出る。
+From 192.168.***.*** icmp_seq=1 Destination Host Unreachable
+```
 
 ---
 
@@ -327,7 +425,7 @@ export ROS_MASTER_URI=http://○○○.○○○.○○○.○○○:11311 <-同
 - ターミナルを開きなおして ROS マスターと`talker.py`を起動。
 
 ```shell
-rosrun beginner_tutorials talker.py
+$ rosrun beginner_tutorials talker.py
 ```
 
 ---
@@ -344,7 +442,7 @@ export ROS_MASTER_URI=http://△△△.△△△.△△△.△△△:11311 <-△
 - ターミナルを開きなおして`listener.py`を起動。
 
 ```shell
-rosrun beginner_tutorials listener.py
+$ rosrun beginner_tutorials listener.py
 ```
 
 ---
