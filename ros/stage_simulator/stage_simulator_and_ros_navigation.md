@@ -9,21 +9,20 @@
 - [move_base](http://wiki.ros.org/move_base)（`navigation`に関するサービスを提供するノード）の設定ファイルを作成する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/includes
-mkdir move_base
+$ roscd oit_navigation_test/launch/includes
+$ mkdir move_base
 ```
 
 - `move_base`ディレクトリに下記のファイルをダウンロードする。
-  - [costmap_common.yaml](./stage_simulator_and_ros_navigation/costmap_common.yaml)
-  - [costmap_global.yaml](./stage_simulator_and_ros_navigation/costmap_global.yaml)
-  - [costmap_local.yaml](./stage_simulator_and_ros_navigation/costmap_local.yaml)
-  - [move_base.launch](./stage_simulator_and_ros_navigation/move_base.launch)
-  - [move_base.yaml](./stage_simulator_and_ros_navigation/move_base.yaml)
-  - [planner_global.yaml](./stage_simulator_and_ros_navigation/planner_global.yaml)
-  - [planner_local.yaml](./stage_simulator_and_ros_navigation/planner_local.yaml)
+  - [costmap_common.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_common.yaml)
+  - [costmap_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_global.yaml)
+  - [costmap_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_local.yaml)
+  - [move_base.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/move_base.launch)
+  - [move_base.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/move_base.yaml)
+  - [planner_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/planner_global.yaml)
+  - [planner_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/planner_local.yaml)
 - `launch/simulation`ディレクトリに下記のファイルをダウンロードする。
-  - [navigation.launch](./stage_simulator_and_ros_navigation/navigation.launch)
+  - [navigation.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/navigation.launch)
 - `navigation.launch`を実行する。
 
 ```shell
