@@ -16,7 +16,7 @@ $ mkdir -p launch/simulation
 ```
 
 - 下記ファイルをダウンロード（右クリック->「リンク先を保存」）し`catkin_ws/src/oit_navigation_test/launch/simulation/`に保存。
-  - [stage.launch](./stage_simulator_and_ros/stage.launch)
+  - [stage.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/stage.launch)
 - 次のコマンドで`stage.launch`を実行
 
 ```shell
