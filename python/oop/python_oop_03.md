@@ -14,7 +14,7 @@
 
 - `Employee`を継承し、管理職を表す`Leader`クラスを実装します。
 - [前頁](./python_oop_02.md)で作成したディレクトリに次のベースファイルをダウンロードする。
-  - [leader.py](./02/leader.py)
+  - [leader.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/02/leader.py)
 
 ## 問題（１）
 
