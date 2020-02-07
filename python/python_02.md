@@ -321,14 +321,14 @@ ITEM : coffee tea apple
 - 分担
   - `Task.py`を作るグループ
   - `Slot.py`を作るグループ
-  - [`main.py`](./python_02/main.py)は各自ダウンロード
+  - [`main.py`](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/python_02/main.py)は各自ダウンロード
 - 実習内容
 - スロット管理係の仕事を定義
 - グループごとにプログラムを実装
 - 3 つあわせて、テスト
 - ダウンロードファイル
-  - [音声認識結果のサンプルファイル](./python_02/input_sample.txt)
-  - [タスク定義ファイルの例](./python_02/task_list.tar.gz)
+  - [音声認識結果のサンプルファイル](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/python_02/input_sample.txt)
+  - [タスク定義ファイルの例](https://github.com/KMiyawaki/lectures/raw/master/python/python_02/task_list.tar.gz)
 
 ---
 
