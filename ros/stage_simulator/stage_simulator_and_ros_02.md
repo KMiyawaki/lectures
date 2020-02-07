@@ -1,6 +1,6 @@
 # Stage Simulator と ROS（２）
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)
 
 ---
 
@@ -113,4 +113,4 @@ roslaunch localization.launch
 
 ---
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)

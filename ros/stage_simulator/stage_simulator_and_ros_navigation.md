@@ -1,6 +1,6 @@
 # `Stage Simulator`と`ROS navigation`
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)
 
 ---
 
@@ -73,4 +73,4 @@ roslaunch navigation.launch
 
 ---
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)

@@ -1,6 +1,6 @@
 # Stage Simulator と ROS（１）
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)
 
 ---
 
@@ -117,4 +117,4 @@ roslaunch teleop_joy.launch
 
 ---
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)

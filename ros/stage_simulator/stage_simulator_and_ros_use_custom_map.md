@@ -1,6 +1,6 @@
 # 実機で作成した地図をシミュレーションで使う
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)
 
 ---
 
@@ -109,4 +109,4 @@ roslaunch navigation.launch
 
 ---
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)

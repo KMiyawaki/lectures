@@ -1,6 +1,6 @@
 # Stage Simulator （１）
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)
 
 ---
 
@@ -120,4 +120,4 @@ roslaunch turtlebot_stage turtlebot_in_stage.launch
 
 ---
 
-[stage_simulator/Home.md](Home.md)
+[stage_simulator/Home](Home.md)

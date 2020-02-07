@@ -2,7 +2,7 @@
 
 2 次元平面上を動くロボットのシミュレーション
 
-[ros/Home.md](../Home.md)
+[ros/Home](../Home.md)
 
 ---
 
@@ -16,4 +16,4 @@
 
 ---
 
-[ros/Home.md](../Home.md)
+[ros/Home](../Home.md)
