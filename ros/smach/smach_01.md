@@ -9,15 +9,15 @@
 ## インストール
 
 ```shell
-sudo apt-get install ros-melodic-smach
-sudo apt-get install ros-melodic-smach-viewer
+$ sudo apt-get install ros-melodic-smach
+$ sudo apt-get install ros-melodic-smach-viewer
 ```
 
 - `ros-melodic-smach-viewer`をインストールする際にスクリプトが入らない場合があるので、一度`rosrun`して確認する。
 - `roscore`起動後に下記のコマンドを実行。
 
 ```shell
-rosrun smach_viewer smach_viewer.py
+$ rosrun smach_viewer smach_viewer.py
 ```
 
 - ここで`smach_viewer.py`が無い旨のエラーが出たらスクリプトがインストールされていない。
@@ -33,20 +33,26 @@ rosrun smach_viewer smach_viewer.py
 - 別パッケージを作成して実施。
 
 ```shell
-cd
-cd catkin_ws/src
-catkin_create_pkg smach_tutorials std_msgs rospy roscpp
-cd smach_tutorials/
-mkdir examples
-cd examples
+$ cd
+$ cd catkin_ws/src
+$ catkin_create_pkg smach_tutorials std_msgs rospy roscpp
+Created file smach_tutorials/CMakeLists.txt
+Created file smach_tutorials/package.xml
+Created folder smach_tutorials/include/smach_tutorials
+Created folder smach_tutorials/src
+Successfully created files in /home/oit/catkin_ws/src/smach_tutorials. Please adjust the values in package.xml.
+$ cd smach_tutorials/
+$ mkdir examples
+$ cd examples
 ```
 
 - [state_machine_simple.py](https://raw.githubusercontent.com/eacousineau/executive_smach_tutorials/hydro-devel/smach_tutorials/examples/state_machine_simple.py)をダウンロードして`examples`ディレクトリに配置する。
   - 実行権限追加を忘れないように。
 - `roscore`を起動後（既に起動しているなら再起動の必要はない）、`state_machine_simple.py`を実行する。
-- 実行結果
 
 ```shell
+$ roscd smach_tutorials/examples
+$ ./state_machine_simple.py
 [INFO] [1536725370.457410]: State machine starting in initial state 'FOO' with userdata:
 	[]
 [INFO] [1536725370.457685]: Executing state FOO
@@ -100,7 +106,20 @@ cd examples
 ```
 
 - スクリプトを作成し終わったら、`roscore`を起動後（既に起動しているなら再起動の必要はない）`state_machine_simple.py`を実行する。
+
+```shell
+$ roscd smach_tutorials/examples
+$ ./state_machine_simple.py
+[INFO] [1536725370.457410]: State machine starting in initial state 'FOO' with userdata:
+	[]
+```
+
 - さらに別コンソールで、`rosrun smach_viewer smach_viewer.py`を実行する。
+
+```shell
+$ rosrun smach_viewer smach_viewer.py
+```
+
 - 次のように状態遷移図を見ることができる。
 
 ![Screenshot from 2018-09-12 13-03-06.png](./2018-09-12_13-17-50.png)
