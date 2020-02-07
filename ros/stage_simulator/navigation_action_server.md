@@ -14,38 +14,41 @@
 - スクリプトを格納するディレクトリを作る
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test
-mkdir scripts
+$ roscd oit_navigation_test
+$ mkdir scripts
 ```
 
 - 作成した`scripts`に下記ファイルをダウンロード
-  - [simple_navigation_local_goals.py](./navigation_action_server/simple_navigation_local_goals.py)
+  - [simple_navigation_local_goals.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/navigation_action_server/simple_navigation_local_goals.py)
   - 実行権限を付けておくこと。
-- [Stage Simulator と ROS navigation](stage_simulator_and_ros_navigation)で作成した`navigation.launch`を起動しておく。
+- [Stage Simulator と ROS navigation](./stage_simulator_and_ros_navigation.md)で作成した`navigation.launch`を起動しておく。
 - スクリプトを実行する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/scripts
-rosrun oit_navigation_test simple_navigation_local_goals.py
+$ roscd oit_navigation_test/scripts
+$ rosrun oit_navigation_test simple_navigation_local_goals.py
+[INFO] [1581057085.133475, 13.100000]: Waiting for the move_base action server to come up
+[INFO] [1581057085.369557, 13.300000]: The server comes up
+[INFO] [1581057085.370793, 13.300000]: Sending goal
+[INFO] [1581057087.550210, 15.500000]: Finished: (3)
 ```
 
+- ロボットが少し前進し停止するはず。
 - スクリプトを別名でコピーし編集する。
 
 ```shell
-cp simple_navigation_local_goals.py simple_navigation_global_goals.py
+$ cp simple_navigation_local_goals.py simple_navigation_global_goals.py
 ```
 
 - 編集箇所は次の通り
 
 ```python
-COORD_TYPE = "base_link" # ロボットローカル座標系
+coord_type = "base_link" # ロボットローカル座標系
 を
-COORD_TYPE = "map" # マップ座標系
+coord_type = "map" # マップ座標系
 にして、
-GOAL.target_pose.pose.position.x = 5.5 （x 座標変更）
-GOAL.target_pose.pose.position.y = -1.8 (y 座標追記)
+goal.target_pose.pose.position.x = 5.5 （x 座標変更）
+goal.target_pose.pose.position.y = -1.8 (y 座標追記)
 ```
 
 ## `Stage`のシミュレータ上に障害物を置く
@@ -53,9 +56,8 @@ GOAL.target_pose.pose.position.y = -1.8 (y 座標追記)
 - 地図を編集して障害物を作っているのではない点に注意。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation/worlds/
-emacs HRC.world &
+$ roscd oit_navigation_test/maps
+$ emacs HRC.world &
 ```
 
 - 末尾に追記
