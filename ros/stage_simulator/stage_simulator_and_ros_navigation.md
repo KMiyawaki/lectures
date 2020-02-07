@@ -26,9 +26,8 @@ $ mkdir move_base
 - `navigation.launch`を実行する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation
-roslaunch navigation.launch
+$ roscd oit_navigation_test/launch/simulation
+$ roslaunch navigation.launch
 ```
 
 - RViz 上で「`2D Pose Estimate`」した後に「`2D Nav Goal`」を指定してやればロボットが移動する。
