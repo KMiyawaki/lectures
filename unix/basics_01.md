@@ -106,27 +106,32 @@
 ## 検索
 
 - `find`： **_ファイル自体_** の検索を行う。
-  - ファイル名で検索できる。
+  - **以降のコマンド入力において`$`は入力プロンプト（入力を促す記号）であり、演習時にタイプする必要はない。**
+- ファイル名で検索できる。
 
 ```shell
-find . -mtime -10 -print
+$ find . -name hoe.txt -print
 ```
 
 - **最終更新日時**が 10 日以内であるファイルを検索するコマンド。
 
 ```shell
-find . -name hoe.txt -print
+$ find . -mtime -10 -print
+.
+./.config/dconf
+./.config/dconf/user
+./.config/google-chrome
+./.config/google-chrome/WidevineCdm
+...
 ```
 
 - 検索されたファイルに対して**コマンドを適用**なども可能。
-
   - （例）最終アクセス日時が 1 月以上昔のファイルを消去する。
-
 - `grep`：テキストファイルの **_中身_** を検索する。
   - 文字列が**書かれているファイル**を検索する。
 
 ```shell
-grep "hoe" *.txt
+$ grep "hoe" *.txt
 ```
 
 ---
@@ -164,7 +169,16 @@ grep "hoe" *.txt
 - オンラインマニュアル
 
 ```shell
-man command
+$ man grep # この例ではgrepコマンドのマニュアルを表示
+GREP(1)                                                                         User Commands                                                                         GREP(1)
+
+NAME
+       grep, egrep, fgrep, rgrep - print lines matching a pattern
+
+SYNOPSIS
+       grep [OPTIONS] PATTERN [FILE...]
+...
+# 'q'キーで終了
 ```
 
 - 概要から使い方まで調べられる。
@@ -174,7 +188,7 @@ man command
 
 ## 実習(1)
 
-- いろんなディレクトリに行って中身を見てみる。
+- 色々なディレクトリに行って中身を見てみる。
 - 例えば
 
   - ホームディレクトリ以下の中身をみる。
@@ -262,17 +276,19 @@ man command
 - 権限が正しく動くか確認する。
 
 ```shell
-cd /
-touch hoe.txt
-cd /tmp
-touch hoe.txt
+$ cd /
+$ touch hoe.txt
+touch: 'hoe.txt' に touch できません: 許可がありません
+$ cd /tmp
+$ touch hoe.txt
 ```
 
 - 権限を変更し動作を確認する。
 
 ```shell
-chmod u-r hoe.txt
-less hoe.txt
+$ chmod u-r hoe.txt
+$ less hoe.txt
+hoe.txt: 許可がありません
 ```
 
 - ディレクトリについても実施する。
@@ -298,20 +314,23 @@ less hoe.txt
 - サーチパスの確認。
 
 ```shell
-echo $PATH
+$ echo $PATH
+/opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 ```
 
 - 実行形式ファイルの保存場所を表示する。
 
 ```shell
-which ls
+$ which ls
+/bin/ls
 ```
 
 - サーチパスにないファイルはどうすればよいか？
   - サーチパスに加える。
 
 ```shell
-PATH=$PATH:/home/usrs/moto/bin; export PATH
+$ PATH=$PATH:/home/usrs/moto/bin
+$ export PATH
 ```
 
 - 絶対パスや相対パスで実行する。
@@ -334,7 +353,8 @@ PATH=$PATH:/home/usrs/moto/bin; export PATH
 - ファイルの中身は`file`コマンドで表示可能。
 
 ```shell
-file /bin/ls
+$ file /bin/ls
+/bin/ls: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, for GNU/Linux 3.2.0, BuildID[sha1]=9567f9a28e66f4d7ec4baf31cfbf68d0410f0ae6, stripped
 ```
 
 ---
@@ -372,13 +392,13 @@ nextline
 - 実行権限を与える。
 
 ```shell
-chmod +x textfile.txt
+$ chmod +x textfile.txt
 ```
 
 - 実行すると編集できる。
 
 ```shell
-./textfile.txt
+$ ./textfile.txt
 （/usr/bin/emacs -nw textfile.txt と同じ）
 ```
 
@@ -389,7 +409,7 @@ chmod +x textfile.txt
 - いろいろなコマンドの保存場所を探す。
 
 ```shell
-which ls
+$ which less
 ```
 
 - `PATH`の値を変えてみる。
