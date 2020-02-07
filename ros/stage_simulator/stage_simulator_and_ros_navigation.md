@@ -54,18 +54,16 @@ roslaunch navigation.launch
 - `launch/simulation/navigation.launch`を編集する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation
-emacs navigation.launch
+$ roscd oit_navigation_test/launch/simulation
+$ emacs navigation.launch
 ```
 
 - 「`localization.rviz`」->「`navigation.rviz`」に変更。
 - 再度`navigation.launch`を実行する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation
-roslaunch navigation.launch
+$ roscd oit_navigation_test/launch/simulation
+$ roslaunch navigation.launch
 ```
 
 - `RViz`上の`2D Nav Goal`ボタンでロボットを目的地に移動させると、`move_base`が算出した経路計画が表示される。
