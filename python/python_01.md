@@ -24,14 +24,14 @@
 - 実行権限を与えて実行する。
 
 ```shell
-chmod +x filename.py
-./filename.py
+$ chmod +x filename.py
+$ ./filename.py
 ```
 
 - `python`コマンドの引数にファイル名を与えて実行することも可能。
 
 ```shell
-python filename.py
+$ python filename.py
 ```
 
 ## プログラムの中身

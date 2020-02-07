@@ -10,9 +10,9 @@
 - ホームディレクトリ直下に演習用ディレクトリを作成する。
 
 ```shell
-cd
-mkdir -p python/oop/02
-cd python/oop/02
+$ cd
+$ mkdir -p python/oop
+$ cd python/oop
 ```
 
 - 作成したディレクトリに次のベースファイルをダウンロードする。
