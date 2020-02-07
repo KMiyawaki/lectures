@@ -9,16 +9,15 @@
 - [amcl](http://wiki.ros.org/amcl)を使う。
 - 全てのターミナルと RViz のウィンドウを閉じ、新たにターミナルを開く。
 - 下記ファイルを`oit_navigation_test/launch/includes`にダウンロード。
-  - [amcl.launch](./stage_simulator_and_ros/amcl.launch)
+  - [amcl.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/amcl.launch)
 - 下記ファイルを`oit_navigation_test/launch/simulation`にダウンロード。
-  - [localization.launch](./localization.launch)
+  - [localization.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/localization.launch)
 - 実行
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation
-roslaunch localization.launch
-(最初は RViz に何も見えていないはず)
+$ roscd oit_navigation_test/launch/simulation
+$ roslaunch localization.launch
+# 最初は RViz に何も見えていないはず
 ```
 
 ## RViz にデータを表示する
