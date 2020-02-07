@@ -1,5 +1,5 @@
-include "../includes/map.inc"
-include "../includes/device.inc"
+include "./simulator_files/map.inc"
+include "./simulator_files/device.inc"
 
 # set the resolution of the underlying raytrace model in meters
 resolution 0.02
@@ -16,7 +16,7 @@ window
 # load an environment bitmap
 floorplan
 (
-   bitmap "../../../maps/HRC.pgm"
+   bitmap "./HRC.pgm"
    size [29.3 24.5 0.5]
    pose [9.4 -7.4 0 0 0]
 )
