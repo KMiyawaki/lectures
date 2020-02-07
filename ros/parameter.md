@@ -68,7 +68,7 @@ text = rospy.get_param("~text", text)
 - 次のコマンドで`talker_param.py`を起動して結果を確認しなさい。
 
 ```shell
-rosrun beginner_tutorials talker_param.py _text:="Happy Halloween"
+$ rosrun beginner_tutorials talker_param.py _text:="Happy Halloween"
 ```
 
 - 出力例
@@ -91,7 +91,7 @@ rosrun beginner_tutorials talker_param.py _text:="Happy Halloween"
 - パラメータ名の前に「\_（アンダースコア）」が必要。
 
 ```shell
-rosrun パッケージ名 スクリプト名 _パラメータ名:=パラメータ
+$ rosrun パッケージ名 スクリプト名 _パラメータ名:=パラメータ
 ```
 
 ## 補足
@@ -107,12 +107,7 @@ rosrun パッケージ名 スクリプト名 _パラメータ名:=パラメー�
 - 別のターミナルを起動し、次のコマンドを実行しなさい。
 
 ```shell
-rosparam list
-```
-
-- 出力例
-
-```shell
+$ rosparam list
 /rosdistro
 /rosversion
 ・・・
@@ -127,12 +122,7 @@ rosparam list
 - 続けて、次のコマンドを実行しなさい。
 
 ```shell
-rosparam get /talker_param/text
-```
-
-- 出力例
-
-```shell
+$ rosparam get /talker_param/text
 Happy Halloween
 ```
 

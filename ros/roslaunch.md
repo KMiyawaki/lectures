@@ -32,7 +32,7 @@
 - 構文
 
 ```shell
-roslaunch [パッケージ名] launchファイル名
+$ roslaunch [パッケージ名] launchファイル名
 ```
 
 - `launch`ファイル
@@ -60,10 +60,10 @@ roslaunch [パッケージ名] launchファイル名
 - `launch`ファイルを作成する。
 
 ```shell
-roscd beginner_tutorials/
-mkdir launch
-cd launch
-emacs turtle.launch &
+$ roscd beginner_tutorials/
+$ mkdir launch
+$ cd launch
+$ emacs turtle.launch &
 ```
 
 - `turtle.launch`の内容は次の通り。保存して`emacs`を終了。
@@ -80,7 +80,7 @@ emacs turtle.launch &
 - 次のコマンドを実行して、実習（１）と同様に矢印キーで亀をコントロールできることを確認しなさい。
 
 ```shell
-roslaunch beginner_tutorials turtle.launch
+$ roslaunch beginner_tutorials turtle.launch
 ```
 
 - **roslaunch した端末をクリックしてからでないと矢印キーでのコントロールはできない。**
@@ -89,8 +89,8 @@ roslaunch beginner_tutorials turtle.launch
 - さらに、次のやり方でも`roslaunch`できることを確認しなさい。
 
 ```shell
-roscd beginner_tutorials/launch
-roslaunch turtle.launch
+$ roscd beginner_tutorials/launch
+$ roslaunch turtle.launch
 ```
 
 - 亀の移動ができたら`Ctrl+C`で終了させ、端末を閉じなさい。
@@ -135,10 +135,10 @@ roslaunch turtle.launch
 - 新たな`launch`ファイルを作成する。
 
 ```shell
-roscd beginner_tutorials/
-mkdir launch
-cd launch
-emacs pair.launch &
+$ roscd beginner_tutorials/
+$ mkdir launch
+$ cd launch
+$ emacs pair.launch &
 ```
 
 - `pair.launch`の内容は次の通り。保存して`emacs`を終了。
@@ -153,7 +153,7 @@ emacs pair.launch &
 - 次のコマンドで`pair.launch`を実行しなさい。**これまでのように画面上に文字が流れることはない。**
 
 ```shell
-roslaunch beginner_tutorials pair.launch
+$ roslaunch beginner_tutorials pair.launch
 ```
 
 ---
@@ -214,13 +214,8 @@ data: "Good Bye 1535068295.05"
 - 次のコマンドで`pair.launch`を実行しなさい。
 
 ```shell
-roslaunch beginner_tutorials pair.launch
-```
-
-- 出力例
-
-```shell
-・・・launch の起動メッセージ・・・
+$ roslaunch beginner_tutorials pair.launch
+# launch の起動メッセージが流れる。
 [INFO] [1535068920.480185]: /listenerI heard Hello ROS launch 1535068920.48
 [INFO] [1535068920.579530]: /listenerI heard Hello ROS launch 1535068920.58
 [INFO] [1535068920.680067]: /listenerI heard Hello ROS launch 1535068920.68
@@ -243,7 +238,7 @@ roslaunch beginner_tutorials pair.launch
 - 実行結果
 
 ```shell
-・・・launch の起動メッセージ・・・
+# launch の起動メッセージが流れる。
 [INFO] [1535069164.599809]: /listenerI heard /home/「ユーザ名」/catkin_ws/src/beginner_tutorials 1535069164.6
 [INFO] [1535069164.700438]: /listenerI heard /home/「ユーザ名」/catkin_ws/src/beginner_tutorials 1535069164.7
 [INFO] [1535069164.799238]: /listenerI heard /home/「ユーザ名」/catkin_ws/src/beginner_tutorials 1535069164.8
