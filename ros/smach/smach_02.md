@@ -15,17 +15,34 @@
 ## 実習
 
 - 次のファイルを`state_machine_simple.py`と同じディレクトリに保存しなさい。実行権限の付与を忘れないように。
-  - [state_machine_no_navigation.py](state_machine_no_navigation.py)
+  - [state_machine_no_navigation.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_no_navigation.py)
 
 ### 実行順序
 
 - まず、`oit_navigation_test/launch/simulation/navigation.launch`
+
+```shell
+$ roscd oit_navigation_test/launch/simulation
+$ roslaunch navigation.launch
+```
+
 - しばらくしてから`state_machine_no_navigation.py`を実行。
+
+```shell
+$ roscd smach_tutorials/examples/
+$ ./state_machine_no_navigation.py
+[INFO] [1581077522.716507, 286.100000]: State machine starting in initial state 'go_straight_01' with userdata:
+	[]
+[INFO] [1581077522.718719, 286.100000]: Executing state GoStraightByTime
+[INFO] [1581077527.691294, 291.100000]: State machine terminating 'go_straight_01':'ok':'OK'
+# Ctrl+Cで終了させる。
+```
+
 - 起動したら、`Stage simulator`の画面と`rviz`の画面をよく観察すること。
 - 次いで、`smach_viewer`
 
 ```shell
-rosrun smach_viewer smach_viewer.py
+$ rosrun smach_viewer smach_viewer.py
 ```
 
 ## 問題

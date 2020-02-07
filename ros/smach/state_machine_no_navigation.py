@@ -9,7 +9,7 @@ import smach_ros
 from geometry_msgs.msg import Quaternion, Twist
 
 
-class GoStraightOdomByTime(smach.State):
+class GoStraightByTime(smach.State):
     def __init__(self, time_limit, linear_vel=0.4, cmd_vel="/cmd_vel"):
         smach.State.__init__(self, outcomes=['ok'])
         self.cmd_vel = cmd_vel
@@ -46,7 +46,7 @@ def main():
     # Open the container
     with sm:
         # Add states to the container
-        smach.StateMachine.add('GoStraightOdomByTime', GoStraightOdomByTime(5.0),
+        smach.StateMachine.add('go_straight_01', GoStraightByTime(5.0),
                                transitions={'ok': 'OK'})
 
     sis = smach_ros.IntrospectionServer('state_machine_simple', sm, '/SM_ROOT')

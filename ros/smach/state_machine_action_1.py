@@ -11,7 +11,7 @@ from smach_ros import SimpleActionState
 from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 
 
-class GoStraightOdomByTime(smach.State):
+class GoStraightByTime(smach.State):
     def __init__(self, time_limit, linear_vel=0.4, cmd_vel="/cmd_vel"):
         smach.State.__init__(self, outcomes=['ok'])
         self.cmd_vel = cmd_vel
@@ -48,7 +48,7 @@ def main():
     # Open the container
     with sm:
         # Add states to the container
-        smach.StateMachine.add('GoStraightOdomByTime', GoStraightOdomByTime(5.0),
+        smach.StateMachine.add('GoStraightByTime', GoStraightByTime(5.0),
                                transitions={'ok': 'call_move_base'})
         coord_type = "base_link"
         move_base_goal = MoveBaseGoal()

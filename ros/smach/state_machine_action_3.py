@@ -15,7 +15,7 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 
 
-class GoStraightOdomByTime(smach.State):
+class GoStraightByTime(smach.State):
     def __init__(self, time_limit, linear_vel=0.4, cmd_vel="/cmd_vel"):
         smach.State.__init__(self, outcomes=['ok'])
         self.cmd_vel = cmd_vel
@@ -160,7 +160,7 @@ def main():
     # Open the container
     with sm:
         # Add states to the container
-        smach.StateMachine.add('GoStraightOdomByTime', GoStraightOdomByTime(1.0),
+        smach.StateMachine.add('GoStraightByTime', GoStraightByTime(1.0),
                                transitions={'ok': 'WayPointNavigation'})
         smach.StateMachine.add('WayPointNavigation', waypoint_navigation(),
                                transitions={'ok': 'OK', 'ng': 'NG'})
