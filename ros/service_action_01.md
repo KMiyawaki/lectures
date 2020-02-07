@@ -35,14 +35,25 @@
 - ROS マスターを起動する。
 
 ```shell
-roscore
+$ roscore
 ```
 
-- 別ターミナルで`Turtle sim`を起動し、どのようなサービスが提供されているか調べる。
+- 別ターミナルで[`turtlesim`](http://wiki.ros.org/turtlesim)を起動し、どのようなサービスが提供されているか調べる。
 
 ```shell
-rosrun turtlesim turtlesim_node
-rosservice list
+$ rosrun turtlesim turtlesim_node
+$ rosservice list
+/clear
+/kill
+/reset
+/rosout/get_loggers
+/rosout/set_logger_level
+/spawn
+/turtle1/set_pen
+/turtle1/teleport_absolute
+/turtle1/teleport_relative
+/turtlesim/get_loggers
+/turtlesim/set_logger_level
 ```
 
 ---
@@ -53,29 +64,38 @@ rosservice list
 
 ## rosservice type [サービス名]
 
-- (例) `rosservice type clear`
-  - `clear`という名前のサービスの引数の型を表示する。
-  - 実行結果：`std_srvs/Empty`
-  - このサービスの引数の型は空で,サービスを呼び出すのに引数がいらないことを意味している。
-    - サービス実行時にデータを送らず,終了時もデータを受け取らない。
-- (例) `rosservice type /turtle1/teleport_absolute`
-  - 実行結果：`turtlesim/TeleportAbsolute`
-    - このサービスの型は`turtlesim/TeleportAbsolute`型。
+- (例) `clear`という名前のサービスの引数の型を表示する。
+
+```shell
+$ rosservice type clear
+std_srvs/Empty
+```
+
+- このサービスの引数の型は空で,サービスを呼び出すのに引数がいらないことを意味している。
+  - サービス実行時にデータを送らず,終了時もデータを受け取らない。
+- (例) `/turtle1/teleport_absolute`という名前のサービスの引数の型を表示する。
+
+```shell
+$ rosservice type /turtle1/teleport_absolute
+turtlesim/TeleportAbsolute
+```
+
+- このサービスの型は`turtlesim/TeleportAbsolute`型。
 
 ---
 
 ## rossrv show [service type]
 
 - サービスの引数と戻り値の定義を表示する。
-- (例) `rosservice type /turtle1/teleport_absolute | rossrv show`
-- 実行結果
+- (例) `/turtle1/teleport_absolute`の引数、戻り値の型を表示する。
 
 ```shell
+$ rosservice type /turtle1/teleport_absolute | rossrv show
 float32 x
 float32 y
 float32 theta
 ---
-
+# 空行がある
 ```
 
 - `x, y, theta`はサービス実行時のパラメータ。`Turtle`の位置と向きを表している。
@@ -86,9 +106,17 @@ float32 theta
 ## rosservice call [service][args]
 
 - 引数`[args]`を渡してサービス`[service]`を呼び出す。
-- (例)`rosservice call /turtle1/teleport_absolute 5 2 0`
-  - 最後の`5 2 0`は座標`(5,2)`に亀を移動させ、向きを`0`にすることを表している。
-- (例)`rosservice call clear`亀の移動軌跡を消す。
+- (例)座標`(5,2)`に亀を移動させ、向きを`0`にする。
+
+```shell
+$ rosservice call /turtle1/teleport_absolute 5 2 0
+```
+
+- (例)亀の移動軌跡を消す。
+
+```shell
+$ rosservice call clear
+```
 
 ### 問題（１）
 
@@ -101,31 +129,26 @@ float32 theta
 ## シンプルなサービスとクライアントを書く
 
 - これからサービスを作る準備をする。
-- 内容は[ja/ROS/Tutorials/CreatingMsgAndSrv](http://wiki.ros.org/ja/ROS/Tutorials/CreatingMsgAndSrv)の「3.サービス(srv)を使う」に準拠している。
+  - 内容は[ja/ROS/Tutorials/CreatingMsgAndSrv](http://wiki.ros.org/ja/ROS/Tutorials/CreatingMsgAndSrv)の「3.サービス(srv)を使う」に準拠している。
 
 ---
 
 ## サービスの型定義を書く
 
 ```shell
-roscd beginner_tutorials
-mkdir srv
+$ roscd beginner_tutorials
+$ mkdir srv
 ```
 
 - [AddTwoInts.srv](https://raw.githubusercontent.com/ros/ros_tutorials/lunar-devel/rospy_tutorials/srv/AddTwoInts.srv)を`srv`に保存する。
 - `AddTwoInts.srv`の内容を確認する。
 
 ```shell
-cd srv
-less AddTwoInts.srv
-```
-
-- 実行結果は次の通り。`---`の上が引数で下が返却値である。
-
-```text
+$ cd srv
+$ less AddTwoInts.srv
 int64 a
 int64 b
----
+--- # 上が引数で下が返却値
 int64 sum
 ```
 
@@ -133,11 +156,11 @@ int64 sum
 
 ## サービスの型を使えるようにする
 
-- `CMakeLists.txt`を編集する。エディタは何でも良い。ここでは`Emacs`を使う。
+- `CMakeLists.txt`を編集する。エディタは何でも良い。ここでは`emacs`を使う。
 
 ```shell
-roscd beginner_tutorials
-emacs CMakeLists.txt &
+$ roscd beginner_tutorials
+$ emacs CMakeLists.txt &
 ```
 
 - 編集箇所（１）
@@ -201,9 +224,9 @@ generate_messages(
 ## コンパイル
 
 ```shell
-cd
-cd catkin_ws
-catkin_make
+$ cd
+$ cd catkin_ws
+$ catkin_make
 ```
 
 - 生成された結果は`~/catkin_ws/devel/lib/python2.7/dist-packages/beginner_tutorials/srv`にある。
