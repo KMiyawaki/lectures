@@ -53,9 +53,8 @@ $ roslaunch localization.launch
 - 設定の保存場所を作る。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/config
-mkdir rviz （ここに rviz の設定を保存する）
+$ roscd oit_navigation_test/config
+$ mkdir rviz  # ここに rviz の設定を保存する
 ```
 
 - `RViz`のメニューで`File`->`Save Config As`をクリックし、先ほど作成した`config/rviz`ディレクトリに`localization.rviz`として保存する。
@@ -66,9 +65,8 @@ mkdir rviz （ここに rviz の設定を保存する）
 - `localization.launch`を編集する。
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation/
-emacs localization.launch
+$ roscd oit_navigation_test/launch/simulation
+$ emacs localization.launch
 ```
 
 - 内容は次の通り。
@@ -77,7 +75,8 @@ emacs localization.launch
 <launch>
   <!-- Check simulation world and amcl_map for localization. They should be same. -->
   <arg name="oit_navigation_dir" value="$(find oit_navigation_test)" />
-  <arg name="simulation_world" default="$(arg oit_navigation_dir)/launch/simulation/worlds/HRC.world"/>
+  <arg name="simulation_world" default="$(arg oit_navigation_dir)/maps/HRC.world"/>
+
   <arg name="map_name" default="$(arg oit_navigation_dir)/maps/HRC.yaml"/>
   <!-- 追記 -->
   <arg name="rviz_conf" value="$(arg oit_navigation_dir)/config/rviz/localization.rviz" />
@@ -85,7 +84,9 @@ emacs localization.launch
   <include file="$(arg oit_navigation_dir)/launch/simulation/stage.launch">
     <arg name="world" value="$(arg simulation_world)"/>
   </include>
-  <include file="$(arg oit_navigation_dir)/launch/includes/teleop_joy.launch"/>
+  <node name="mouse_teleop" pkg="mouse_teleop" type="mouse_teleop.py">
+    <remap from="/mouse_vel" to="/cmd_vel"/>
+  </node>
   <!-- 修正 -->
   <node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(arg rviz_conf)" />
   <!-- 修正ここまで -->
@@ -98,9 +99,8 @@ emacs localization.launch
 - 実行
 
 ```shell
-cd
-cd catkin_ws/src/oit_navigation_test/launch/simulation
-roslaunch localization.launch
+$ roscd oit_navigation_test/launch/simulation
+$ roslaunch localization.launch
 ```
 
 ---
