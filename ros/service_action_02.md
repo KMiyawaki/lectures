@@ -24,10 +24,10 @@
 - 今回は皿洗いをする装置を制御するノードを想定し`DoDishes.action`ファイルを作成して編集する。エディタは何でも良い。
 
 ```shell
-roscd beginner_tutorials
-mkdir action
-cd action
-emacs DoDishes.action &
+$ roscd beginner_tutorials
+$ mkdir action
+$ cd action
+$ emacs DoDishes.action &
 ```
 
 - 内容は次の通り。
@@ -48,8 +48,8 @@ float32 percent_complete
 ## アクションを使えるようにする
 
 ```shell
-roscd beginner_tutorials
-emacs CMakeLists.txt &
+$ roscd beginner_tutorials
+$ emacs CMakeLists.txt &
 ```
 
 - 編集箇所（１）
@@ -106,8 +106,8 @@ add_action_files(
 ## package.xml を修正する
 
 ```shell
-roscd beginner_tutorials
-emacs package.xml &
+$ roscd beginner_tutorials
+$ emacs package.xml &
 ```
 
 - 修正箇所（１）
@@ -171,9 +171,9 @@ emacs package.xml &
 ## コンパイル
 
 ```shell
-cd
-cd catkin_ws
-catkin_make
+$ cd
+$ cd catkin_ws
+$ catkin_make
 ```
 
 - 生成結果は`~/catkin_ws/devel/lib/python2.7/dist-packages/beginner_tutorials/msg`
@@ -185,9 +185,9 @@ catkin_make
 - `do_dishes_server.py`というファイルを作成し、アクションサーバーのプログラムを入力する。
 
 ```shell
-roscd beginner_tutorials
-cd scripts
-emacs do_dishes_server.py &
+$ roscd beginner_tutorials
+$ cd scripts
+$ emacs do_dishes_server.py &
 ```
 
 - プログラムは次の通り。
@@ -200,9 +200,9 @@ emacs do_dishes_server.py &
 - `do_dishes_client.py`というファイルを作成し、アクションクライアントのプログラムを入力する。
 
 ```shell
-roscd beginner_tutorials
-cd scripts
-emacs do_dishes_client.py &
+$ roscd beginner_tutorials
+$ cd scripts
+$ emacs do_dishes_client.py &
 ```
 
 - プログラムは次の通り。
@@ -216,8 +216,8 @@ emacs do_dishes_client.py &
 - ROS マスターが起動している前提で 2 つのターミナルを使い次のコマンドを実行する。
 
 ```shell
-rosrun begineer_tutorials do_dishes_server.py
-rosrun begineer_tutorials do_dishes_client.py
+$ rosrun begineer_tutorials do_dishes_server.py
+$ rosrun begineer_tutorials do_dishes_client.py
 ```
 
 ---
