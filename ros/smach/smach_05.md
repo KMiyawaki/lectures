@@ -13,7 +13,7 @@ SMACH の状態に外部からデータを与える
 - 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell
-rosrun smach_viewer smach_viewer.py
+$ rosrun smach_viewer smach_viewer.py
 ```
 
 ## [Passing User Data between States](http://wiki.ros.org/smach/Tutorials/User%20Data)

@@ -20,7 +20,7 @@ SMACH から Action を使う
 - 上記プログラムを別名でコピーする。
 
 ```shell
-cp state_machine_action_1.py state_machine_action_2.py
+$ cp state_machine_action_1.py state_machine_action_2.py
 ```
 
 - コピーして生成した`state_machine_action_2.py`の下記部分を編集する。
@@ -51,7 +51,7 @@ move_base_goal.target_pose.pose.orientation.w = 1.0
 - 新しいターミナルを開いて下記コマンドを実行する。
 
 ```shell
-rostopic echo /clicked_point
+$ rostopic echo /clicked_point
 ```
 
 - RViz 上で`Publish Point`ボタンを押し、地図上の任意の場所をクリックする。

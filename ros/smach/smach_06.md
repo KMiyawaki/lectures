@@ -13,7 +13,7 @@
 - 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell
-rosrun smach_viewer smach_viewer.py
+$ rosrun smach_viewer smach_viewer.py
 ```
 
 ## 問題（１）
