@@ -475,6 +475,7 @@ for i in k:
 - 以下のようなプログラムを作成して実行する。
   - 英文が書かれたファイルを準備する。
   - 使用されている単語の個数を調べ、上位 5 個の単語を表示する。
+  - [input.txt](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/python_01/input.txt)
 
 ## ファイルの読み書き
 
