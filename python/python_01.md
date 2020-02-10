@@ -496,7 +496,7 @@ f.write("hoe")
 ## ファイル入出力の例
 
 ```python
-ifn = "intput.txt"
+ifn = "input.txt"
 ofn = "output.txt"
 ifp = open(ifn, "r")  # ファイルをオープン
 ofp = open(ofn, "w")  # ファイルをオープン
