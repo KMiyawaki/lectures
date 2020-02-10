@@ -392,7 +392,7 @@ nextline
 - 実行権限を与える。
 
 ```shell
-$ chmod +x textfile.txt
+$ chmod u+x textfile.txt
 ```
 
 - 実行すると編集できる。

@@ -24,7 +24,7 @@
 - 実行権限を与えて実行する。
 
 ```shell
-$ chmod +x filename.py
+$ chmod u+x filename.py
 $ ./filename.py
 ```
 
