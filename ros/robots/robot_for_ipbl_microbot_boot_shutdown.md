@@ -63,6 +63,11 @@ Last login: Thu Feb  6 12:29:34 2020
 jetson@jetson-desktop:~$ # Jetson NANO にログインできた
 ```
 
+## ロボットを動かす
+
+- [WEB ブラウザから動かす場合](./robot_for_ipbl_microbot.md)
+- [RViz から動かす場合](./robot_for_ipbl_microbot_rviz.md)
+
 ## ロボットの電源を OFF にする
 
 - ロボット側端末で Jetson NANO をシャットダウンする。
