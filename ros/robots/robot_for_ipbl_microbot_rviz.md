@@ -50,6 +50,23 @@ Serial: 2018101900004171
 [YDLidar]: [YDLIDAR INFO] Now YDLIDAR is scanning ......
 ```
 
+- 新たな端末を開き（以降これをクライアント端末と表記する）、以下のコマンドを実行する。
+
+```shell
+$ roscd roscd my_microbot_apps/launch/include
+$ pwd
+/home/[user name]/catkin_ws/src/my_microbot_apps/launch/includes
+$ roslaunch teleop_simple.launch
+```
+
+- 次の図のように RViz と Mouse Teleop というタイトルのウィンドウが開く。
+
+![2020-02-11_10-37-16.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-37-16.png)
+
+- [Mouse Teleop](https://github.com/ros-teleop/teleop_tools)はマウス操作でロボットに速度指令を送ることができるソフトである。
+  - Mouse Teleop 上でマウスドラッグするとロボットを操作できる。
+- [RViz](http://wiki.ros.org/rviz)は ROS の標準の可視化ツールである。
+
 ## 地図を作成する
 
 - LRF のデータを重ね合わせることでロボットを動作させる場所の地形の全体像をロボットに記憶させる。
@@ -62,6 +79,20 @@ jetson@jetson-desktop:~$ roscd my_microbot_apps/launch/real
 jetson@jetson-desktop:~/catkin_ws/src/my_microbot_apps/launch/real$ roslaunch mapping.launch
 ```
 
+- 新たな端末を開き（以降これをクライアント端末と表記する）、以下のコマンドを実行する。
+
+```shell
+$ roscd roscd my_microbot_apps/launch/include
+$ pwd
+/home/[user name]/catkin_ws/src/my_microbot_apps/launch/includes
+$ roslaunch teleop_mapping.launch
+```
+
+- 次の図のように RViz と Mouse Teleop のウィンドウが開く。
+
+![2020-02-11_10-40-18.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-40-18.png)
+
+- Mouse Teleop でしばらく走らせると徐々に地図が出来上がっていく。
 - PC でもう一つターミナルを起動し、`ssh`でロボットに接続する。以降この端末をロボット側端末(2)とする。
 
 ```shell
@@ -111,20 +142,43 @@ PARAMETERS
 [ INFO] [1580974342.064977135]: odom received!
 ```
 
+- 新たな端末を開き（以降これをクライアント端末と表記する）、以下のコマンドを実行する。
+
+```shell
+$ roscd roscd my_microbot_apps/launch/include
+$ pwd
+/home/[user name]/catkin_ws/src/my_microbot_apps/launch/includes
+$ roslaunch teleop_navigation.launch
+```
+
+- 次の図のように RViz と Mouse Teleop のウィンドウが開く。
+
+![2020-02-11_10-41-10.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-10.png)
+
 ### 自己位置を推定する
 
 - 多くの場合、ナビゲーション開始時にロボットは自分が地図上のどこにいるのかが分かっていない。
 - そのため、次の図のようにレーザのデータが地図の地形と一致していない場合がある。
+
+![2020-02-11_10-41-10.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-10.png)
+
 - 次のようにしてロボットに現在地を教え、自己位置を推定させる。
-- Set AMCL Initial Pose にチェックを入れる。
-- Estimate ボタンを押す。
+- RViz 上で 2D Pose Estimate ボタンをクリックし、地図上のロボットがいるであろう場所から向いている方向に向かって左ドラッグして離す。
+
+![2020-02-07_11-57-36.svg.png](./robot_for_ipbl_microbot_rviz/2020-02-07_11-57-36.svg.png)
+
 - うまく行くと、次の図のように LRF のデータが地形とおおよそ一致する。
   - 完全に一致する必要はない。
 
+![2020-02-11_10-41-14.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-14.png)
+
 ### 目標地点を指定して自律移動させる
 
-- Send goal ボタンを押すと、ロボットが目的地に向かう。
+- RViz 上で 2D Nav Goal ボタンをクリックし、ゴール地点でロボットを向かせたい方向に向けて左ドラッグして離とそこまで自律移動する。
   - 途中に予期しない障害物が出現すると回避するかその場で止まる。
+
+![2020-02-07_11-58-27.svg.png](./robot_for_ipbl_microbot_rviz/2020-02-07_11-58-27.svg.png)
+
 - 問題がなければ目的地で止まる。
 - 姿勢を調節するために目的地付近で回転する場合もある。
   - たどり着けなかった場合、ssh でログインしているロボット側の端末にエラーメッセージが出ている。
