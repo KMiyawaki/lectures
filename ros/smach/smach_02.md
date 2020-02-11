@@ -45,8 +45,8 @@ $ rosrun smach_viewer smach_viewer.py
   - まずは`GoStraightByTime`クラスをコピーし、`TurnByTime`というクラスを作ってみよう。
 - ロボットを四角形を描くように移動させてみよう。直進->90 度回転->直進・・・。時計回りに動いてから反時計回りに動くなど。
 - 実機でも試してみよう。
-  - [作成した地図でナビゲーションする](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/robot_for_ipbl_microbot_chrome.md#%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%9C%B0%E5%9B%B3%E3%81%A7%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B)
-  - [自己位置を推定する](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/robot_for_ipbl_microbot_chrome.md#%E8%87%AA%E5%B7%B1%E4%BD%8D%E7%BD%AE%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B)
+  - [作成した地図でナビゲーションする](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/jetson_microbot_chrome.md#%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E5%9C%B0%E5%9B%B3%E3%81%A7%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B)
+  - [自己位置を推定する](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/jetson_microbot_chrome.md#%E8%87%AA%E5%B7%B1%E4%BD%8D%E7%BD%AE%E3%82%92%E6%8E%A8%E5%AE%9A%E3%81%99%E3%82%8B)
   - 以上を実施し、正しい自己位置が取れた時点で`state_machine_no_navigation.py`を実行する。
 
 ---

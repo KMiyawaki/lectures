@@ -13,13 +13,12 @@
 
 ## ロボットを起動する
 
-- [起動して`ssh`接続まで](./robot_for_ipbl_microbot_boot_shutdown.md)を実施する。
+- [起動して`ssh`接続まで](./jetson_microbot_boot_shutdown.md)を実施する。
 
 ## クライアント PC と Jetson が ROS 上で通信できるようにする
 
 - [複数 PC が ROS 上で通信する方法](../basics_02.md)を参照し、クライアント PC の設定を行う。
   - 上記ページにおいて、マスターは Jetson NANO、スレーブはクライアント PC に読み替えること。
-  - マスター、スレーブ双方の`.bashrc`の編集まで実施する。
 
 ## ロボットの動作テストを行う
 
@@ -63,7 +62,7 @@ $ roslaunch teleop_simple.launch
 
 - 次の図のように RViz と Mouse Teleop というタイトルのウィンドウが開く。
 
-![2020-02-11_10-37-16.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-37-16.png)
+![2020-02-11_10-37-16.png](./jetson_microbot_rviz/2020-02-11_10-37-16.png)
 
 - [Mouse Teleop](https://github.com/ros-teleop/teleop_tools)はマウス操作でロボットに速度指令を送ることができるソフトである。
   - Mouse Teleop 上でマウスドラッグするとロボットを操作できる。
@@ -92,7 +91,7 @@ $ roslaunch teleop_mapping.launch
 
 - 次の図のように RViz と Mouse Teleop のウィンドウが開く。
 
-![2020-02-11_10-40-18.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-40-18.png)
+![2020-02-11_10-40-18.png](./jetson_microbot_rviz/2020-02-11_10-40-18.png)
 
 - Mouse Teleop でしばらく走らせると徐々に地図が出来上がっていく。
 - PC でもう一つターミナルを起動し、`ssh`でロボットに接続する。以降この端末をロボット側端末(2)とする。
@@ -155,31 +154,31 @@ $ roslaunch teleop_navigation.launch
 
 - 次の図のように RViz と Mouse Teleop のウィンドウが開く。
 
-![2020-02-11_10-41-10.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-10.png)
+![2020-02-11_10-41-10.png](./jetson_microbot_rviz/2020-02-11_10-41-10.png)
 
 ### 自己位置を推定する
 
 - 多くの場合、ナビゲーション開始時にロボットは自分が地図上のどこにいるのかが分かっていない。
 - そのため、次の図のようにレーザのデータが地図の地形と一致していない場合がある。
 
-![2020-02-11_10-41-10.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-10.png)
+![2020-02-11_10-41-10.png](./jetson_microbot_rviz/2020-02-11_10-41-10.png)
 
 - 次のようにしてロボットに現在地を教え、自己位置を推定させる。
 - RViz 上で 2D Pose Estimate ボタンをクリックし、地図上のロボットがいるであろう場所から向いている方向に向かって左ドラッグして離す。
 
-![2020-02-07_11-57-36.svg.png](./robot_for_ipbl_microbot_rviz/2020-02-07_11-57-36.svg.png)
+![2020-02-07_11-57-36.svg.png](./jetson_microbot_rviz/2020-02-07_11-57-36.svg.png)
 
 - うまく行くと、次の図のように LRF のデータが地形とおおよそ一致する。
   - 完全に一致する必要はない。
 
-![2020-02-11_10-41-14.png](./robot_for_ipbl_microbot_rviz/2020-02-11_10-41-14.png)
+![2020-02-11_10-41-14.png](./jetson_microbot_rviz/2020-02-11_10-41-14.png)
 
 ### 目標地点を指定して自律移動させる
 
 - RViz 上で 2D Nav Goal ボタンをクリックし、ゴール地点でロボットを向かせたい方向に向けて左ドラッグして離とそこまで自律移動する。
   - 途中に予期しない障害物が出現すると回避するかその場で止まる。
 
-![2020-02-07_11-58-27.svg.png](./robot_for_ipbl_microbot_rviz/2020-02-07_11-58-27.svg.png)
+![2020-02-07_11-58-27.svg.png](./jetson_microbot_rviz/2020-02-07_11-58-27.svg.png)
 
 - 問題がなければ目的地で止まる。
 - 姿勢を調節するために目的地付近で回転する場合もある。
@@ -187,7 +186,7 @@ $ roslaunch teleop_navigation.launch
 
 ## ロボットの電源を OFF にする
 
-- [電源 OFF から充電まで](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/robot_for_ipbl_microbot_boot_shutdown.md#%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E9%9B%BB%E6%BA%90%E3%82%92-off-%E3%81%AB%E3%81%99%E3%82%8B)を実施する。
+- [電源 OFF から充電まで](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/jetson_microbot_boot_shutdown.md#%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E9%9B%BB%E6%BA%90%E3%82%92-off-%E3%81%AB%E3%81%99%E3%82%8B)を実施する。
 
 ---
 

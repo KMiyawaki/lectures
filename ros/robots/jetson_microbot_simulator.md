@@ -9,11 +9,11 @@
 - ネイティブな Linux に ROS その他の必要なソフトを[インストール](https://github.com/KMiyawaki/setup_robot_programming)する。
   - シミュレーションは仮想環境や WSL でも実行できる。
   - ただし、仮想環境の場合に`scp`でファイルをコピーする場合はネットワークをブリッジモードにしておくこと。
-- ロボットに[Wifi 接続](./robot_for_ipbl_microbot_boot_shutdown.md)しておくこと。
+- ロボットに[Wifi 接続](./jetson_microbot_boot_shutdown.md)しておくこと。
 
 ### Jetson NANO に保存した地図をクライアント側で回収し、シミュレーション用ファイルを生成する
 
-- [ロボットで作成した地図](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/robot_for_ipbl_microbot_chrome.md#%E5%9C%B0%E5%9B%B3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)をクライアント側にコピーする。
+- [ロボットで作成した地図](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/jetson_microbot_chrome.md#%E5%9C%B0%E5%9B%B3%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)をクライアント側にコピーする。
 - ここでは作成した地図の名前を`my_map_01`として説明する。
 
 ```shell
