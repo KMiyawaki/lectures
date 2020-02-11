@@ -17,7 +17,7 @@
 
 ## クライアント PC と Jetson が ROS 上で通信できるようにする
 
--[複数 PC が ROS 上で通信する方法](https://github.com/KMiyawaki/lectures/blob/master/ros/basics_01.md#%E4%BB%96%E3%81%AE-pc-%E3%81%A8%E3%81%AE%E9%80%9A%E4%BF%A1)を参照し、クライアント PC の設定を行う。
+- [複数 PC が ROS 上で通信する方法](https://github.com/KMiyawaki/lectures/blob/master/ros/basics_01.md#%E4%BB%96%E3%81%AE-pc-%E3%81%A8%E3%81%AE%E9%80%9A%E4%BF%A1)を参照し、クライアント PC の設定を行う。
 
 ## ロボットの動作テストを行う
 
@@ -115,10 +115,8 @@ PARAMETERS
 
 - 多くの場合、ナビゲーション開始時にロボットは自分が地図上のどこにいるのかが分かっていない。
 - そのため、次の図のようにレーザのデータが地図の地形と一致していない場合がある。
-
 - 次のようにしてロボットに現在地を教え、自己位置を推定させる。
 - Set AMCL Initial Pose にチェックを入れる。
-
 - Estimate ボタンを押す。
 - うまく行くと、次の図のように LRF のデータが地形とおおよそ一致する。
   - 完全に一致する必要はない。
