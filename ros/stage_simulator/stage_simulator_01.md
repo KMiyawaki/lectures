@@ -4,45 +4,10 @@
 
 ---
 
-## Navigation メタパッケージ
+## PC を用意する
 
-- 障害物回避や経路計画などを実行するシステム
-  - 実機でもシミュレーションでも使えるし、必要。
-- 参考 [ROS の navigation のページ](http://wiki.ros.org/navigation)
-
-## 必要なソフトのインストール
-
-- navigation メタパッケージ
-
-```shell
-$ sudo apt-get install ros-melodic-navigation
-```
-
-- レーザレンジファインダ（Laser Range Finder：LRF、2 次元水平面の距離センサ）関連
-  - LRF のデータに対し距離による制限などを行うノード
-
-```shell
-$ sudo apt-get install ros-melodic-laser-pipeline
-```
-
-- gmapping (占有格子地図作成システム)
-  - LRF で得られたデータを重ねあわせることでロボット周囲の環境の形状がおおよそ分かる。
-  - これを 2 値画像（白黒の画像）で表現したものを**占有格子地図**と呼ぶ。
-
-```shell
-$ sudo apt-get install ros-melodic-slam-gmapping
-$ sudo apt-get install ros-melodic-map-server
-```
-
-- ロボットを手動操作するノード群
-  - JoyStick、キーボード、マウス等で速度指令を与えることができる。
-
-```shell
-$ sudo apt-get install ros-melodic-joy
-$ sudo apt-get install ros-melodic-teleop-twist-keyboard
-$ sudo apt-get install ros-melodic-teleop-twist-joy
-$ sudo apt-get install ros-melodic-mouse-teleop
-```
+- ネイティブな Linux に ROS その他の必要なソフトを[インストール](https://github.com/KMiyawaki/setup_robot_programming)する。
+- 仮想環境（WSL、Virtual Box）でも実行可能。
 
 ## Stage のサンプルを実行する
 
@@ -129,6 +94,10 @@ SUMMARY
 
 1. 自己位置推定
 2. 障害物回避しながら目標位置への移動
+
+- これらの機能は ROS では Navigation メタパッケージによって実現できる。
+  - 実機でもシミュレーションでも使えるし、必要。
+  - 参考 [ROS の navigation のページ](http://wiki.ros.org/navigation)
 
 ### 自己位置推定
 
