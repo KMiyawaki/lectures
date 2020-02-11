@@ -34,7 +34,7 @@
 
 - ロボットはたくさんのセンサを積んでいる。
 
-![3028269162-orion.png](2087168698-3028269162-orion.png)
+![3028269162-orion.png](./basics_01/2087168698-3028269162-orion.png)
 
 - 実行プログラムを一つにまとめてしまうと、1 台の PC しか使えない。
   - 処理能力は足りる? USB ポートは足りる?
@@ -218,7 +218,7 @@ $ chmod u+x listener.py
 
 - 権限が付与されたことを`ls -l`で確認すること。
 
-![console_01-min.png](console_01-min.png)
+![console_01-min.png](./basics_01/console_01-min.png)
 
 ---
 
@@ -274,7 +274,7 @@ $ rosrun beginner_tutorials listener.py
 $ rqt_graph
 ```
 
-![rqt-min.png](rqt-min.png)
+![rqt-min.png](./basics_01/rqt-min.png)
 
 ## rostopic list
 

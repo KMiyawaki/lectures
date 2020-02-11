@@ -23,7 +23,7 @@
   - `lo` (ローカルループバック)は自分自身のこと。
   - 有線と無線が接続されている場合は両方のアドレスが出ることがある。
 
-![console_02-min.png](console_02-min.png)
+![console_02-min.png](./basics_02/console_02-min.png)
 
 ---
 

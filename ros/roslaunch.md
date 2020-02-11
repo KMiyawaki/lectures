@@ -160,7 +160,7 @@ $ roslaunch beginner_tutorials pair.launch
 
 - 別の端末を開き`rqt_graph`を実行し、確かに 2 つのノードが起動していることを確認しなさい。
 
-![pair_01.png](1061250541-pair_01.png)
+![pair_01.png](./roslaunch/1061250541-pair_01.png)
 
 - 結果を確認したら、`Ctrl+C`で終了させなさい。
 - `rostopic echo /chatter`コマンドを実行して`/chatter`トピックにデータが流れていることも確認しなさい。
@@ -178,7 +178,7 @@ data: "Good Bye 1535068295.05"
 
 - `rqt_console`コマンドを実行し、トピックが流れていることを GUI でも確認しなさい。
 
-![pair_02.png](2010396211-pair_02.png)
+![pair_02.png](./roslaunch/2010396211-pair_02.png)
 
 - 最後に全ての端末を`Ctrl+C`で終了させ、端末を閉じなさい。
 
