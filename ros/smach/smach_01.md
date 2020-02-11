@@ -32,7 +32,7 @@ $ rosrun smach_viewer smach_viewer.py
 
 ## チュートリアル
 
-- [state_machine_simple.py](https://raw.githubusercontent.com/eacousineau/executive_smach_tutorials/hydro-devel/smach_tutorials/examples/state_machine_simple.py)をダウンロードして`scripts`ディレクトリに配置する。
+- [state_machine_simple.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_simple.py)をダウンロードして`scripts`ディレクトリに配置する。
   - **実行権限追加を忘れないように。**
 
 ```shell
