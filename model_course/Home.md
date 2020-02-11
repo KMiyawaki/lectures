@@ -4,7 +4,7 @@
 
 ---
 
-- [JetsonMicrobot で深層学習と ROS を学ぶ](./dnn_ros.md)
+- [Jetson Microbot で深層学習と ROS を学ぶ](./dnn_ros.md)
 
 ---
 

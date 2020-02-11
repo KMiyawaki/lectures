@@ -1,4 +1,4 @@
-# JetsonMicrobot の起動と終了
+# Jetson Microbot の起動と終了
 
 [ros/robots/Home](Home.md)
 

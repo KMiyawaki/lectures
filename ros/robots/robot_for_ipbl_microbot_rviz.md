@@ -1,4 +1,4 @@
-# JetsonMicrobot を RViz から動かす
+# Jetson Microbot を RViz から動かす
 
 [ros/robots/Home](Home.md)
 

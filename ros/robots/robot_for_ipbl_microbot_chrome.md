@@ -1,4 +1,4 @@
-# JetsonMicrobot を動かす
+# Jetson Microbot を動かす
 
 [ros/robots/Home](Home.md)
 
