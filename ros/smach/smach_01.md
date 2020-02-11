@@ -25,14 +25,14 @@ $ rosrun smach_viewer smach_viewer.py
 - ここで`smach_viewer.py`が無い旨のエラーが出たらスクリプトがインストールされていない。
 - インストールされていれば次のような GUI のウィンドウが開く。
 
-![Screenshot from 2018-09-12 13-03-06.png](./2018-09-12_13-03-06.png)
+![2018-09-12_13-03-06.png](./smach_01/2018-09-12_13-03-06.png)
 
 - インストールされていない場合は[smach_viewer.py](https://github.com/ros-visualization/executive_smach_visualization/blob/indigo-devel/smach_viewer/scripts/smach_viewer.py)をダウンロードし、`/opt/ros/melodic/share/smach_viewer/scripts`に配置する。
 - ただし、`mkdir`、`mv`などのコマンドは`sudo`でないと失敗するので注意。
 
 ## チュートリアル
 
-- [state_machine_simple.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_simple.py)をダウンロードして`scripts`ディレクトリに配置する。
+- [state_machine_simple.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_01/state_machine_simple.py)をダウンロードして`scripts`ディレクトリに配置する。
   - **実行権限追加を忘れないように。**
 
 ```shell
@@ -117,7 +117,7 @@ $ rosrun smach_viewer smach_viewer.py
 
 - 次のように状態遷移図を見ることができる。
 
-![Screenshot from 2018-09-12 13-03-06.png](./2018-09-12_13-17-50.png)
+![2018-09-12_13-03-06.png](./smach_01/2018-09-12_13-17-50.png)
 
 ---
 

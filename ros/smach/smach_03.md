@@ -10,7 +10,7 @@ SMACH からセンサデータを使う
 
 - まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
-  - [state_machine_wait_for_msg.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_wait_for_msg.py)
+  - [state_machine_wait_for_msg.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_03/state_machine_wait_for_msg.py)
 
 ## 問題(1)
 

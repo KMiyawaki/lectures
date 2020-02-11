@@ -10,7 +10,7 @@
 
 - まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
-  - [state_machine_action_3.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_action_3.py)
+  - [state_machine_action_3.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_06/state_machine_action_3.py)
 - 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell

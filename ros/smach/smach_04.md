@@ -10,7 +10,7 @@ SMACH から Action を使う
 
 - まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
-  - [state_machine_action_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_action_1.py)
+  - [state_machine_action_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_04/state_machine_action_1.py)
 
 ## [SimpleActionState](http://wiki.ros.org/smach/Tutorials/Calling%20Actions)
 
@@ -62,7 +62,7 @@ Is /clock being published?
 
 - RViz 上で`Publish Point`ボタンを押し、地図上の任意の場所をクリックする。
 
-![2018-11-10_17-12-28.png](2018-11-10_17-12-28.png)
+![2018-11-10_17-12-28.png](./smach_04/2018-11-10_17-12-28.png)
 
 - `rostopic echo /clicked_point`を実行したターミナル上にクリックした場所の座標が表示される。この情報の`x`と`y`を使えば良い。
 

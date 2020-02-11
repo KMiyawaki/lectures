@@ -15,7 +15,7 @@
 ## 実習
 
 - 次のファイルを`state_machine_simple.py`と同じディレクトリに保存しなさい。実行権限の付与を忘れないように。
-  - [state_machine_no_navigation.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_no_navigation.py)
+  - [state_machine_no_navigation.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_02/state_machine_no_navigation.py)
 
 ### 実行順序
 
