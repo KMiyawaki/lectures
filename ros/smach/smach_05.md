@@ -8,8 +8,8 @@ SMACH の状態に外部からデータを与える
 
 ## 実習（１）
 
-- 次のファイルを`smach_tutorials/example`にダウンロードし，`roscore`を起動してから実行しなさい。
-  - [user_data_sample_1.py](user_data_sample_1.py)
+- 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし、`roscore`を起動してから実行しなさい。
+  - [user_data_sample_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/user_data_sample_1.py)
 - 別ターミナルで`smach_viewer`も起動して状態遷移を可視化しなさい。
 
 ```shell
@@ -30,8 +30,8 @@ $ rosrun smach_viewer smach_viewer.py
 
 ## 実習（２）
 
-- 次のファイルを`smach_tutorials/example`にダウンロードし，`roscore`を起動してから実行しなさい。
-  - [user_data_sample_2.py](user_data_sample_2.py)
+- 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし、`roscore`を起動してから実行しなさい。
+  - [user_data_sample_2.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/user_data_sample_2.py)
 - 次にプログラムの一番下にある`main_1`を`main_2`に変更して再度実行し、何が違うかを検証しなさい。
 
 ## 問題（１）

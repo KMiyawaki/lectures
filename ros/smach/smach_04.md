@@ -8,8 +8,9 @@ SMACH から Action を使う
 
 ## 実習（１）
 
-- 次のファイルを`smach_tutorials/example`にダウンロードし，シミュレータの`navigation.launch`を起動してから実行しなさい。
-  - [state_machine_action_1.py](state_machine_action_1.py)
+- まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
+- 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
+  - [state_machine_action_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_action_1.py)
 
 ## [SimpleActionState](http://wiki.ros.org/smach/Tutorials/Calling%20Actions)
 
@@ -20,7 +21,10 @@ SMACH から Action を使う
 - 上記プログラムを別名でコピーする。
 
 ```shell
+$ roscd my_microbot_apps/scripts
 $ cp state_machine_action_1.py state_machine_action_2.py
+$ ls
+state_machine_action_1.py state_machine_action_2.py
 ```
 
 - コピーして生成した`state_machine_action_2.py`の下記部分を編集する。
@@ -47,11 +51,13 @@ move_base_goal.target_pose.pose.orientation.w = 1.0
 
 - スクリプトでマップ上の特定の場所にロボットをナビゲーションさせる際に、ゴールの座標が必要となる。
 - RViz の`Publish Point`ボタンで座標を調べることができる。
-- `navigation.launch`を起動していないなら、[Stage Simulator と ROS(1)](stage_simulator_and_ros_01)に従って`navigation.launch`を起動しておく。
+- まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
 - 新しいターミナルを開いて下記コマンドを実行する。
 
 ```shell
 $ rostopic echo /clicked_point
+WARNING: no messages received and simulated time is active.
+Is /clock being published?
 ```
 
 - RViz 上で`Publish Point`ボタンを押し、地図上の任意の場所をクリックする。

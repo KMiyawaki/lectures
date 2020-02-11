@@ -8,6 +8,8 @@
 
 ## インストール
 
+- ROS のプログラミング環境を[セットアップ](https://github.com/KMiyawaki/setup_robot_programming)した PC（仮想環境、WSL 可）で行う。
+
 ```shell
 $ sudo apt-get install ros-melodic-smach
 $ sudo apt-get install ros-melodic-smach-viewer
@@ -30,28 +32,21 @@ $ rosrun smach_viewer smach_viewer.py
 
 ## チュートリアル
 
-- 別パッケージを作成して実施。
+- [state_machine_simple.py](https://raw.githubusercontent.com/eacousineau/executive_smach_tutorials/hydro-devel/smach_tutorials/examples/state_machine_simple.py)をダウンロードして`scripts`ディレクトリに配置する。
+  - **実行権限追加を忘れないように。**
 
 ```shell
-$ cd
-$ cd catkin_ws/src
-$ catkin_create_pkg smach_tutorials std_msgs rospy roscpp
-Created file smach_tutorials/CMakeLists.txt
-Created file smach_tutorials/package.xml
-Created folder smach_tutorials/include/smach_tutorials
-Created folder smach_tutorials/src
-Successfully created files in /home/oit/catkin_ws/src/smach_tutorials. Please adjust the values in package.xml.
-$ cd smach_tutorials/
-$ mkdir examples
-$ cd examples
+$ roscd my_microbot_apps/scripts
+$ pwd
+/home/[user name]/catkin_ws/src/my_microbot_apps/scripts
+$ chmod u+x state_machine_simple.py
+$ ls -l
+-rwxr--r-- 1 oit oit 1364  2月 11 13:03 state_machine_simple.py
 ```
 
-- [state_machine_simple.py](https://raw.githubusercontent.com/eacousineau/executive_smach_tutorials/hydro-devel/smach_tutorials/examples/state_machine_simple.py)をダウンロードして`examples`ディレクトリに配置する。
-  - 実行権限追加を忘れないように。
 - `roscore`を起動後（既に起動しているなら再起動の必要はない）、`state_machine_simple.py`を実行する。
 
 ```shell
-$ roscd smach_tutorials/examples
 $ ./state_machine_simple.py
 [INFO] [1536725370.457410]: State machine starting in initial state 'FOO' with userdata:
 	[]
@@ -108,7 +103,7 @@ $ ./state_machine_simple.py
 - スクリプトを作成し終わったら、`roscore`を起動後（既に起動しているなら再起動の必要はない）`state_machine_simple.py`を実行する。
 
 ```shell
-$ roscd smach_tutorials/examples
+$ roscd my_microbot_apps/scripts
 $ ./state_machine_simple.py
 [INFO] [1536725370.457410]: State machine starting in initial state 'FOO' with userdata:
 	[]

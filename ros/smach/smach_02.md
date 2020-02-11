@@ -19,13 +19,7 @@
 
 ### 実行順序
 
-- まず、`oit_navigation_test/launch/simulation/navigation.launch`
-
-```shell
-$ roscd oit_navigation_test/launch/simulation
-$ roslaunch navigation.launch
-```
-
+- まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)
 - しばらくしてから`state_machine_no_navigation.py`を実行。
 
 ```shell
