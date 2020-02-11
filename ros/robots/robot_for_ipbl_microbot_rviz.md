@@ -131,7 +131,7 @@ PARAMETERS
 
 ## ロボットの電源を OFF にする
 
-- [電源 OFF から充電まで](./robot_for_ipbl_microbot_boot_shutdown.md)を実施する。
+- [電源 OFF から充電まで](https://github.com/KMiyawaki/lectures/blob/master/ros/robots/robot_for_ipbl_microbot_boot_shutdown.md#%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E3%81%AE%E9%9B%BB%E6%BA%90%E3%82%92-off-%E3%81%AB%E3%81%99%E3%82%8B)を実施する。
 
 ---
 
