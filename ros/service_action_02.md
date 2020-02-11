@@ -191,7 +191,7 @@ $ emacs do_dishes_server.py &
 ```
 
 - プログラムは次の通り。
-  - [do_dishes_server.py](do_dishes_server.py)
+  - [do_dishes_server.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/service_action_02/do_dishes_server.py)
 
 ---
 
@@ -206,7 +206,7 @@ $ emacs do_dishes_client.py &
 ```
 
 - プログラムは次の通り。
-  - [do_dishes_client.py](do_dishes_client.py)
+  - [do_dishes_client.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/service_action_02/do_dishes_client.py)
 
 ---
 
