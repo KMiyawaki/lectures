@@ -51,9 +51,9 @@ From 192.168.***.*** icmp_seq=1 Destination Host Unreachable
 - ROS マスターを動作させる PC をマスター、それ以外をスレーブと呼ぶ。
 
 1. PC1 をマスター、PC2 をスレーブとする。
-2. マスター・スレーブ両方とも`roscore`とすべての ROS ノードをを停止する。
+2. マスター・スレーブ両方とも`roscore`とすべての ROS ノードを停止する。
 
-### マスター側
+### マスター側の設定
 
 - 任意のエディタで`~/.bashrc`を編集し、下記を末尾に追記する。
 
@@ -62,15 +62,9 @@ export ROS_IP=○○○.○○○.○○○.○○○ # 〇にはマスタの IP
 export ROS_MASTER_URI=http://○○○.○○○.○○○.○○○:11311 # 同上
 ```
 
-- ターミナルを開きなおして ROS マスタと`talker.py`を起動。
-
-```shell
-$ rosrun beginner_tutorials talker.py
-```
-
 ---
 
-### スレーブ側
+### スレーブ側の設定
 
 - 任意のエディタで`~/.bashrc`を編集し、下記を末尾に追記する。
 
@@ -79,7 +73,27 @@ export ROS_IP=○○○.○○○.○○○.○○○ # 〇にはスレーブの
 export ROS_MASTER_URI=http://△△△.△△△.△△△.△△△:11311 # △にはマスターのアドレス
 ```
 
-- ターミナルを開きなおして`listener.py`を起動。
+## ROS を使った通信のテスト
+
+### マスター側の操作
+
+- すべてのターミナルを閉じる。
+- 新たにターミナルを開き`roscore`を起動する。
+
+```shell
+$ roscore
+```
+
+- もう一つターミナルを開き`talker.py`を起動。
+
+```shell
+$ rosrun beginner_tutorials talker.py
+```
+
+### スレーブ側の操作
+
+- すべてのターミナルを閉じる。
+- 新たにターミナルを開き`listener.py`を起動。
 
 ```shell
 $ rosrun beginner_tutorials listener.py
