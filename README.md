@@ -1,5 +1,7 @@
 # Lecture notes
 
+## [Model Courses](./model_course/Home.md)
+
 ## [Linux](./unix/Home.md)
 
 ## [Python](./python/Home.md)
