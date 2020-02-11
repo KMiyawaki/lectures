@@ -365,102 +365,14 @@ if __name__ == '__main__':
 
 ---
 
-## 他の PC との通信
-
-- 誰かと二人組になりなさい。
-
-### 問題（４）
-
-- `ifconfig`コマンドで自 PC の IP アドレスを調べ、パートナーに教えなさい。
-- パートナーと相互に通信できることを`ping`コマンドで確認しなさい。
-  - 参考:[ロボット理工学科 演習](http://robot.isc.chubu.ac.jp/?p=538)
-
----
-
-## ifconfig
-
-- PC の IP アドレスを調べる。
-  - `lo` (ローカルループバック)は自分自身のこと。
-  - 有線と無線が接続されている場合は両方のアドレスが出ることがある。
-
-![console_02-min.png](console_02-min.png)
-
----
-
-## ping [IP アドレス]
-
-- 指定した IP アドレスに接続できるかどうかを調べる。
-
-```shell
-$ ping 192.168.***.*** # 接続先のIPアドレスを指定する。
-# ネットワーク接続に問題がない場合は次のような応答がある。
-PING 192.168.***.*** (192.168.***.***) 56(84) bytes of data.
-64 bytes from 192.168.***.***: icmp_seq=1 ttl=64 time=0.018 ms
-64 bytes from 192.168.***.***: icmp_seq=2 ttl=64 time=0.065 ms
-64 bytes from 192.168.***.***: icmp_seq=3 ttl=64 time=0.050 ms
-...
-# 接続できない場合は次のようなメッセージが出る。
-From 192.168.***.*** icmp_seq=1 Destination Host Unreachable
-```
-
----
-
-## 他の PC との通信（２）
-
-- 複数の PC を使う場合も ROS マスターは一つの PC のみで動かす。
-- ROS マスターを動作させる PC をマスター、それ以外をスレーブと呼ぶ。
-
-1. 二人組みのうち、マスター側とスレーブ側を決める。
-2. マスター・スレーブ両方とも`roscore`,`listener.py`,`talker.py`を停止する。
-
-### マスター側
-
-- 任意のエディタで`~/.bashrc`を編集し、下記を末尾に追記。
-
-```shell
-export ROS_IP=○○○.○○○.○○○.○○○ <- 〇には自分の IPアドレス
-export ROS_MASTER_URI=http://○○○.○○○.○○○.○○○:11311 <-同上
-```
-
-- ターミナルを開きなおして ROS マスターと`talker.py`を起動。
-
-```shell
-$ rosrun beginner_tutorials talker.py
-```
-
----
-
-### スレーブ側
-
-- 任意のエディタで`~/.bashrc`を編集する。
-
-```shell
-export ROS_IP=○○○.○○○.○○○.○○○ <- 〇には自分の IPアドレス
-export ROS_MASTER_URI=http://△△△.△△△.△△△.△△△:11311 <-△にはマスタのアドレス
-```
-
-- ターミナルを開きなおして`listener.py`を起動。
-
-```shell
-$ rosrun beginner_tutorials listener.py
-```
-
----
-
 ## 応用問題（１）
-
-- `talker.py`が出力するデータを好きな文字に変えて再び実行し、パートナーに
-  メッセージを届けなさい。
-- マスターとスレーブの役割を交代しながら実施すること。
-
-## 応用問題（２）
 
 - ROS の`std_msg`について調べなさい。
   - `String`以外にどのような型が用意されているか、[std_msgs](http://wiki.ros.org/std_msgs)を参考に調べなさい。
 
 ---
 
-## 応用問題（３）
+## 応用問題（２）
 
 - `talker.py`を次のように変更しなさい。
 
@@ -494,7 +406,7 @@ number = (number + 1) % 20 # 追記
 
 ---
 
-## 応用問題（４）
+## 応用問題（３）
 
 - `listener.py`を次のように編集し、実行結果を確認しなさい。
 - 修正（１）
@@ -519,18 +431,6 @@ def callback(data):
 
 def callbackInt32(data): # 追記
     rospy.loginfo(rospy.get_caller_id() + 'I heard %d', data.data) # 追記
-```
-
----
-
-## 後始末
-
-- 任意のエディタで`~/.bashrc`を編集し、`ROS_IP`と`ROS_MASTER_URI`の`export`をコメントアウトしておくこと。
-  - 行の先頭に「#」をつける。
-
-```shell
-# export ROS_IP=〇〇〇.〇〇〇.〇〇〇.〇〇〇
-# export ROS_MASTER_URI=〇〇〇.〇〇〇.〇〇〇.〇〇〇
 ```
 
 ---
