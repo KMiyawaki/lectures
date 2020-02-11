@@ -9,48 +9,7 @@
 - ネイティブな Linux に ROS その他の必要なソフトを[インストール](https://github.com/KMiyawaki/setup_robot_programming)する。
 - 仮想環境（WSL、Virtual Box）でも実行可能。
 
-## Stage のサンプルを実行する
-
-- 参考 [ROS stage のページ](http://wiki.ros.org/stage)
-
-- 必要なソフトのインストール
-
-```shell
-$ sudo apt-get install ros-melodic-navigation-stage
-$ sudo apt-get install ros-melodic-stage
-$ sudo apt-get install ros-melodic-stage-ros
-```
-
-- `Stage`用`Simulation`のサンプル
-
-```shell
-$ cd
-$ cd catkin_ws/src
-$ git clone https://github.com/KMiyawaki/oit_navigation_microbot_01.git
-# ~/catkin_ws/src/oit_navigation_microbot_01 がなければダウンロードされる。
-Cloning into 'oit_navigation_microbot_01'...
-remote: Enumerating objects: 59, done.
-remote: Counting objects: 100% (59/59), done.
-remote: Compressing objects: 100% (47/47), done.
-remote: Total 102 (delta 18), reused 36 (delta 10), pack-reused 43
-Receiving objects: 100% (102/102), 61.35 KiB | 309.00 KiB/s, done.
-Resolving deltas: 100% (22/22), done.
-# すでに ~/catkin_ws/src/oit_navigation_microbot_01 がある場合は以下のようなエラーが出るが問題はない。
-fatal: destination path 'oit_navigation_microbot_01' already exists and is not an empty directory.
-# この場合は最新版にアップデートしておく
-$ cd oit_navigation_microbot_01
-$ git pull origin master
-From https://github.com/KMiyawaki/oit_navigation_microbot_01
- * branch            master     -> FETCH_HEAD
-Already up to date.
-$ cd
-$ cd catkin_ws/src
-$ git clone https://github.com/KMiyawaki/my_microbot_apps.git
-# oit_navigation_microbot_01 と同様。
-$ cd
-$ cd catkin_ws
-$ catkin_make
-```
+## [Stage](<(http://wiki.ros.org/stage)>)のサンプルを実行する
 
 - ターミナルを全て閉じて開き直し、以下のコマンドを実行。
 
