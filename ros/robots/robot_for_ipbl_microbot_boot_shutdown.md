@@ -8,24 +8,24 @@
 
 - コネクタの向き（リード線の色）に注意して電池を接続する。
 
-![20200206_175420.jpg](./20200206_175420.jpg)
+![20200206_175420.jpg](./robot_for_ipbl_microbot_boot_shutdown/20200206_175420.jpg)
 
 ### Jetson NANO 用の電源を ON にする
 
 - DC-DC コンバータの LED（図中指差ししている箇所）が赤くなっていなければ電源ボタンを押す。
 
-![20200206_180918.jpg](./20200206_180918.jpg)
+![20200206_180918.jpg](./robot_for_ipbl_microbot_boot_shutdown/20200206_180918.jpg)
 
 - 液晶ディスプレイに IP アドレスその他の情報が表示されると、Jetson NANO の起動は完了している。
 
-![20200206_181008.jpg](./20200206_181008.jpg)
+![20200206_181008.jpg](./robot_for_ipbl_microbot_boot_shutdown/20200206_181008.jpg)
 
 ## ロボットの Wifi に接続する
 
 - 一般的な Wifi 接続と同じようにネットワークマネージャから接続する。
 - 自分のロボットのアクセスポイントに間違えないように接続すること。
 
-![2020-02-06_12-31-53.png](./2020-02-06_12-31-53.png)
+![2020-02-06_12-31-53.png](./robot_for_ipbl_microbot_boot_shutdown/2020-02-06_12-31-53.png)
 
 ## ロボットに`ssh`接続する
 
@@ -65,7 +65,7 @@ jetson@jetson-desktop:~$ # Jetson NANO にログインできた
 
 ## ロボットを動かす
 
-- [WEB ブラウザから動かす場合](./robot_for_ipbl_microbot.md)
+- [WEB ブラウザから動かす場合](./robot_for_ipbl_microbot_chrome.md)
 - [RViz から動かす場合](./robot_for_ipbl_microbot_rviz.md)
 
 ## ロボットの電源を OFF にする
@@ -85,17 +85,17 @@ jetson@jetson-desktop:~/catkin_ws/src/my_microbot_apps/launch/real$ shutdown -h 
 - リード線ではなく、コネクタをしっかりと掴んで引き抜く。
   - リード線を強引に引っ張ると、DC-DC コンバータからリード線が抜けてしまう。注意して引き抜くこと。
 
-![20200206_181707.jpg](20200206_181707.jpg)
+![20200206_181707.jpg](robot_for_ipbl_microbot_boot_shutdown/20200206_181707.jpg)
 
 - 充電器に電池を接続し、BATTERY ボタンを長押しする。
 - NiMH の LED が赤く点灯し充電が始まる。
   - 充電中は点滅する。詳細は[充電器のマニュアル](https://hitecrcd.co.jp/download/x1nano-jpn/)を参照。
 
-![20200206_182347.jpg](20200206_182347.jpg)
+![20200206_182347.jpg](robot_for_ipbl_microbot_boot_shutdown/20200206_182347.jpg)
 
 - NiMH の LED が緑色に点灯すると充電は完了している。
 
-![20200206_182317.jpg](20200206_182317.jpg)
+![20200206_182317.jpg](robot_for_ipbl_microbot_boot_shutdown/20200206_182317.jpg)
 
 ---
 
