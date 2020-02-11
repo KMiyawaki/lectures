@@ -13,7 +13,7 @@
 
 - 問題
 
-  - `HRC.pgm`はそのままでは Stage Simulator では使えない。理由は何であったか。[Stage Simulator （２）](stage_simulator_02.md)を見て思い出しなさい。
+  - `HRC.pgm`はそのままでは Stage Simulator では使えない。理由は何であったか。[Stage Simulator (2)](stage_simulator_02.md)を見て思い出しなさい。
 
 - 次のコマンドを実行して`HRC.pgm`を変換する。
 

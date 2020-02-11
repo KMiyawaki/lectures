@@ -1,4 +1,4 @@
-# ROS サービスとアクション（１）
+# ROS サービスとアクション(1)
 
 [ros/Home](Home.md)
 
@@ -176,7 +176,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ---
 
-- 編集箇所（２）
+- 編集箇所(2)
 
 ```text
 ## Generate services in the 'srv' folder

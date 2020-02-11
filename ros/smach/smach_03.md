@@ -12,7 +12,7 @@ SMACH からセンサデータを使う
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
   - [state_machine_wait_for_msg.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/state_machine_wait_for_msg.py)
 
-## 問題（１）
+## 問題(1)
 
 - 上記のプログラムはレーザレンジファインダやオドメトリのセンサデータを受信しメッセージを表示している。
 

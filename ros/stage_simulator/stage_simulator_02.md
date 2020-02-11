@@ -1,4 +1,4 @@
-# Stage Simulator （２）
+# Stage Simulator (2)
 
 [stage_simulator/Home](Home.md)
 

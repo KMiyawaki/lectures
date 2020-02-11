@@ -23,7 +23,7 @@ $ roslaunch localization.launch
 ## RViz にデータを表示する
 
 - `/base_scan`を可視化する。
-  - やり方は[Stage Simulator と ROS（１）](stage_simulator_and_ros_01.md)
+  - やり方は[Stage Simulator と ROS(1)](stage_simulator_and_ros_01.md)
   - ただし、`Fixed Frame`を変更する必要は**ない**。また、点が小さく見えにくいので`Size`を`0.05m`程度にする。
 
 ![2018-08-29_13-57-07.png](2018-08-29_13-57-07.png)

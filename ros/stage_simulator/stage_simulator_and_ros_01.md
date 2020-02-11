@@ -1,4 +1,4 @@
-# Stage Simulator と ROS（１）
+# Stage Simulator と ROS(1)
 
 [stage_simulator/Home](Home.md)
 

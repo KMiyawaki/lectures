@@ -1,4 +1,4 @@
-# Python オブジェクト指向（再）（１）
+# Python オブジェクト指向（再）(1)
 
 [python/oop/Home](Home.md)
 

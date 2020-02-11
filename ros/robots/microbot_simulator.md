@@ -57,7 +57,7 @@ $ roscd my_microbot_apps/launch/simulation
 $ roslaunch navigation.launch map_name:=my_map_01 use_teleop:=true
 ```
 
-- 起動後は[Stage Simulator （１）](../stage_simulator/stage_simulator_01.md)を参照。
+- 起動後は[Stage Simulator (1)](../stage_simulator/stage_simulator_01.md)を参照。
 
 ---
 

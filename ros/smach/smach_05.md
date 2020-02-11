@@ -6,7 +6,7 @@ SMACH の状態に外部からデータを与える
 
 ---
 
-## 実習（１）
+## 実習(1)
 
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし、`roscore`を起動してから実行しなさい。
   - [user_data_sample_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/user_data_sample_1.py)
@@ -34,7 +34,7 @@ $ rosrun smach_viewer smach_viewer.py
   - [user_data_sample_2.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/user_data_sample_2.py)
 - 次にプログラムの一番下にある`main_1`を`main_2`に変更して再度実行し、何が違うかを検証しなさい。
 
-## 問題（１）
+## 問題(1)
 
 - 上記のプログラムが何を行っているか類推してから、
   - `main_2`のコーヒーを緑茶に変更して再度実行しなさい。エラーが発生しプログラムが停止するはずなので、それを防ぎなさい。

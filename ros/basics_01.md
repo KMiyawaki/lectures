@@ -54,7 +54,7 @@
 
 ---
 
-## 実習（１）
+## 実習(1)
 
 - ROS マスターの起動。ターミナルで下記コマンドを実行。
 
@@ -191,7 +191,7 @@ $ roscd beginner_tutorials
 
 ---
 
-## 簡単なパブリッシャとサブスクライバの作成（２）
+## 簡単なパブリッシャとサブスクライバの作成(2)
 
 ```shell
 $ roscd beginner_tutorials
@@ -359,7 +359,7 @@ if __name__ == '__main__':
     listener()
 ```
 
-### 問題（３）
+### 問題(3)
 
 - ROS マスター、`talker.py`、`listener.py` を全て`Ctrl+C`で終了させなさい。
 
@@ -392,7 +392,7 @@ pubInt32 = rospy.Publisher('number', Int32, queue_size=10) # 追記
 
 ---
 
-- 修正（３）
+- 修正(3)
 
 ```python
 pub.publish(hello_str)
@@ -406,7 +406,7 @@ number = (number + 1) % 20 # 追記
 
 ---
 
-## 応用問題（３）
+## 応用問題(3)
 
 - `listener.py`を次のように編集し、実行結果を確認しなさい。
 - 修正（１）
@@ -423,7 +423,7 @@ rospy.Subscriber('chatter', String, callback)
 rospy.Subscriber('number', Int32, callbackInt32) # 追記
 ```
 
-- 修正（３）
+- 修正(3)
 
 ```python
 def callback(data):

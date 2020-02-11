@@ -6,7 +6,7 @@
 
 ---
 
-## 実習（１）
+## 実習(1)
 
 - まず、[シミュレータを起動する](../stage_simulator/stage_simulator_01.md)。
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
@@ -17,7 +17,7 @@
 $ rosrun smach_viewer smach_viewer.py
 ```
 
-## 問題（１）
+## 問題(1)
 
 - `TurnToPoint`クラスの`execute`を完成させて、ロボットが次の目標地点を向いてから自律移動するようにしなさい。
 

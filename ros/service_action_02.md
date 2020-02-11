@@ -1,4 +1,4 @@
-# ROS サービスとアクション（２）
+# ROS サービスとアクション(2)
 
 [ros/Home](Home.md)
 
@@ -52,7 +52,7 @@ $ roscd beginner_tutorials
 $ emacs CMakeLists.txt &
 ```
 
-- 編集箇所（１）
+- 編集箇所(1)
 
 ```text
 find_package(catkin REQUIRED
@@ -67,7 +67,7 @@ find_package(catkin REQUIRED
 
 ---
 
-- 編集箇所（２）
+- 編集箇所(2)
 
 ```text
 ## Generate added messages and ・・・
@@ -110,7 +110,7 @@ $ roscd beginner_tutorials
 $ emacs package.xml &
 ```
 
-- 修正箇所（１）
+- 修正箇所(1)
 
 ```xml
 <build_depend>std_msgs</build_depend>
@@ -125,7 +125,7 @@ $ emacs package.xml &
 
 ---
 
-- 修正箇所（２）
+- 修正箇所(2)
 
 ```xml
 <build_export_depend>std_msgs</build_export_depend>
@@ -138,7 +138,7 @@ $ emacs package.xml &
 <build_export_depend>actionlib_msgs</build_export_depend>
 ```
 
-- 修正箇所（３）
+- 修正箇所(3)
 
 ```xml
 <exec_depend>std_msgs</exec_depend>
@@ -222,7 +222,7 @@ $ rosrun begineer_tutorials do_dishes_client.py
 
 ---
 
-## 問題（１）
+## 問題(1)
 
 - `do_dishes_server.py`の`execute`メソッド冒頭に次のように追記しなさい。
 
@@ -235,7 +235,7 @@ if goal.dishwasher_id >= len(DoDishesServer.WASHERS) :
 
 - `do_dishes_server.py`で追記した上記のコードが呼び出されるように、`do_dishes_client.py`を修正しなさい。
 
-## 問題（２）
+## 問題(2)
 
 - `Python`の辞書を利用して、連番ではない`dishwasher_id`に対応させなさい。
 - 現状では`WASHERS`は配列なので、`0,1,2,3・・・`という`dishwasher_id`しか使えない。
