@@ -433,6 +433,12 @@ def callbackInt32(data): # 追記
     rospy.loginfo(rospy.get_caller_id() + 'I heard %d', data.data) # 追記
 ```
 
+## 応用問題(4)
+
+- 2 人組になり[複数の PC で ROS の通信を行う設定](./basics_02.md)を行い、双方で`talker.py`と`listener.py`を動かし通信しなさい。
+- `talker.py`が出力するデータを好きな文字に変えて再び実行し、通信相手にメッセージを届けなさい。
+- マスタとスレーブの役割を交代しながら実施すること。
+
 ---
 
 [ros/Home](Home.md)

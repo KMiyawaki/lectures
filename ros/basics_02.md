@@ -82,29 +82,38 @@ export ROS_MASTER_URI=http://△△△.△△△.△△△.△△△:11311 # △
 
 ```shell
 $ roscore
+... logging to /home/oit/.ros/log/2a158670-4cbe-11ea-ba79-0800273f4c45/roslaunch-oit-VirtualBox-2259.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+...
+process[rosout-1]: started with pid [2281]
+started core service [/rosout]
 ```
 
-- もう一つターミナルを開き`talker.py`を起動。
+- もう一つターミナルを開き下記コマンドを実行する。
+  - 文字列のデータ`hello`を毎秒 10 回送信するコマンドである。
 
 ```shell
-$ rosrun beginner_tutorials talker.py
+$ rostopic pub /chatter std_msgs/String "hello" -r 10
+# 出力はない
 ```
 
 ### スレーブ側の操作
 
 - すべてのターミナルを閉じる。
-- 新たにターミナルを開き`listener.py`を起動。
+- 新たにターミナルを開き下記コマンドを実行する。
 
 ```shell
-$ rosrun beginner_tutorials listener.py
+$ rostopic echo /chatter
+data: "hello"
+---
+data: "hello"
+---
+data: "hello"
 ```
 
----
-
-## 応用問題（１）
-
-- `talker.py`が出力するデータを好きな文字に変えて再び実行し、通信相手にメッセージを届けなさい。
-- マスタとスレーブの役割を交代しながら実施すること。
+- トピック`/chatter`に文字列のデータが流れていることがわかる。
 
 ---
 
