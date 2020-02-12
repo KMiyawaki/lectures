@@ -16,8 +16,8 @@ $ cd python/oop
 ```
 
 - 作成したディレクトリに次のベースファイルをダウンロードする。
-  - [app.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/02/app.py)
-  - [employee.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/02/employee.py)
+  - [app.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/python_oop_02/app.py)
+  - [employee.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/python_oop_02/employee.py)
 
 ## 問題（１）
 
