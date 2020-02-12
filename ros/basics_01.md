@@ -158,7 +158,7 @@ $ catkin_make
 
 ---
 
-## 簡単なパブリッシャとサブスクライバの作成（１）
+## 簡単なパブリッシャとサブスクライバの作成(1)
 
 - 参考：[ROS/Tutorials/WritingPublisherSubscriber(python)](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29)
 - ターミナルを開き、次のコマンドを実行
@@ -167,7 +167,7 @@ $ catkin_make
 $ roscd beginner_tutorials
 ```
 
-### 問題（１）
+### 問題(1)
 
 - カレントディレクトリを確認しなさい。
 
@@ -205,7 +205,7 @@ $ pwd
   - [talker.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py)
   - [listener.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py)
 
-### 問題（２）
+### 問題(2)
 
 - ダウンロードした 2 つのファイルにユーザの実行権限をつけなさい。
 
@@ -365,25 +365,25 @@ if __name__ == '__main__':
 
 ---
 
-## 応用問題（１）
+## 応用問題(1)
 
 - ROS の`std_msg`について調べなさい。
   - `String`以外にどのような型が用意されているか、[std_msgs](http://wiki.ros.org/std_msgs)を参考に調べなさい。
 
 ---
 
-## 応用問題（２）
+## 応用問題(2)
 
 - `talker.py`を次のように変更しなさい。
 
-- 修正（１）
+- 修正(1)
 
 ```python
 from std_msgs.msg import String
 from std_msgs.msg import Int32 # 追記
 ```
 
-- 修正（２）
+- 修正(2)
 
 ```python
 pub = rospy.Publisher('chatter', String, queue_size=10)
@@ -409,14 +409,14 @@ number = (number + 1) % 20 # 追記
 ## 応用問題(3)
 
 - `listener.py`を次のように編集し、実行結果を確認しなさい。
-- 修正（１）
+- 修正(1)
 
 ```python
 from std_msgs.msg import String
 from std_msgs.msg import Int32 #追記
 ```
 
-- 修正（２）
+- 修正(2)
 
 ```python
 rospy.Subscriber('chatter', String, callback)

@@ -1,4 +1,4 @@
-# [SMACH（スマッシュ）（1）](http://wiki.ros.org/smach)
+# [SMACH（スマッシュ）(1)](http://wiki.ros.org/smach)
 
 階層構造のあるステートマシンを作成するためのノード
 

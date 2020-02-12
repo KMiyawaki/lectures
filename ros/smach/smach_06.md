@@ -1,4 +1,4 @@
-# [SMACH（スマッシュ）（6）](http://wiki.ros.org/smach)
+# [SMACH（スマッシュ）(6)](http://wiki.ros.org/smach)
 
 階層化された状態遷移を使い、複数地点のナビゲーションを行う
 

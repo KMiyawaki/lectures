@@ -1,4 +1,4 @@
-# [SMACH（スマッシュ）（5）](http://wiki.ros.org/smach)
+# [SMACH（スマッシュ）(5)](http://wiki.ros.org/smach)
 
 SMACH の状態に外部からデータを与える
 
@@ -28,7 +28,7 @@ $ rosrun smach_viewer smach_viewer.py
 
 ![smach_user_data.svg](./smach_05/smach_user_data.svg)
 
-## 実習（２）
+## 実習(2)
 
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし、`roscore`を起動してから実行しなさい。
   - [user_data_sample_2.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_05/user_data_sample_2.py)

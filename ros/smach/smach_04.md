@@ -1,4 +1,4 @@
-# [SMACH（スマッシュ）（4）](http://wiki.ros.org/smach)
+# [SMACH（スマッシュ）(4)](http://wiki.ros.org/smach)
 
 SMACH から Action を使う
 
@@ -16,7 +16,7 @@ SMACH から Action を使う
 
 - `smach`から`action`クライアントの機能を簡単に呼び出すための状態。
 
-## 実習（２）
+## 実習(2)
 
 - 上記プログラムを別名でコピーする。
 

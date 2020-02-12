@@ -4,7 +4,7 @@
 
 ---
 
-## 問題（1）（復習）ROS の node の起動
+## 問題(1)（復習）ROS の node の起動
 
 - `beginner_tutorials`パッケージの`talker.py`を起動し、動作が確認できたら終了させなさい。
   - 忘れた人は [ROS(1)](basics_01.md) を参照しなさい。
@@ -29,7 +29,7 @@
 
 ---
 
-## 実習（1）（準備運動）
+## 実習(1)（準備運動）
 
 - `talker.py`をコピーし`talker_param.py`を作成して下記の変更を加えなさい。
 - 関数`talker()`に仮引数`text`を追加しなさい。`text`には文字列が与えられることを想定しています。
@@ -57,7 +57,7 @@ rospy.init_node('talker_param', anonymous=False)
 
 ---
 
-## 実習（2）
+## 実習(2)
 
 - `rospy.init_node('talker_param', anonymous=False)`の下に次のコードを追加しなさい。
 
@@ -142,7 +142,7 @@ Happy Halloween
 
 ---
 
-## 問題（2）
+## 問題(2)
 
 - パラメータを本番用のプログラムに直接書いてはいけない理由は何か？
 

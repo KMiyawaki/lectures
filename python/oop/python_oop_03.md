@@ -16,7 +16,7 @@
 - [前頁](./python_oop_02.md)で作成したディレクトリに次のベースファイルをダウンロードする。
   - [leader.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/python_oop_03/leader.py)
 
-## 問題（１）
+## 問題(1)
 
 - `Leader`クラスに部下の最大人数を表す`max_member`フィールドを追加しなさい。
 - 初期値は`3`となるようにコンストラクタに引数を加えなさい。

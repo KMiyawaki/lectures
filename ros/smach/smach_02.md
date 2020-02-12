@@ -1,4 +1,4 @@
-# [SMACH（スマッシュ）（2）](http://wiki.ros.org/smach)
+# [SMACH（スマッシュ）(2)](http://wiki.ros.org/smach)
 
 [smach/Home](Home.md)
 

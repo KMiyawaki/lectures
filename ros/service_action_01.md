@@ -118,7 +118,7 @@ $ rosservice call /turtle1/teleport_absolute 5 2 0
 $ rosservice call clear
 ```
 
-### 問題（１）
+### 問題(1)
 
 - 亀をいろいろな場所にテレポートさせ、画面の座標系について理解しましょう。
   - どこが原点ですか?
@@ -163,7 +163,7 @@ $ roscd beginner_tutorials
 $ emacs CMakeLists.txt &
 ```
 
-- 編集箇所（１）
+- 編集箇所(1)
 
 ```text
 find_package(catkin REQUIRED COMPONENTS
@@ -199,7 +199,7 @@ add_service_files(
 
 ---
 
-- 編集箇所（３）
+- 編集箇所(3)
 
 ```text
 ## Generate added messages and・・・

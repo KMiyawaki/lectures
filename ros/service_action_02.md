@@ -80,7 +80,7 @@ generate_messages(
 
 ---
 
-- 編集箇所（３）
+- 編集箇所(3)
 
 ```text
 ## Generate actions in the 'ac・・・

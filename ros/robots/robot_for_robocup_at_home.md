@@ -1,4 +1,4 @@
-# 実機を動かす（1）
+# 実機を動かす(1)
 
 [ros/robots/Home](Home.md)
 

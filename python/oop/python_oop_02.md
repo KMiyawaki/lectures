@@ -19,12 +19,12 @@ $ cd python/oop
   - [app.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/python_oop_02/app.py)
   - [employee.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/python/oop/python_oop_02/employee.py)
 
-## 問題（１）
+## 問題(1)
 
 - `Employee`クラスに月給を表す`salary`フィールドを新たに作成しなさい。
 - 初期値は`230000`となるようにコンストラクタに引数を加えなさい。
 
-## 問題（２）
+## 問題(2)
 
 - `Employee`クラスに月給に基づいてボーナスを計算する`get_bonus`メソッドを作成しなさい。引数は実数の`month`。返却値は実数で`salary`×`month`で計算される賞与額を返す。
 - `Employee`クラスに入社何年目かを計算する`get_experience`メソッドを作成しなさい。引数は整数の`year`。返却値は整数で`year`から`join.year`を引いた年数を返す。
