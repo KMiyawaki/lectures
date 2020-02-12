@@ -37,13 +37,13 @@ $ roslaunch navigation.launch
 
 - RViz 上の`Add`ボタンで`Map`を追加し、`topic`を`/move_base/local_costmap/costmap`に、`color scheme`を`costmap`にする。
 
-![2017-12-18_17-41-21.png](2017-12-18_17-41-21.png)
+![2017-12-18_17-41-21.png](./stage_simulator_and_ros_navigation/2017-12-18_17-41-21.png)
 
 - RViz 上の`Add`ボタンで`Path`を追加し、`topic`を`/move_base/DWAPlannerROS/global_plan`に、`color`を黄色にする。
 
-![2017-12-18_17-45-40.png](2017-12-18_17-45-40.png)
+![2017-12-18_17-45-40.png](./stage_simulator_and_ros_navigation/2017-12-18_17-45-40.png)
 
-![2017-12-18_17-46-11.png](2017-12-18_17-46-11.png)
+![2017-12-18_17-46-11.png](./stage_simulator_and_ros_navigation/2017-12-18_17-46-11.png)
 
 - 同じ要領で`Path`を追加し、`topic`を`/move_base/DWAPlannerROS/local_plan`に、`color`を赤にする。
 - 同じ要領で`Path`を追加し、`topic`を`/move_base/NavfnROS/plan`に、`color`を青にする。

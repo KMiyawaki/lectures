@@ -9,9 +9,9 @@
 - [amcl](http://wiki.ros.org/amcl)を使う。
 - 全てのターミナルと RViz のウィンドウを閉じ、新たにターミナルを開く。
 - 下記ファイルを`oit_navigation_test/launch/includes`にダウンロード。
-  - [amcl.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/amcl.launch)
+  - [amcl.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_02/amcl.launch)
 - 下記ファイルを`oit_navigation_test/launch/simulation`にダウンロード。
-  - [localization.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/localization.launch)
+  - [localization.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_02/localization.launch)
 - 実行
 
 ```shell
@@ -26,27 +26,27 @@ $ roslaunch localization.launch
   - やり方は[Stage Simulator と ROS(1)](stage_simulator_and_ros_01.md)
   - ただし、`Fixed Frame`を変更する必要は**ない**。また、点が小さく見えにくいので`Size`を`0.05m`程度にする。
 
-![2018-08-29_13-57-07.png](2018-08-29_13-57-07.png)
+![2018-08-29_13-57-07.png](./stage_simulator_and_ros_02/2018-08-29_13-57-07.png)
 
 - `Add`ボタンをクリックして`by display type`から`Map`を選択。`topic`を`/map`にする。
 
-![2017-12-18_16-49-15.png](2017-12-18_16-49-15.png)
+![2017-12-18_16-49-15.png](./stage_simulator_and_ros_02/2017-12-18_16-49-15.png)
 
 - `Add`ボタンをクリックして`by display type`から`Axes`を選択。`Length`を`0.5`にする。
 
-![2017-12-18_16-58-09.png](2017-12-18_16-58-09.png)
+![2017-12-18_16-58-09.png](./stage_simulator_and_ros_02/2017-12-18_16-58-09.png)
 
 - `Add`ボタンをクリックして`by display type`から`TF`を選択。
 
-![2017-12-18_17-00-32.png](2017-12-18_17-00-32.png)
+![2017-12-18_17-00-32.png](./stage_simulator_and_ros_02/2017-12-18_17-00-32.png)
 
 - `Add`ボタンをクリックして`by display type`から`PoseArray`を選択。`topic`を`/particlecloud`にする。
 
-![2017-12-18_17-02-13.png](2017-12-18_17-02-13.png)
+![2017-12-18_17-02-13.png](./stage_simulator_and_ros_02/2017-12-18_17-02-13.png)
 
 - `/particlecloud`トピックの色を緑にする。
 
-![2018-08-29_14-22-58.png](2018-08-29_14-22-58.png)
+![2018-08-29_14-22-58.png](./stage_simulator_and_ros_02/2018-08-29_14-22-58.png)
 
 ## RViz の可視化設定を保存する
 

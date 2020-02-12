@@ -16,7 +16,7 @@ $ mkdir -p launch/simulation
 ```
 
 - 下記ファイルをダウンロード（右クリック->「リンク先を保存」）し`catkin_ws/src/oit_navigation_test/launch/simulation/`に保存。
-  - [stage.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/stage.launch)
+  - [stage.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_01/stage.launch)
 - 次のコマンドで`stage.launch`を実行
 
 ```shell
@@ -75,7 +75,7 @@ $ rosrun  mouse_teleop mouse_teleop.py mouse_vel:=cmd_vel
 
 - Mouse Teleop ウィンドウ上でマウスをドラッグすると前進・旋回速度をロボットに与えられる。
 
-![2020-02-07_13-14-59.png](./2020-02-07_13-14-59.png)
+![2020-02-07_13-14-59.png](./stage_simulator_and_ros_01/2020-02-07_13-14-59.png)
 
 - Mouse Teleop はウィンドウの「☓」マークをクリックしないと終了できないので、注意。
 
@@ -91,11 +91,11 @@ $ mkdir -p launch/includes
 
 - `config`ディレクトリに下記を保存
 
-  - [my_elecom.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/my_elecom.yaml)
+  - [my_elecom.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_01/my_elecom.yaml)
 
 - `lanch/includes`ディレクトリに下記を保存
 
-  - [teleop_joy.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros/teleop_joy.launch)
+  - [teleop_joy.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_01/teleop_joy.launch)
 
 - `teleop_joy.launch`を実行
   - PC にジョイパッドを接続してから下記コマンドを入力。
@@ -121,19 +121,19 @@ $ rviz
 
 - 左の方、`Displays`にある`Fixed Frame`を「`odom`」にする。
 
-![2018-08-29_13-36-48.png](./2018-08-29_13-36-48.png)
+![2018-08-29_13-36-48.png](./stage_simulator_and_ros_01/2018-08-29_13-36-48.png)
 
 - `Add`ボタンをクリックして`By display type`から`LaserScan`を選択する。
 
-![2017-12-18_14-00-25.png](./2017-12-18_14-00-25.png)
+![2017-12-18_14-00-25.png](./stage_simulator_and_ros_01/2017-12-18_14-00-25.png)
 
 - `Topic`名を`/base_scan`にする（前述した`rostopic list`の結果を思い出すこと）
 
-![2017-12-18_14-06-26.png](./2017-12-18_14-06-26.png)
+![2017-12-18_14-06-26.png](./stage_simulator_and_ros_01/2017-12-18_14-06-26.png)
 
 - 赤い点でレーザのデータが表示されているのが分かる。
 
-![2018-08-29_13-38-47.png](./2018-08-29_13-38-47.png)
+![2018-08-29_13-38-47.png](./stage_simulator_and_ros_01/2018-08-29_13-38-47.png)
 
 ## 問題
 
