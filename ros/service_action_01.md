@@ -163,7 +163,7 @@ $ roscd beginner_tutorials
 $ emacs CMakeLists.txt &
 ```
 
-- 編集箇所(1)
+### 編集箇所(1)
 
 ```text
 find_package(catkin REQUIRED COMPONENTS
@@ -176,7 +176,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ---
 
-- 編集箇所(2)
+### 編集箇所(2)
 
 ```text
 ## Generate services in the 'srv' folder
@@ -199,7 +199,7 @@ add_service_files(
 
 ---
 
-- 編集箇所(3)
+### 編集箇所(3)
 
 ```text
 ## Generate added messages and・・・

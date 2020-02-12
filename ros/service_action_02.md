@@ -52,7 +52,7 @@ $ roscd beginner_tutorials
 $ emacs CMakeLists.txt &
 ```
 
-- 編集箇所(1)
+### 編集箇所(1-1)
 
 ```text
 find_package(catkin REQUIRED
@@ -67,7 +67,7 @@ find_package(catkin REQUIRED
 
 ---
 
-- 編集箇所(2)
+### 編集箇所(1-2)
 
 ```text
 ## Generate added messages and ・・・
@@ -80,7 +80,7 @@ generate_messages(
 
 ---
 
-- 編集箇所(3)
+### 編集箇所(1-3)
 
 ```text
 ## Generate actions in the 'ac・・・
@@ -110,7 +110,7 @@ $ roscd beginner_tutorials
 $ emacs package.xml &
 ```
 
-- 修正箇所(1)
+### 編集箇所(2-1)
 
 ```xml
 <build_depend>std_msgs</build_depend>
@@ -125,7 +125,7 @@ $ emacs package.xml &
 
 ---
 
-- 修正箇所(2)
+### 編集箇所(2-2)
 
 ```xml
 <build_export_depend>std_msgs</build_export_depend>
@@ -138,7 +138,7 @@ $ emacs package.xml &
 <build_export_depend>actionlib_msgs</build_export_depend>
 ```
 
-- 修正箇所(3)
+### 編集箇所(2-3)
 
 ```xml
 <exec_depend>std_msgs</exec_depend>
