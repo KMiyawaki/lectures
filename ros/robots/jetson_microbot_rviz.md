@@ -8,7 +8,7 @@
 
 - ネイティブな Linux に ROS その他の必要なソフトを[インストール](https://github.com/KMiyawaki/setup_robot_programming)する。
 - 仮想環境を利用する場合、ネットワークアダプタの設定をブリッジモードにする必要がある。
-  - ただし、Virtual Box は通信速度が遅く、実用に耐えない。
+  - Virtual Box ではアダプタのプロミスキャス・モードを「すべて許可」にすること。
   - VMWare は利用可能。
 
 ## ロボットを起動する
