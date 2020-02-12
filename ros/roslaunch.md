@@ -10,7 +10,6 @@
 
 - ROS は複数の`node`を連携させて一つのシステムとして動作させる。
 - 一つのロボットを動作させるノード群の構成例。
-
   - ロボット全体の統合＝状態遷移に基づくタスク遂行
   - 音声対話
   - 台車のモータコントローラの ROS ドライバ
@@ -21,7 +20,6 @@
     - 物体の認識
     - 人間の姿勢推定と動作認識
     - 人間の顔、性別、年齢認識
-
 - 各パッケージに複数の`node`が含まれる。他の ROS の`node`に依存するものもある。
 - **一つのシステムにつき大量の`node`を実行する必要がある。全ての`node`を逐一`rosrun`することは不可能。**
 
@@ -44,7 +42,6 @@ $ roslaunch [パッケージ名] launchファイル名
 ## 実習(1)
 
 - **実習に入る前に必ず全ての端末を閉じなさい。**
-
 - 端末を開き`roscore`を起動。以降この端末を「端末(1)」とする。
 - 端末を開き`rosrun turtlesim turtlesim_node`で亀のシミュレータを起動。以降この端末を「端末(2)」とする。
 - 端末を開き`rosrun turtlesim turtle_teleop_key`を実行。以降この端末を「端末(3)」とする。
@@ -84,7 +81,6 @@ $ roslaunch beginner_tutorials turtle.launch
 ```
 
 - **roslaunch した端末をクリックしてからでないと矢印キーでのコントロールはできない。**
-
 - 亀の移動ができたら`Ctrl+C`で終了させ、端末を閉じなさい。
 - さらに、次のやり方でも`roslaunch`できることを確認しなさい。
 
@@ -186,7 +182,8 @@ data: "Good Bye 1535068295.05"
 
 ## 実習(4)
 
-- `pair.launch`を編集し、`talker_param.py`を起動している`node`タグを次のように変更しなさい。**param タグを追加するために node の終了タグが必要になったことに注意**
+- `pair.launch`を編集し、`talker_param.py`を起動している`node`タグを次のように変更しなさい。
+  - **param タグを追加するために node の終了タグが必要になったことに注意**
 
 ```xml
   <node name="talker_param" type="talker_param.py" pkg="beginner_tutorials" />
