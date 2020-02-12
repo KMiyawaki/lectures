@@ -6,7 +6,7 @@
 
 ## `oit_navigation`パッケージ
 
-[oit_navigation](https://bitbucket.org/oit-trial/oit_navigation/src/master/)は台車と北陽の URG を使い、 ROS のナビゲーションメタパッケージを起動する。
+oit_navigation は台車と北陽の URG を使い、 ROS のナビゲーションメタパッケージを起動する。
 このチュートリアルで扱う台車は [RoboClaw](http://www.ionmc.com/RoboClaw-2x30A-Motor-Controller_p_9.html) コントローラを使った２輪ロボットである。
 
 ## JoyStick teleop
@@ -85,7 +85,7 @@ roslaunch navigation.launch
 
 ### 問題
 
-- 作成した地図を[oit_navigation](https://bitbucket.org/oit-trial/oit_navigation/src/master/)リポジトリに`push`しましょう。
+- 作成した地図を oit_navigation リポジトリに`push`しましょう。
 
 ---
 

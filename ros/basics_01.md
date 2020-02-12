@@ -60,7 +60,7 @@
 
 ```shell
 $ roscore
-... logging to /home/***/.ros/log/9474a7ce-4941-11ea-a3d0-000c2924787d/roslaunch-ubuntu-7288.log
+... logging to /home/[user name]/.ros/log/9474a7ce-4941-11ea-a3d0-000c2924787d/roslaunch-ubuntu-7288.log
 Checking log directory for disk usage. This may take awhile.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
@@ -103,22 +103,22 @@ started core service [/rosout]
 $ mkdir -p ~/catkin_ws/src
 $ cd ~/catkin_ws/src
 $ catkin_init_workspace
-Creating symlink "/home/oit/catkin_ws/src/CMakeLists.txt" pointing to "/opt/ros/melodic/share/catkin/cmake/toplevel.cmake"
+Creating symlink "/home/[user name]/catkin_ws/src/CMakeLists.txt" pointing to "/opt/ros/melodic/share/catkin/cmake/toplevel.cmake"
 $ cd ~/catkin_ws/
 $ catkin_make
-Base path: /home/oit/catkin_ws
-Source space: /home/oit/catkin_ws/src
-Build space: /home/oit/catkin_ws/build
-Devel space: /home/oit/catkin_ws/devel
-Install space: /home/oit/catkin_ws/install
+Base path: /home/[user name]/catkin_ws
+Source space: /home/[user name]/catkin_ws/src
+Build space: /home/[user name]/catkin_ws/build
+Devel space: /home/[user name]/catkin_ws/devel
+Install space: /home/[user name]/catkin_ws/install
 ####
-#### Running command: "cmake /home/oit/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/oit/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/oit/catkin_ws/install -G Unix Makefiles" in "/home/oit/catkin_ws/build"
+#### Running command: "cmake /home/[user name]/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/[user name]/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/[user name]/catkin_ws/install -G Unix Makefiles" in "/home/[user name]/catkin_ws/build"
 ####
 -- The C compiler identification is GNU 7.4.0
 ...
--- Build files have been written to: /home/oit/catkin_ws/build
+-- Build files have been written to: /home/[user name]/catkin_ws/build
 ####
-#### Running command: "make -j2 -l2" in "/home/oit/catkin_ws/build"
+#### Running command: "make -j2 -l2" in "/home/[user name]/catkin_ws/build"
 ####
 ```
 
@@ -148,7 +148,7 @@ Created file beginner_tutorials/CMakeLists.txt
 Created file beginner_tutorials/package.xml
 Created folder beginner_tutorials/include/beginner_tutorials
 Created folder beginner_tutorials/src
-Successfully created files in /home/oit/catkin_ws/src/beginner_tutorials. Please adjust the values in package.xml.
+Successfully created files in /home/[user name]/catkin_ws/src/beginner_tutorials. Please adjust the values in package.xml.
 $ cd ~/catkin_ws
 $ catkin_make
 ```

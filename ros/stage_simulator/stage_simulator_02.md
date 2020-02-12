@@ -16,7 +16,7 @@ Created file oit_navigation_test/package.xml
 Created file oit_navigation_test/CMakeLists.txt
 Created folder oit_navigation_test/include/oit_navigation_test
 Created folder oit_navigation_test/src
-Successfully created files in /home/oit/catkin_ws/src/oit_navigation_test. Please adjust the values in package.xml.
+Successfully created files in /home/[user name]/catkin_ws/src/oit_navigation_test. Please adjust the values in package.xml.
 ```
 
 - `Stage`用の仮想環境を設定するファイルを格納するディレクトリを作成する
@@ -43,7 +43,7 @@ $ mkdir -p maps/simulator_files
 
 ```shell
 $ pwd
-/home/oit/catkin_ws/src/oit_navigation_test
+/home/[user name]/catkin_ws/src/oit_navigation_test
 $ sudo apt install tree
 パッケージリストを読み込んでいます... 完了
 依存関係ツリーを作成しています

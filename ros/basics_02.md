@@ -82,7 +82,7 @@ export ROS_MASTER_URI=http://△△△.△△△.△△△.△△△:11311 # △
 
 ```shell
 $ roscore
-... logging to /home/oit/.ros/log/2a158670-4cbe-11ea-ba79-0800273f4c45/roslaunch-oit-VirtualBox-2259.log
+... logging to /home/[user name]/.ros/log/2a158670-4cbe-11ea-ba79-0800273f4c45/roslaunch-[user name]-VirtualBox-2259.log
 Checking log directory for disk usage. This may take awhile.
 Press Ctrl-C to interrupt
 Done checking log file disk usage. Usage is <1GB.
