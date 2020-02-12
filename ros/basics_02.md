@@ -23,7 +23,22 @@
   - `lo` (ローカルループバック)は自分自身のこと。
   - 有線と無線が接続されている場合は両方のアドレスが出ることがある。
 
-![console_02-min.png](./basics_02/console_02-min.png)
+```shell
+$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (ローカルループバック)
+        RX packets 2467  bytes 266047 (266.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2467  bytes 266047 (266.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.***.***  netmask 255.255.255.0  broadcast 192.168.***.***
+        ...
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
 
 ---
 
