@@ -218,7 +218,12 @@ $ chmod u+x listener.py
 
 - 権限が付与されたことを`ls -l`で確認すること。
 
-![console_01-min.png](./basics_01/console_01-min.png)
+```shell
+$ ls -l
+合計 8
+-rwxrw-r-- 1 robocup2020 robocup2020 2406  2月 12 12:43 listener.py
+-rwxrw-r-- 1 robocup2020 robocup2020 2217  2月 12 12:43 talker.py
+```
 
 ---
 
