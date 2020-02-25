@@ -393,6 +393,7 @@ from std_msgs.msg import Int32 # 追記
 ```python
 pub = rospy.Publisher('chatter', String, queue_size=10)
 pubInt32 = rospy.Publisher('number', Int32, queue_size=10) # 追記
+number = 0 # 追記
 ```
 
 ---
@@ -401,8 +402,8 @@ pubInt32 = rospy.Publisher('number', Int32, queue_size=10) # 追記
 
 ```python
 pub.publish(hello_str)
-number = (number + 1) % 20 # 追記
 pubInt32.publish(number) # 追記
+number = (number + 1) % 20 # 追記
 ```
 
 - `talker.py`を実行しなさい。
