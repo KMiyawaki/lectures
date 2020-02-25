@@ -54,7 +54,7 @@ Serial: 2018101900004171
 - 新たな端末を開き（以降これをクライアント端末と表記する）、以下のコマンドを実行する。
 
 ```shell
-$ roscd my_microbot_apps/launch/include
+$ roscd my_microbot_apps/launch/includes
 $ pwd
 /home/[user name]/catkin_ws/src/my_microbot_apps/launch/includes
 $ roslaunch teleop_simple.launch
