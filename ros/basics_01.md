@@ -401,8 +401,8 @@ pubInt32 = rospy.Publisher('number', Int32, queue_size=10) # 追記
 
 ```python
 pub.publish(hello_str)
-pubInt32.publish(number) # 追記
 number = (number + 1) % 20 # 追記
+pubInt32.publish(number) # 追記
 ```
 
 - `talker.py`を実行しなさい。
