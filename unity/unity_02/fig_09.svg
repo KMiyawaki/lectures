@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 243.68126 172.24381"
+   height="651"
+   width="921">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker1127"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path867" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path834" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <image
+     xlink:href="fig_07_06.png"
+     y="-2.6645353e-14"
+     x="0"
+     id="image1161"
+     preserveAspectRatio="none"
+     height="172.24379"
+     width="243.68129" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot38"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     transform="matrix(0.26458333,0,0,0.26458333,162.08715,-47.934988)"><flowRegion
+       id="flowRegion40"><rect
+         id="rect42"
+         width="412.14285"
+         height="129.28572"
+         x="-55"
+         y="124.36342" /></flowRegion><flowPara
+       id="flowPara44" /></flowRoot>  <rect
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.43091372;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect848-9-2"
+     width="19.52009"
+     height="7.4274092"
+     x="11.474151"
+     y="138.1992"
+     ry="2.0042226" />
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.25220981;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+     clip-path="none"
+     d="m 33.074414,153.48921 c 0,0.71502 0.83915,1.295 1.8737,1.295 h 13.23621 v 0 h 6.47535 2.44233 c 1.03705,0 1.87372,-0.57998 1.87372,-1.295 v -3.23748 0 -1.9425 0 c 0,-0.71675 -0.83667,-1.29499 -1.87372,-1.29499 H 41.09538 l -10.040466,-3.97173 5.019306,3.97173 h -1.126106 c -1.03455,0 -1.8737,0.57824 -1.8737,1.29499 v 0 1.9425 0 z"
+     id="path869-4-4" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333406px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+     x="34.995171"
+     y="152.56711"
+     id="text888-0-6"><tspan
+       y="152.56711"
+       x="34.995171"
+       id="tspan29">①クリック</tspan></text>
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27993819;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+     clip-path="none"
+     d="m 36.602018,99.147658 c 0,0.880882 0.83915,1.595392 1.87371,1.595392 h 13.23623 v 0 h 6.475353 2.44233 c 1.03705,0 1.87372,-0.71451 1.87372,-1.595392 v -3.98849 0 -2.3931 0 c 0,-0.883016 -0.83667,-1.595386 -1.87372,-1.595386 H 48.856348 l 7.438003,-8.610384 -12.459163,8.610384 h -5.35946 c -1.03456,0 -1.87371,0.71237 -1.87371,1.595386 v 0 2.3931 0 z"
+     id="path869-4-4-3" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333406px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+     x="39.163574"
+     y="97.57267"
+     id="text888-0-6-1"><tspan
+       y="97.57267"
+       x="39.163574"
+       id="tspan91">②ドラッグ</tspan></text>
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.53636575;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect848-9-2-6"
+     width="22.945101"
+     height="9.7897282"
+     x="75.563728"
+     y="128.50044"
+     ry="2.6416743" />
+  <rect
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.56700301;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect848-9-2-6-9"
+     width="29.675024"
+     height="8.4589834"
+     x="13.135343"
+     y="50.892807"
+     ry="2.2825842" />
+  <path
+     id="path48"
+     d="M 89.336599,128.0149 39.623498,55.410616"
+     style="fill:none;stroke:#ff0000;stroke-width:0.75947893;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1127)" />
+</svg>

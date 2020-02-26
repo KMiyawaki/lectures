@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="1138"
+   height="652"
+   viewBox="0 0 301.09585 172.50838"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <marker
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path834"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <image
+     xlink:href="fig_11.png"
+     y="0"
+     x="0"
+     id="image29"
+     preserveAspectRatio="none"
+     height="172.50836"
+     width="301.09589" />
+  <flowRoot
+     transform="matrix(0.26458333,0,0,0.26458333,131.18798,-6.550549)"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     id="flowRoot38"
+     xml:space="preserve"><flowRegion
+       id="flowRegion40"><rect
+         y="124.36342"
+         x="-55"
+         height="129.28572"
+         width="412.14285"
+         id="rect42" /></flowRegion><flowPara
+       id="flowPara44" /></flowRoot>  <rect
+     ry="2.2937167"
+     y="128.21931"
+     x="231.08939"
+     height="8.5002375"
+     width="9.6154108"
+     id="rect848-9-8"
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.32354164;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <rect
+     ry="1.2800555"
+     y="48.350254"
+     x="12.168682"
+     height="4.743732"
+     width="29.877522"
+     id="rect848"
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.42605248;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     id="path869-4"
+     d="m 17.538371,38.926929 c 0,-0.82949 0.881234,-1.50231 1.967654,-1.50231 H 33.40585 v 0 h 6.799977 2.564782 c 1.089051,0 1.967656,0.67282 1.967656,1.50231 v 3.75578 0 2.25347 0 c 0,0.83149 -0.878605,1.5023 -1.967656,1.5023 H 30.407075 l -6.388104,1.7419 1.115211,-1.7419 h -5.628157 c -1.08642,0 -1.967654,-0.67081 -1.967654,-1.5023 v 0 -2.25347 0 z"
+     clip-path="none"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27837515;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     id="text888-0"
+     y="43.524712"
+     x="20.625362"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+     xml:space="preserve"><tspan
+       y="43.524712"
+       x="20.625362"
+       id="tspan28-1"
+       style="stroke-width:0.26458335">①クリック</tspan></text>
+  <path
+     id="path869-4-2"
+     d="m 229.61001,118.31123 c 0,-0.82949 0.88123,-1.50231 1.96765,-1.50231 h 13.89983 v 0 h 6.79998 2.56478 c 1.08905,0 1.96765,0.67282 1.96765,1.50231 v 3.75578 0 2.25347 0 c 0,0.83149 -0.8786,1.5023 -1.96765,1.5023 h -12.36354 l -6.3881,1.7419 1.11521,-1.7419 h -5.62816 c -1.08642,0 -1.96765,-0.67081 -1.96765,-1.5023 v 0 -2.25347 0 z"
+     clip-path="none"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27837515;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     id="text888-0-4"
+     y="122.90901"
+     x="232.69699"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+     xml:space="preserve"><tspan
+       y="122.90901"
+       x="232.69699"
+       id="tspan28-1-7"
+       style="stroke-width:0.26458335">②クリック</tspan></text>
+  <rect
+     ry="2.230063"
+     y="76.686111"
+     x="250.36093"
+     height="8.2643442"
+     width="29.568449"
+     id="rect848-9-8-2"
+     style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.55943447;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  <path
+     id="path869-4-2-4"
+     d="m 248.76361,66.660092 c 0,-0.82949 0.88123,-1.50231 1.96765,-1.50231 h 13.89983 v 0 h 6.79998 2.56478 c 1.08905,0 1.96765,0.67282 1.96765,1.50231 v 3.75578 0 2.25347 0 c 0,0.83149 -0.8786,1.5023 -1.96765,1.5023 h -12.36354 l -6.3881,1.7419 1.11521,-1.7419 h -5.62816 c -1.08642,0 -1.96765,-0.67081 -1.96765,-1.5023 v 0 -2.25347 0 z"
+     clip-path="none"
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27837515;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+  <text
+     id="text888-0-4-8"
+     y="71.257874"
+     x="251.85059"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333359px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335"
+     xml:space="preserve"><tspan
+       y="71.257874"
+       x="251.85059"
+       id="tspan28-1-7-2"
+       style="stroke-width:0.26458335">③クリック</tspan></text>
+</svg>

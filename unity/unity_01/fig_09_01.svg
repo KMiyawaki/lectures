@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 301.09582 194.73336"
+   height="194.73334mm"
+   width="301.09583mm">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(176.47104,-19.060492)"
+     id="layer1">
+    <image
+       xlink:href="fig_09_01.png"
+       width="301.09583"
+       height="194.73334"
+       preserveAspectRatio="none"
+       id="image33"
+       x="-176.47104"
+       y="19.060492" />
+    <rect
+       ry="2.3908255"
+       y="50.626022"
+       x="-170.18045"
+       height="8.8601131"
+       width="19.252829"
+       id="rect848"
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.46740958;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       id="path869"
+       d="m -159.69447,39.677212 c 0,-1.076327 1.19212,-1.949377 2.66181,-1.949377 h 18.80347 v 0 h 9.19891 3.4696 c 1.47325,0 2.66182,0.87305 2.66182,1.949377 v 4.873442 0 2.924066 0 c 0,1.078933 -1.18857,1.949377 -2.66182,1.949377 h -16.7252 l -8.64174,2.260257 1.50865,-2.260257 h -7.61369 c -1.46969,0 -2.66181,-0.870444 -2.66181,-1.949377 v 0 -2.924066 0 z"
+       clip-path="none"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.36881763;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text888"
+       y="45.998474"
+       x="-156.62881"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="45.998474"
+         x="-156.62881"
+         id="tspan886">①クリック</tspan></text>
+    <rect
+       ry="1.9069279"
+       y="198.27391"
+       x="61.362007"
+       height="7.0668468"
+       width="33.147205"
+       id="rect848-6"
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.54773057;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       id="path869-5"
+       d="m 85.742351,186.26677 c 0,-1.07633 1.192121,-1.94938 2.661815,-1.94938 h 18.803474 v 0 h 9.19891 3.4696 c 1.47325,0 2.66181,0.87305 2.66181,1.94938 v 4.87344 0 2.92407 0 c 0,1.07893 -1.18856,1.94937 -2.66181,1.94937 h -16.72521 l -8.64173,2.26026 1.508641,-2.26026 h -7.613685 c -1.469694,0 -2.661815,-0.87044 -2.661815,-1.94937 v 0 -2.92407 0 z"
+       clip-path="none"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.36881763;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text888-4"
+       y="192.58803"
+       x="88.808006"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="192.58803"
+         x="88.808006"
+         id="tspan886-5">②クリック</tspan></text>
+    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,11.496524,27.015234)"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       id="flowRoot38"
+       xml:space="preserve"><flowRegion
+         id="flowRegion40"><rect
+           y="124.36342"
+           x="-55"
+           height="129.28572"
+           width="412.14285"
+           id="rect42" /></flowRegion><flowPara
+         id="flowPara44" /></flowRoot>  </g>
+</svg>

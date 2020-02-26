@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="112.32242mm"
+   height="67.101357mm"
+   viewBox="0 0 112.32241 67.10137"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="fig_13.svg"
+   inkscape:export-filename="C:\Users\user\Documents\lectures\unity\unity_prep_01\fig_13.svg.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="88.769329"
+     inkscape:cy="207.748"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-11.496524,-73.138313)">
+    <image
+       sodipodi:absref="C:\Users\user\Documents\lectures\unity\unity_01\fig_13.png"
+       xlink:href="fig_13.png"
+       sodipodi:insensitive="true"
+       y="73.138313"
+       x="11.496524"
+       id="image823"
+       preserveAspectRatio="none"
+       height="67.101357"
+       width="112.32242" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot38"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,11.496524,27.015234)"><flowRegion
+         id="flowRegion40"><rect
+           id="rect42"
+           width="412.14285"
+           height="129.28572"
+           x="-55"
+           y="124.36342" /></flowRegion><flowPara
+         id="flowPara44" /></flowRoot>    <rect
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:0.28684443;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect848"
+       width="9.2280359"
+       height="6.9618096"
+       x="57.469185"
+       y="84.761963"
+       ry="1.8785845" />
+    <path
+       sodipodi:nodetypes="sscccssccccscccsccccs"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.27837512;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       clip-path="none"
+       d="m 54.794923,75.626784 c 0,-0.82949 0.881235,-1.502312 1.967655,-1.502312 h 13.899823 v 0 h 6.799977 2.564783 c 1.08905,0 1.967655,0.672822 1.967655,1.502312 v 3.755774 0 2.253468 0 c 0,0.831493 -0.878605,1.502305 -1.967655,1.502305 H 67.663627 l -6.388104,1.741895 1.115211,-1.741895 h -5.628156 c -1.08642,0 -1.967655,-0.670812 -1.967655,-1.502305 v 0 -2.253468 0 z"
+       id="path869" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="57.881912"
+       y="80.224701"
+       id="text888"><tspan
+         sodipodi:role="line"
+         id="tspan28"
+         x="57.881912"
+         y="80.224701">①クリック</tspan></text>
+  </g>
+</svg>
