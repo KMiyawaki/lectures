@@ -216,8 +216,8 @@ $ emacs do_dishes_client.py &
 - ROS マスターが起動している前提で 2 つのターミナルを使い次のコマンドを実行する。
 
 ```shell
-$ rosrun begineer_tutorials do_dishes_server.py
-$ rosrun begineer_tutorials do_dishes_client.py
+$ rosrun beginner_tutorials do_dishes_server.py
+$ rosrun beginner_tutorials do_dishes_client.py
 ```
 
 ---
