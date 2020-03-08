@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 862 523"
+   height="523"
+   width="862">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipEmfPath1">
+      <path
+         d="M 3.6674174,3.6674174 H 418.56394 V 221.95848 H 3.6674174 Z"
+         id="path861" />
+    </clipPath>
+    <pattern
+       id="EMFhbasepattern"
+       patternUnits="userSpaceOnUse"
+       width="6"
+       height="6"
+       x="0"
+       y="0" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <image
+       xlink:href="fig_02.png"
+       y="0"
+       x="0"
+       id="image823"
+       preserveAspectRatio="none"
+       height="523"
+       width="862" />
+    <rect
+       ry="17.283613"
+       y="88.185822"
+       x="446.80899"
+       height="64.051003"
+       width="133.79967"
+       id="rect848"
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:3.31299806;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       id="path869"
+       d="M 5.0227672,34.840465 C 5.0227672,18.37695 18.37695,5.0227672 34.840465,5.0227672 H 245.47778 v 0 h 103.04646 38.86665 c 16.50338,0 29.8177,13.3541828 29.8177,29.8176978 v 74.544245 0 44.72655 0 c 0,16.50337 -13.31432,29.81769 -29.8177,29.81769 h -187.3564 l -96.80503,34.57293 16.89983,-34.57293 H 34.840465 c -16.463515,0 -29.8176978,-13.31432 -29.8176978,-29.81769 v 0 -44.72655 0 z"
+       clip-path="url(#clipEmfPath1)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.82778692;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(0.28553119,0,0,0.31479478,548.25267,23.557432)" />
+    <text
+       id="text888"
+       y="64.941589"
+       x="564.43896"
+       style="font-style:normal;font-weight:normal;font-size:50.77826691px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.26945674"
+       xml:space="preserve"><tspan
+         style="font-size:30.46696091px;stroke-width:1.26945674"
+         y="64.941589"
+         x="564.43896"
+         id="tspan886">①入力</tspan></text>
+    <rect
+       ry="12.749229"
+       y="472.0921"
+       x="707.07947"
+       height="47.24712"
+       width="143.25975"
+       id="rect848-6"
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:2.94428897;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       id="path869-5"
+       d="M 5.0227672,34.840465 C 5.0227672,18.37695 18.37695,5.0227672 34.840465,5.0227672 H 245.47778 v 0 h 103.04646 38.86665 c 16.50338,0 29.8177,13.3541828 29.8177,29.8176978 v 74.544245 0 44.72655 0 c 0,16.50337 -13.31432,29.81769 -29.8177,29.81769 H 200.03449 L 165.1848,231.38219 120.12929,183.92895 H 34.840465 c -16.463515,0 -29.8176978,-13.31432 -29.8176978,-29.81769 v 0 -44.72655 0 z"
+       clip-path="none"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:4.82778692;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(0.4239177,0,0,0.3137044,668.55721,397.9351)" />
+    <text
+       id="text888-6"
+       y="439.19623"
+       x="685.39636"
+       style="font-style:normal;font-weight:normal;font-size:50.77826691px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.26945674"
+       xml:space="preserve"><tspan
+         style="font-size:30.46696091px;stroke-width:1.26945674"
+         y="439.19623"
+         x="685.39636"
+         id="tspan886-4">②クリック</tspan></text>
+    <rect
+       ry="40.94286"
+       y="87.015945"
+       x="142.30423"
+       height="151.72934"
+       width="157.83839"
+       id="rect848-2"
+       style="fill:none;fill-opacity:1;stroke:#f30000;stroke-width:5.53824043;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+</svg>
