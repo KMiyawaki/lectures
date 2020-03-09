@@ -15,7 +15,7 @@
 
 ```shell
 $ roscd my_microbot_apps/launch/simulation/
-$ roslaunch navigation.launch use_teleop:=true
+$ roslaunch navigation.launch use_teleop:=true use_mouse:=false
 ... logging to /home/[user name]/.ros/log/ebe20526-4944-11ea-a3d0-000c2924787d/roslaunch-ubuntu-16196.log
 Checking log directory for disk usage. This may take awhile.
 Press Ctrl-C to interrupt
