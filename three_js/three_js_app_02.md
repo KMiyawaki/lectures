@@ -7,10 +7,10 @@
 ## Microsoft 3D ライブラリの活用
 
 付録 1 で拡張子`gltf`のモデルデータを利用した。
-ここでは手早く3D モデルを得る方法として Windows 10 で手軽に利用可能な「[3D ビューアー](https://www.microsoft.com/ja-jp/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab)」を通じてダウンロード可能な 3D モデルを Three.js から利用する方法を紹介する。
+ここでは手早く3D モデルを得る方法として Windows 10 で手軽に利用可能な「[3D ビューアー](https://www.microsoft.com/ja-jp/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab)」を通じてダウンロード可能な 3D モデルを Three.js 適したデータに変換する方法を紹介する。
 
 3D ビューアーから利用できるモデルのファイルは`gltf`のバイナリ形式である、`glb`である。  
-得られるモデルの問題は高品質なもののファイルサイズが数十メガバイトと大容量である。
+得られるモデルは高品質なものの、ファイルサイズが数十メガバイトと大容量である。
 このままブラウザアプリで利用すると、ユーザに大きな負担を与えてしまう。
 
 Visual Studio Code を利用すれば数ステップの手順でファイルサイズを抑えられる。
@@ -65,11 +65,11 @@ Windows 10 の「 3D ビューア」を起動する。
 
 ![gltf_vscode_01.png](./three_js_app_02/gltf_vscode_01.png)
 
-Visual Studio Code で`glb`ファイルのフォルダを開く。
+Visual Studio Code で`glb`ファイルを保存したフォルダを開く。
 
 ![gltf_vscode_02.png](./three_js_app_02/gltf_vscode_02.png)
 
-フォルダに存在するオリジナルの`glb`ファイル（例では`Shuttle.glb`）をクリックする。
+フォルダに存在するオリジナルの`glb`ファイル（例では`Shuttle.glb`）をクリックする。  
 Visual Studio Code 上ではエラーが表示されるが、問題はない。
 
 ![gltf_vscode_03.png](./three_js_app_02/gltf_vscode_03.png)
@@ -92,7 +92,8 @@ Visual Studio Code 上ではエラーが表示されるが、問題はない。
 
 ## テクスチャのリサイズ
 
-テクスチャ画像（上記の場合は拡張子 png の4つのファイル）のサイズを縮小する。以下の点に十分注意すること。
+テクスチャ画像（上記の場合は拡張子`png`の4つのファイル）のサイズを縮小する。  
+以下の点に十分注意すること。
 
 - 縮小画像は、元画像のアスペクト比（縦横比）と全く同じにすること。通常はアスペクト比 1 である。
 - 縮小画像の縦横画素数は 2 のべき乗とすること。
@@ -123,7 +124,7 @@ Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリ�
 
 ## サイズ削減後の glb ファイルの見栄えを確認する
 
-ブラウザで[glTF Viewer](https://gltf-viewer.donmccurdy.com/)を開き、完成した`glb`ファイルをドラッグ＆ドロップする。
+ブラウザで[glTF Viewer](https://gltf-viewer.donmccurdy.com/)を開き、完成した`glb`ファイルをドラッグ＆ドロップする。  
 オリジナルモデルとサイズ削減後モデルの比較は次の通りである。
 
 - オリジナル
@@ -137,14 +138,14 @@ Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリ�
 オリジナルに比べると当然テクスチャ解像度低下による劣化があるが、本演習の用途ではこれで十分である。  
 また 1 ファイルで数十メガバイトものモデルデータをユーザにダウンロードさせるのはかなりのストレスになるので避けるのが妥当である。
 
-## Three.js で glb を読込む
+## Three.js で`glb`を読込む
 
 [THREE.GLTFLoader](https://threejs.org/docs/#examples/en/loaders/GLTFLoader)でロードし、シーンに追加すれば表示できる。  
 `Shuttle_min.glb`を`ThreeJS-master/assets/downloads/Shuttle_min.glb`となるように配置して、`ThreeJS-master/lecA2/appendix20.html`をこれまで同様に実行すれば、以下のようになる。
 
 ![appendix20_1.png](./three_js_app_02/appendix20_1.png)
 
-Android 端末で最初に実行した際、表示されるまでにややタイムラグがあるかもしれない。
+Android 端末で最初に実行した際は、表示されるまでにややタイムラグがあるかもしれない。
 
 - - -
 
