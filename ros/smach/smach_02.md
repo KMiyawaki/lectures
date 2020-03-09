@@ -23,7 +23,7 @@
 - しばらくしてから`state_machine_no_navigation.py`を実行。
 
 ```shell
-$ roscd smach_tutorials/examples/
+$ roscd my_microbot_apps/scripts/
 $ ./state_machine_no_navigation.py
 [INFO] [1581077522.716507, 286.100000]: State machine starting in initial state 'go_straight_01' with userdata:
 	[]
