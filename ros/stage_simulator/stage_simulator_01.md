@@ -44,6 +44,7 @@ SUMMARY
 
 - `Mouse Teleop`
   - GUI でマウスによりロボットに速度を与えるソフト。
+  - `use_mouse:=false`のオプションを外すと起動できる。
 
 ![2020-02-07_11-17-41.png](./stage_simulator_01/2020-02-07_11-17-41.png)
 
