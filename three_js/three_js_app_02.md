@@ -66,8 +66,26 @@ $ gltf-pipeline -i ship.gltf -b -d
 Total: 1011.394ms
 $ ls -lh|grep glb
 -rw-r--r-- 1 oit oit 506K  3月  9 08:51 ship-processed.glb # 完成した glb ファイル。これを使う。
--rwxrw-rw- 1 oit oit  22M  3月  9 07:11 ship.glb
+-rwxrw-rw- 1 oit oit  22M  3月  9 07:11 ship.glb # もとの glb ファイル。
 ```
+
+ファイルサイズが 40 分の 1 以下になっていることが分かる。
+
+### サイズ削減後の glb ファイルの見栄えを確認する
+
+ブラウザで[](https://gltf-viewer.donmccurdy.com/)を開き、完成した glb ファイルをドラッグ＆ドロップする。
+オリジナルモデルとサイズ削減後モデルの比較は次の通りである。
+
+- オリジナル
+
+![gltf_viewer_02.png](./three_js_app_02/gltf_viewer_02.png)
+
+- サイズ削減後
+
+![gltf_viewer_01.png](./three_js_app_02/gltf_viewer_01.png)
+
+オリジナルに比べると当然テクスチャ解像度低下による劣化があるが、本演習の用途ではこれで十分である。
+また 1 ファイルで数十メガバイトものモデルデータをユーザにダウンロードさせるのはかなりのストレスになるので避けるのが妥当である。
 
 ---
 
