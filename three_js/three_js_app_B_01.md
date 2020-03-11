@@ -1,4 +1,4 @@
-# Three.js(付録2)
+# Three.js(付録 B)
 
 [three_js/Home](./Home.md)
 
@@ -19,29 +19,29 @@ Visual Studio Code を利用すれば数ステップの手順でファイルサ�
 
 Windows 10 の「 3D ビューア」を起動する。
 
-![3D_viewer_01.png](./three_js_app_02/3D_viewer_01.png)
+![3D_viewer_01.png](./three_js_app_B_01/3D_viewer_01.png)
 
 「ようこそ」画面を閉じる。
 
-![3D_viewer_02.png](./three_js_app_02/3D_viewer_02.png)
+![3D_viewer_02.png](./three_js_app_B_01/3D_viewer_02.png)
 
 メニューの「 3D ライブラリ」を選択する。
 
-![3D_viewer_03.png](./three_js_app_02/3D_viewer_03.png)
+![3D_viewer_03.png](./three_js_app_B_01/3D_viewer_03.png)
 
 今回は例として「 SF とファンタジー」から「スペースシャトル」を選択する。
 
-![3D_viewer_04.png](./three_js_app_02/3D_viewer_04.png)
+![3D_viewer_04.png](./three_js_app_B_01/3D_viewer_04.png)
 
-![3D_viewer_05.png](./three_js_app_02/3D_viewer_05.png)
+![3D_viewer_05.png](./three_js_app_B_01/3D_viewer_05.png)
 
 名前を付けて保存を選択する。作業場所として空のフォルダを作成すると作業しやすい。
 
-![3D_viewer_06.png](./three_js_app_02/3D_viewer_06.png)
+![3D_viewer_06.png](./three_js_app_B_01/3D_viewer_06.png)
 
 無用なトラブルを避けるため、ファイル名は半角英数字とする。ここでは「`Shuttle.glb`」とした。
 
-![3D_viewer_07.png](./three_js_app_02/3D_viewer_07.png)
+![3D_viewer_07.png](./three_js_app_B_01/3D_viewer_07.png)
 
 ### ファイルサイズ削減の流れ
 
@@ -63,32 +63,32 @@ Windows 10 の「 3D ビューア」を起動する。
 [準備の項](./three_js_prep_01.md)で「 Live Server 」をインストールしたときと同じ要領で実施する。
 拡張機能の検索は「 GLTF 」と入力すればよい。
 
-![gltf_vscode_01.png](./three_js_app_02/gltf_vscode_01.png)
+![gltf_vscode_01.png](./three_js_app_B_01/gltf_vscode_01.png)
 
 Visual Studio Code で`glb`ファイルを保存したフォルダを開く。
 
-![gltf_vscode_02.png](./three_js_app_02/gltf_vscode_02.png)
+![gltf_vscode_02.png](./three_js_app_B_01/gltf_vscode_02.png)
 
 フォルダに存在するオリジナルの`glb`ファイル（例では`Shuttle.glb`）をクリックする。  
 Visual Studio Code 上ではエラーが表示されるが、問題はない。
 
-![gltf_vscode_03.png](./three_js_app_02/gltf_vscode_03.png)
+![gltf_vscode_03.png](./three_js_app_B_01/gltf_vscode_03.png)
 
 ファイル名が表示されているタブ（例では`Shuttle.glb`）を右クリックして、「 gltf: Import from GLB 」を選択する。
 
-![gltf_vscode_04.png](./three_js_app_02/gltf_vscode_04.png)
+![gltf_vscode_04.png](./three_js_app_B_01/gltf_vscode_04.png)
 
 ファイル保存ダイアログが開くので、`glb`ファイルと同じ場所に拡張子を`gltf`に変えて（例では`Shuttle.gltf`）保存する。
 
-![gltf_vscode_05.png](./three_js_app_02/gltf_vscode_05.png)
+![gltf_vscode_05.png](./three_js_app_B_01/gltf_vscode_05.png)
 
 `gltf`ファイルと数枚のテクスチャ、拡張子「`bin`」の頂点データが出力される。
 
-![gltf_vscode_06.png](./three_js_app_02/gltf_vscode_06.png)
+![gltf_vscode_06.png](./three_js_app_B_01/gltf_vscode_06.png)
 
 テクスチャのサイズは下図の通りである。一枚 4MB 以上もある。
 
-![gltf_vscode_07.png](./three_js_app_02/gltf_vscode_07.png)
+![gltf_vscode_07.png](./three_js_app_B_01/gltf_vscode_07.png)
 
 ## テクスチャのリサイズ
 
@@ -105,22 +105,22 @@ Visual Studio Code 上ではエラーが表示されるが、問題はない。
 
 テクスチャを 256 画素四方に縮小するとファイルサイズは次のようになる。
 
-![gltf_vscode_08.png](./three_js_app_02/gltf_vscode_08.png)
+![gltf_vscode_08.png](./three_js_app_B_01/gltf_vscode_08.png)
 
 ## 分離したデータの`glb`への統合
 
 最後に、分離したテクスチャと頂点データを再度まとめなおす。
 Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリックし、ファイル名が表示されているタブを右クリックして「 Export to GLB 」を選択する。
 
-![gltf_vscode_09.png](./three_js_app_02/gltf_vscode_09.png)
+![gltf_vscode_09.png](./three_js_app_B_01/gltf_vscode_09.png)
 
 ファイル保存ダイアログが開くので、名前をオリジナルの`glb`と違うものに変えて（例では`Shuttle_min.glb`としている）保存する。
 
-![gltf_vscode_10.png](./three_js_app_02/gltf_vscode_10.png)
+![gltf_vscode_10.png](./three_js_app_B_01/gltf_vscode_10.png)
 
 ファイルサイズが激減していることが分かる。
 
-![gltf_vscode_11.png](./three_js_app_02/gltf_vscode_11.png)
+![gltf_vscode_11.png](./three_js_app_B_01/gltf_vscode_11.png)
 
 ## サイズ削減後の glb ファイルの見栄えを確認する
 
@@ -129,11 +129,11 @@ Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリ�
 
 - オリジナル
 
-![gltf_viewer_02.png](./three_js_app_02/gltf_viewer_02.png)
+![gltf_viewer_02.png](./three_js_app_B_01/gltf_viewer_02.png)
 
 - サイズ削減後
 
-![gltf_viewer_01.png](./three_js_app_02/gltf_viewer_01.png)
+![gltf_viewer_01.png](./three_js_app_B_01/gltf_viewer_01.png)
 
 オリジナルに比べると当然テクスチャ解像度低下による劣化があるが、本演習の用途ではこれで十分である。  
 また 1 ファイルで数十メガバイトものモデルデータをユーザにダウンロードさせるのはかなりのストレスになるので避けるのが妥当である。
@@ -143,7 +143,7 @@ Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリ�
 [THREE.GLTFLoader](https://threejs.org/docs/#examples/en/loaders/GLTFLoader)でロードし、シーンに追加すれば表示できる。  
 `Shuttle_min.glb`を`ThreeJS-master/assets/downloads/Shuttle_min.glb`となるように配置して、`ThreeJS-master/lecA2/appendix20.html`をこれまで同様に実行すれば、以下のようになる。
 
-![appendix20_1.png](./three_js_app_02/appendix20_1.png)
+![appendix20_1.png](./three_js_app_B_01/appendix20_1.png)
 
 Android 端末で最初に実行した際は、表示されるまでにややタイムラグがあるかもしれない。
 

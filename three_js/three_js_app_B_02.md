@@ -1,4 +1,4 @@
-# Three.js(付録2-2)
+# Three.js(付録 B-2)
 
 [three_js/Home](./Home.md)
 
