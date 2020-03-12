@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: mylib2020</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: mylib2020</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>mylib2020</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">演習用関数群の名前空間</div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="mylib2020.AmmoCollisionBuilder.html">AmmoCollisionBuilder</a></dt>
+            <dd></dd>
+        
+            <dt><a href="mylib2020.AmmoCollisionManager.html">AmmoCollisionManager</a></dt>
+            <dd></dd>
+        
+            <dt><a href="mylib2020.AmmoManager.html">AmmoManager</a></dt>
+            <dd></dd>
+        
+            <dt><a href="mylib2020.AmmoRigidBodyPose.html">AmmoRigidBodyPose</a></dt>
+            <dd></dd>
+        
+            <dt><a href="mylib2020.ArrowButton.html">ArrowButton</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".BACK"><span class="type-signature">(static) </span>BACK<span class="type-signature"> :THREE.Vector3</span></h4>
+
+
+
+
+<div class="description">
+    物体後方を表すベクトル。
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">THREE.Vector3</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line22">line 22</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".FORWARD"><span class="type-signature">(static) </span>FORWARD<span class="type-signature"> :THREE.Vector3</span></h4>
+
+
+
+
+<div class="description">
+    物体前方を表すベクトル。
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">THREE.Vector3</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".checkCollision"><span class="type-signature">(static) </span>checkCollision<span class="signature">(fromObject, targetMeshes, direction, distance<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    fromObject の中心から指定した方向にレイを飛ばし、 targetMeshes に含まれる物体と交叉するかどうかを判定する。<br/>
+物理エンジンを用いない簡易な衝突判定法。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fromObject</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">THREE.Object3D</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">レイの中心となる物体。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>targetMeshes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;THREE.Object3D></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">レイの交叉判定対象となる物体群が入った配列。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>direction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">THREE.Vector3</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">レイの方向。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>distance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    1.5
+                
+                </td>
+            
+
+            <td class="description last">レイとの交差地点と fromObject の距離がこの値未満なら衝突しているとみなす。</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line135">line 135</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    衝突している物体があるか否か。 true: 何かと衝突している。
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".initThree"><span class="type-signature">(static) </span>initThree<span class="signature">(width, height, opts)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Three.js を初期化し、シーンを生成する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>width</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">シーンの横画素数。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>height</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">シーンの縦画素数。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">生成のオプション。次のようなキーでパラメータ指定する。null のとき、デフォルト値が使用される。
+<ul>
+  <li>fov - number 画角。(デフォルト: 45.0)</li>
+  <li>near - number カメラのどのくらい近くから描画範囲に含めるか。(デフォルト: 0.1)</li>
+  <li>far - number カメラのどのくらい遠くまで描画範囲に含めるか。(デフォルト: 1000)</li>
+  <li>axesLength - number シーンに表示するワールド座標軸の長さ。(デフォルト: 20)</li>
+  <li>clearColor - number シーンの何もない領域を塗りつぶす色。(デフォルト: 0x222222)</li>
+  <li>camPosX - number カメラの初期位置。(デフォルト: 0)</li>
+  <li>camPosY - number カメラの初期位置。(デフォルト: 2)</li>
+  <li>camPosZ - number カメラの初期位置。(デフォルト: -7)</li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line64">line 64</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    次の要素が入った配列。
+<ul>
+  <li>THREE.Scene</li>
+  <li>THREE.PerspectiveCamera</li>
+  <li>THREE.WebGLRenderer</li>
+  <li>THREE.Clock</li>
+  <li>THREE.AxesHelper (opts.axesLength が 0 以下の場合は生成されず、 null が帰る)</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".initThreeInElement"><span class="type-signature">(static) </span>initThreeInElement<span class="signature">(element, opts)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Three.js を初期化し、シーンを生成する。
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>element</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">シーンの親となる HTML 要素。</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">生成のオプション。次のようなキーでパラメータ指定する。null のとき、デフォルト値が使用される。
+<ul>
+  <li>fov - number 画角。(デフォルト: 45.0)</li>
+  <li>near - number カメラのどのくらい近くから描画範囲に含めるか。(デフォルト: 0.1)</li>
+  <li>far - number カメラのどのくらい遠くまで描画範囲に含めるか。(デフォルト: 1000)</li>
+  <li>axesLength - number シーンに表示するワールド座標軸の長さ。(デフォルト: 20)</li>
+  <li>clearColor - number シーンの何もない領域を塗りつぶす色。(デフォルト: 0x222222)</li>
+  <li>camPosX - number カメラの初期位置。(デフォルト: 0)</li>
+  <li>camPosY - number カメラの初期位置。(デフォルト: 2)</li>
+  <li>camPosZ - number カメラの初期位置。(デフォルト: -7)</li>
+</ul></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="myThree2020.js.html">myThree2020.js</a>, <a href="myThree2020.js.html#line118">line 118</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    次の要素が入った配列。
+<ul>
+  <li>THREE.Scene</li>
+  <li>THREE.PerspectiveCamera</li>
+  <li>THREE.WebGLRenderer</li>
+  <li>THREE.Clock</li>
+  <li>THREE.AxesHelper (opts.axesLength が 0 以下の場合は生成されず、 null が帰る)</li>
+</ul>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="mylib2020.html">mylib2020</a></li></ul><h3>Classes</h3><ul><li><a href="MyGameCharacter.html">MyGameCharacter</a></li><li><a href="MyGameItem.html">MyGameItem</a></li><li><a href="mylib2020.AmmoCollisionBuilder.html">AmmoCollisionBuilder</a></li><li><a href="mylib2020.AmmoCollisionManager.html">AmmoCollisionManager</a></li><li><a href="mylib2020.AmmoManager.html">AmmoManager</a></li><li><a href="mylib2020.AmmoRigidBodyPose.html">AmmoRigidBodyPose</a></li><li><a href="mylib2020.ArrowButton.html">ArrowButton</a></li><li><a href="MyMaze.html">MyMaze</a></li></ul><h3>Global</h3><ul><li><a href="global.html#MyMazeTestData">MyMazeTestData</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Thu Mar 12 2020 11:19:32 GMT+0900 (GMT+09:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
