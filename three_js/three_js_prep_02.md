@@ -51,19 +51,18 @@ Debug output
 
 ```html
 <!-- Three.js の本体 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r114/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r114/build/three.min.js"></script>
 <!-- マウスでカメラを操作するライブラリ。Three.js に依存している -->
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r114/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r114/examples/js/controls/OrbitControls.js"></script>
 <!-- 演習用に用意した関数群 -->
-<script type="text/javascript" src="../js/myThree2020.js"></script>
-<script type="text/javascript" src="../js/myGameCharacter.js"></script>
+<script src="../js/myThree2020.js"></script>
+<script src="../js/myGameCharacter.js"></script>
 ```
 
 以上で取り込んだ JavaScript のクラス、関数群を利用し、自分のプログラムを次のように記述している。
 
 ```html
-<script type="text/javascript">
+<script>
   function init() {
     ・・・
   }
@@ -71,19 +70,22 @@ Debug output
 </script>
 ```
 
-演習用のプログラムの主要な部分はこの`init`関数内に記述する。C 言語でいうところの`main`関数と似ている。ゲーム制作にあたり、キャラクターを表現するクラスなどは外部ファイルに記述し、`<script type="text/javascript" src=`によって取り込む。
+本演習では演習用のプログラムの主要な部分をこの`init`関数内に記述する。C 言語でいうところの`main`関数と似ている。
+ゲーム制作にあたり、キャラクターを表現するクラスなどは外部ファイルに記述し、`<script src=`によって取り込む。
 
 ### 変数
 
-#### 基本型
+JavaScript の変数はおおきくわけて「プリミティブ型」と「オブジェクト型」の 2 種類がある。
 
-- 文字列（string）
-- 数値（number）
-- 真偽（boolean）
+#### プリミティブ型
 
-#### それ以外の型
+- 文字列（String）
+- 数値（Number）
+- 真偽（Boolean）
 
-- 連想配列、配列、クラス（厳密には連想配列の一種）
+#### オブジェクト型
+
+- 連想配列、配列、クラス（厳密には連想配列の一種）、関数（実装内容が格納された変数とみなす）
 
 JavaScript の変数は宣言時に型を書く必要はない。代入された値によって型が決まる。ただし、特定のキーワードをつける必要がある。
 
@@ -149,7 +151,7 @@ delete dict.z; // dict の中身は { x: 85, y: 12, p:128, q:255 }; となる。
 
 ### if 文
 
-他言語とほぼ同じ。等価、比較、論理の演算子も同様に使える。
+他言語とほぼ同じ。等価、大小比較の関係、論理の演算子も同様に使える。
 
 ```javascript
 let x = 8;
@@ -215,7 +217,13 @@ for (let k in dict) {
 
 ### 関数定義
 
-下記の`myAdd`、`mySub`どちらの方法でも関数を定義することができる。
+関数は`function`キーワードを使い次のような構文で定義する。
+
+- `function 関数名(仮引数 1, 仮引数 2, ...){ 実装内容 }`
+- `const（もしくは let） 変数名 = function (仮引数 1, 仮引数 2, ...){ 実装内容 };`
+  - この書き方の場合はセミコロンを書くのが正しい。
+
+下記の`myAdd`、`mySub`が関数定義の例である。
 
 ```Javascript
 function init(){
@@ -228,7 +236,7 @@ function init(){
   }
   const mySub = function (arg1, arg2) {
     return arg1 - arg2;
-  }
+  }; // この書き方の場合はセミコロンをつけるのが正しい。
 
   let result = myAdd(5, 2); //
   result = mySub(6, 10); // 関数の呼び出し。
@@ -246,7 +254,9 @@ function init(){
 }
 ```
 
-`mySub`の記述方法は関数式と呼ばれる。この書き方は、ある関数全体が定数`mySub`に格納されているという様子がイメージできる。定数に格納されているから`mySub`という名前で呼び出せるのであって、名前をつけずに関数を定義することもできる。これを無名関数といい、GUI のイベント処理などを記述する際によく利用する。  
+`mySub`の記述方法は関数式と呼ばれる。この書き方は、ある関数全体が定数`mySub`に格納されているという様子がイメージできる。
+変数に値を代入する文であるから、関数式の場合はセミコロンをつけるのが文法的には正しい。  
+定数に格納されているから`mySub`という名前で呼び出せるのであって、名前をつけずに関数を定義することもできる。これを無名関数といい、GUI のイベント処理などを記述する際によく利用する。  
 `base10.html`の下の方にある、画面サイズ更新時の処理が無名関数を利用している。
 
 ```javascript
@@ -348,9 +358,14 @@ if (hero.checkHit(monster) == false) {
 
 （補足）C 言語における構造体は連想配列の機能を使えば似たような機能が簡単に実現できる。連想配列のキーが構造体のメンバ名に相当している。
 
+#### プロパティとメソッド
+
+以上のように、 JavaScript のオ[ブジェクト型変数](#オブジェクト型)に格納されいるキー・バリューペアを「プロパティ」とも呼ぶ。また、関数は「メソッド」と呼ぶ。
+
 ### null
 
-`null`は変数や定数が何も参照していないことを示す。クラスや配列、連想配列を格納する変数の初期値としてよく使う。Java の`null`と似ている。また、関数やクラスのメソッドの引数に与え、「無効な値」を表現する際にも使える。  
+`null`は変数や定数が何も参照していないことを示す。クラスや配列、連想配列を格納する変数の初期値としてよく使う。
+Java の`null`と似ている。また、関数やクラスのメソッドの引数に与え、「無効な値」を表現する際にも使える。  
 次の例でコンストラクタの第二引数に`null`が指定されている。
 
 ```javascript
@@ -373,9 +388,11 @@ constructor(name, imageURL, hp, power, defense, speed) {
 
 `MyGameCharacter`の[完全版](https://github.com/KMiyawaki/ThreeJS/blob/master/js/myGameCharacter.js)では`this.imageURL`が`null`でない場合だけこのキャラクタの[画像をロードして表示する](https://github.com/KMiyawaki/ThreeJS/blob/master/js/myGameCharacter.js#L72)というような使い方をしている。
 
+なお、`null`は正確には値ではなく、型の一種である。
+
 ### undefined
 
-`undefined`は変数や定数が定義されていないことを示す。例えば定義されていない変数を関数の引数に与えたとき、関数内部では`undefined`となっており、大抵の場合エラーの原因となる。連想配列（やクラス）で存在しないキーを検索しようとした際も同様の値が返却される。
+`undefined`は変数や定数が定義されていないことを示す。例えば定義されていない変数を関数の引数に与えたとき、関数内部では`undefined`となっており、大抵の場合エラーの原因となる。連想配列（やクラス）で存在しないキーを検索しようとした際も`undefined`が返却される。
 
 ```javascript
 const hero = new MyGameCharacter("主人公", null, 15, 5, 7, 8);
@@ -385,6 +402,8 @@ if (hero.checkHit(Monster) == false) { // Uncaught ReferenceError: Monster is no
 }
 ...
 ```
+
+なお、`undefined`は正確には値ではなく、型の一種である。
 
 ### HTML 要素の取得
 
@@ -413,7 +432,7 @@ taDebugText.value = "ViewPort: " + window.innerWidth + "," + window.innerHeight 
 
 ```html
 <div id="test"></div>
-<script type="text/javascript">
+<script>
   function init() {
     const divTest = document.getElementById("test");
     divTest.innerHTML = "<b>Hello Javascript</b>"; // 太字の文字がブラウザに表示される。
@@ -423,7 +442,7 @@ taDebugText.value = "ViewPort: " + window.innerWidth + "," + window.innerHeight 
 
 ## 参照
 
-参照の概念は Java と似ている。JavaScript の連想配列、配列、クラスといった基本型**以外**の型の変数は値への参照を保持している。
+参照の概念は Java と似ている。JavaScript の連想配列、配列、クラスといったオブジェクト型の変数は値への参照を保持している。
 
 ```javascript
 class Person{

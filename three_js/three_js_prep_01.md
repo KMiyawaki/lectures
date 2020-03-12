@@ -65,37 +65,60 @@
 ## 最初の Three.js プログラム
 
 - https://github.com/KMiyawaki/ThreeJS/archive/master.zip をダウンロードし、PC のドキュメントフォルダに展開する。
-- ディレクトリ構造は次の通り
+- ディレクトリ構造は次の通り。演習に関係のあるファイルだけをリストしている。
 
 ```text
 C:\Users\[ユーザ名]\Documents\ThreeJS-master
 │
 ├─assets
+│  │  blue_circle.png
 │  │  gray_arrow.png
-│  │  gray_circle.png
 │  │  red_arrow.png
 │  │  red_circle.png
 │  │
-│  └─downloads
-│          ColdDungeon.png
-（省略）
-│          sword_01.png
+│  ├─downloads
+│  │      ColdDungeon.png
+│  │      DesolatedHut.png
+│  │      Fiyah.png
+│  │      GrayWalls.png
+│  │      link.txt
+│  │      red-dragon-1549047184nu3.png
+│  │      ReflectingTheLava.png
+│  │      RockWall_orFloor_height.png
+│  │      Shuttle_min.glb
+│  │      sword_01.png
+│  │
+│  ├─models
+│  │      rocket.gltf
+│  │
+│  └─sounds
+│          bounce.wav
 │
 ├─css
 │      common.css
 │
 ├─js
 │      libs.txt
+│      myAmmo2020.js
 │      myGameCharacter.js
 │      myMaze.js
 │      myThree2020.js
 │
 ├─lec01
 │      base10.html
+│
 ├─lec02
 │      base20.html
+│
 ├─lec03
-       base30.html
+│      base30.html
+│
+├─lecA
+│      appendixA0.html
+│      baseA0.html
+│
+└─lecB
+        appendixB0.html
 ```
 
 - Visual Studio Code を起動し、左の方から Explorer ボタンを押す。

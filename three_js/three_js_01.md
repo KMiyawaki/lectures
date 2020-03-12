@@ -99,7 +99,7 @@ function myAdd(arg1, arg2) {
 }
 const mySub = function (arg1, arg2) {
   return arg1 - arg2;
-}
+};
 taDebugText.value += "myAdd(5, 2):" + myAdd(5, 2) + "\n";
 taDebugText.value += "mySub(6, 10):" + mySub(6, 10) + "\n";
 function makeArray(arg1, arg2, arg3) {
@@ -133,7 +133,7 @@ for (let k in dict) {
 プログラムに適度なインデント（字下げ）があると非常に読みやすくなる。Visual Studio Code にはプログラム全体を自動でインデントする機能がある。
 
 - `Ctrl`キーと`Shift`キーと`P`キーを同時に押し、拡張機能のコマンド入力ボックスを呼び出す。
-- `Format`と入力すると、「ドキュメントのフォーマット」という項目が出るので実行する。
+- `format`と入力すると、「ドキュメントのフォーマット」という項目が出るので実行する。
 
 ![format.png](three_js_01/format.png)
 
@@ -182,8 +182,9 @@ Three.js において`THREE.Mesh`クラスは三次元物体の形状や材質�
 
 ```javascript
 /* ↓↓↓work13 の追記場所↓↓↓ */
-sphere.position.x = 10;
-sphere.position.y = 0;
+sphere.position.set(10, 0, 0);  // 物体の位置（ position ）に x, y, z の値をセットするコード。
+//sphere.position.x = 10; // 軸ごとの指定もできる。
+//sphere.position.y = 0;
 /* ↑↑↑work13 の追記場所↑↑↑ */
 ```
 
@@ -204,8 +205,7 @@ sphere.position.y = 0;
 // 物体のローカル座標軸を表示できる。
 cube.add(new THREE.AxesHelper(5));
 // 回転はすべてオブジェクトローカル座標系で行われる。単位はラジアンなので、360度単位からラジアンに変換した値を渡す。
-cube.rotateX(THREE.Math.degToRad(45)); // 各軸周りの回転は関数でも実行できる。
-cube.rotation.y = THREE.Math.degToRad(45); // 各軸周りの回転は rotation の値を直接変更しても実行できる。
+cube.rotation.set(THREE.Math.degToRad(45), THREE.Math.degToRad(45), 0); // 物体の姿勢（ rotation ）に x, y, z の値をセットするコード。
 /* ↑↑↑work14 の追記場所↑↑↑ */
 ```
 

@@ -12,15 +12,15 @@
 雛形は`ThreeJS-master/lec03/base30.html`である。このファイルを`ThreeJS-master/lec03/work31.html`のようにコピーして進める。
 
 以降、迷路ゲームを題材に主にユーザ入力に関する演習を行う。  
-なお、`ThreeJS-master/lec03/base30.html`と`ThreeJS-master/lec01/base10.html`の違いは以下に示す通りである。
+なお、`ThreeJS-master/lec03/base30.html`と`ThreeJS-master/lec01/base10.html`の違いは以下の通りである。
 
 - 迷路のデータ等が入った`myMaze.js`を HTML 冒頭で読込んでいる。
 
 ```html
-<script type="text/javascript" src="../js/myMaze.js"></script>
+<script src="../js/myMaze.js"></script>
 ```
 
-- `THREE.OrbitControls`に関する部分を削除している。したがって、**これまでと同じやり方でマウスによる 3D のビューを操作することはできない**。
+- `THREE.OrbitControls`に関する部分を削除している。したがって、**これまでと同じやり方でマウスにより 3D のビューを操作することはできない**。
 
 ```javascript
 /* 削除 */
@@ -58,7 +58,9 @@ const AUTO_SCROLL_DEBUG = true; // taDebugText を常に最新の行までスク
 
 - `ThreeJS-master/lec03/base30.html`を`ThreeJS-master/lec03/work31.html`というファイル名でコピーしなさい。
 
-今回は、Android 端末のタッチで 3D ビューの操作が可能な UI を WEB ページ上に作成する。1 人称視点の迷路ゲームを想定し、前後・回転移動が可能な十字キーとコマンド入力用のプッシュボタンを作成する。迷路を移動中はランダムなタイミングで敵と遭遇し、戦闘は簡略化のためじゃんけんで行う。  
+今回は、Android 端末のタッチで 3D 空間内の移動が可能な UI を WEB ページ上に作成する。
+1 人称視点の迷路ゲームを想定し、前後・回転移動が可能な十字キーとコマンド入力用のプッシュボタンを作成する。
+迷路を移動中はランダムなタイミングで敵と遭遇し、戦闘は簡略化のためじゃんけんで行う。  
 なお、このページには work は一つしかない。全ての追記・修正は`work31.html`に対して行う。
 本演習では、UI のボタンなどのコンポーネントは HTML に記述し、イベント処理を JavaScript で記述する。
 
@@ -89,7 +91,7 @@ const AUTO_SCROLL_DEBUG = true; // taDebugText を常に最新の行までスク
 <div id="controller" style="position: relative;height: 25%;background-image:url(../assets/downloads/DesolatedHut.png);background-size: 20%;"></div>
 ```
 
-背景には好きな画像を使ってよい（著作権に注意）。
+背景には好きな画像を使ってよい。
 
 ## プッシュボタンを作る
 
@@ -148,7 +150,8 @@ for (let e of elems) {
 
 ## 仮想的なジョイスティックを作る
 
-一昔前のジョイパッドに備わっていたデジタルな十字方向指定キーをスクリーン上に作成する。ゲームのキャラクターを前後左右に動かすための UI である。デジタルな十字キーなのである方向キーが ON か OFF かといった判定しかしない。つまり現代的なアナログジョイスティックとは異なり、キャラクターの移動速度を無段階に操作することはできない。
+一昔前のジョイパッドに備わっていたデジタルな十字方向指定キーをスクリーン上に作成する。ゲームのキャラクターを前後左右に動かすための UI である。
+デジタルな十字キーなので、ある方向キーが ON か OFF かといった判定しかしない。つまり現代的なアナログジョイスティックとは異なり、キャラクターの移動速度を無段階に操作することはできない。
 
 このような仮想ジョイスティック（オンスクリーンジョイスティックとも言う）を作る場合、前項で作成したプッシュボタンを 4 つ並べても機能しない。なぜなら、Android 端末で指をスライドさせてプッシュボタンを触ってもイベントは発生しないからである。click イベントはボタン領域内から指を完全に離した状態から、押して離して初めて機能する。
 
@@ -160,13 +163,13 @@ for (let e of elems) {
 
 ```html
 <div id="controller" style="position: relative;height: 25%;background-color: chocolate;">
-  <div id="up" class="arrowButton" style="top: 5%; left: 16%; background-image:url(../assets/gray_arrow.png);">
+  <div id="up" class="gameButton" style="top: 5%; left: 16%; background-image:url(../assets/gray_arrow.png);">
   </div>
-  <div id="down" class="arrowButton" style="top: 65%; left: 16%; background-image:url(../assets/gray_arrow.png); transform: rotate(180deg)">
+  <div id="down" class="gameButton" style="top: 65%; left: 16%; background-image:url(../assets/gray_arrow.png); transform: rotate(180deg)">
   </div>
-  <div id="left" class="arrowButton" style="top: 35%; left: 3%; background-image:url(../assets/gray_arrow.png); transform: rotate(-90deg)">
+  <div id="left" class="gameButton" style="top: 35%; left: 3%; background-image:url(../assets/gray_arrow.png); transform: rotate(-90deg)">
   </div>
-  <div id="right" class="arrowButton" style="top: 35%; left: 29%; background-image:url(../assets/gray_arrow.png); transform: rotate(90deg)">
+  <div id="right" class="gameButton" style="top: 35%; left: 29%; background-image:url(../assets/gray_arrow.png); transform: rotate(90deg)">
   </div>
   <!-- ここからは前項で実装したプッシュボタンのコード -->
   <button id="gu" type="button" class="pushButton" style="width: 13%;top: 30%; right: 33%;" value="0">
@@ -182,7 +185,7 @@ for (let e of elems) {
 
 ![work31_01_04.png](three_js_03_01/work31_01_04.png)
 
-十字キーの画像は好きなものを使って構わない。ここでは HTML 内の編集で完結させるために、`<div ... style="...background-image:url(../assets/gray_arrow.png);`と`div`要素の属性として背景画像を指定しているが、`css/common.css`内の`arrowButton`スタイルを編集すれば逐一 HTML に書かなくとも済む。  
+十字キーの画像は好きなものを使って構わない。ここでは HTML 内の編集で完結させるために、`<div ... style="...background-image:url(../assets/gray_arrow.png);`と`div`要素の属性として背景画像を指定しているが、`css/common.css`内の`gameButton`スタイルを編集すれば逐一 HTML に書かなくとも済む。  
 十字キーボタン領域の`transform: rotate(90deg)`は要素を回転させるスタイル記述である。これにより一つの画像を用意すれば 4 方向のボタンが作成できる。
 
 - 作成した十字キーを機能させるために以下のコードを JavaScript プログラムに追記しなさい。
@@ -198,7 +201,7 @@ for (let e of elems) {
   e.addEventListener("click", onPushButtonClicked);
 }
 /* 以降が今回の追記 */
-elems = document.getElementsByClassName("arrowButton"); // class 属性に arrowButton が指定された HTML 要素を全て取得し、配列に格納する。
+elems = document.getElementsByClassName("gameButton"); // class 属性に gameButton が指定された HTML 要素を全て取得し、配列に格納する。
 const arrows = {}; // div の id と十字キーボタンクラスをペアとする辞書
 for (let e of elems) {
   arrows[e.id] = new mylib2020.ArrowButton(e, "url(../assets/red_arrow.png)");

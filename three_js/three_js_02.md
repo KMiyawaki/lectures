@@ -36,7 +36,7 @@ scene.add(cube);
 const AUTO_SCROLL_DEBUG = true; // taDebugText を常に最新の行までスクロールさせるかどうか。
 ```
 
-## work21 物体の等速運動（`position`）
+## work21 物体の等速運動（ position ）
 
 - `ThreeJS-master/lec02/base20.html`を`ThreeJS-master/lec02/work21.html`というファイル名でコピーしなさい。
 
@@ -62,7 +62,7 @@ function renderFrame() {
 function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
   /* ↓↓↓work21～work24 の追記場所↓↓↓ */
-  cube.position.x += 2 * deltaTime;
+  cube.position.x += (2 * deltaTime);
   /* ↑↑↑work21～work24 の追記場所↑↑↑ */
 ...
 }
@@ -75,33 +75,43 @@ function renderFrame() {
 
 ![work21.png](three_js_02/work21.png)
 
-## work22 物体の等速運動（`rotation`）
+## work22 物体の等速運動（ rotation ）
 
 - `ThreeJS-master/lec02/base20.html`を`ThreeJS-master/lec02/work22.html`というファイル名でコピーしなさい。
 
-位置の変化は`position`の値を変更していくことでプログラムできる。同じように姿勢は`rotation`を変更していけばよい。単位は「ラジアン」である（π radian = 180 度）が、便利な単位の変換関数`THREE.Math.degToRad(度)`（「度」->「ラジアン」への変換）と`THREE.Math.radToDeg(ラジアン)`（「ラジアン」->「度」への変換）があるので、それらを使用すれば何の問題もない。
+位置の変化は`position`の値を変更していくことでプログラムできた。
+姿勢については専用のメソッド[rotateX, rotateY, rotateZ](https://threejs.org/docs/#api/en/core/Object3D.rotateX)、を使う。
+これらのメソッドは Three.js で生成するほとんどの物体が利用でき、引数に与えた角度だけ物体を回転させられる。
+
+引数の単位は「ラジアン」である（π radian = 180 度）が、便利な単位の変換関数`THREE.Math.degToRad(度)`（「度」->「ラジアン」への変換）と`THREE.Math.radToDeg(ラジアン)`（「ラジアン」->「度」への変換）があるので、それらを使用すれば何の問題もない。
 
 - `work22.html`のコメントを参照し、下記のコードを追記して実行結果を確認しなさい。
 
 ```javascript
 /* ↓↓↓work21～work24 の追記場所↓↓↓ */
 cube.position.x += 2 * deltaTime;
-cube.rotation.y += THREE.Math.degToRad(60) * deltaTime; // 秒速60度で Y 軸中心に回転させる。
+cube.rotateY(THREE.Math.degToRad(60) * deltaTime); // 秒速60度で Y 軸中心に回転させる。
 /* ↑↑↑work21～work24 の追記場所↑↑↑ */
 ```
 
 - 実行結果
   - 立方体が X 軸に沿って回転しながら移動するはずである。上（Y 軸正方向）から見ると反時計回りに回転しているのが分かる。
-  - 回転させる軸（複数でも良い）、スピードを変えて確認しなさい。
+  - 回転させる軸（複数でも良い）、スピード（`rotateY`メソッドの引数の大きさ）を変えて確認しなさい。
   - スピードを負の数にすれば回転方向は逆になる。
 
 ![work22.png](three_js_02/work22.png)
+
+### 回転に関する補足
+
+Three.js に関する WEB 資料や参考書では、姿勢の変更も`position`と似たようなコードで`rotation.y += ***`のように書いてあるものが多い。  
+CG の表示だけならそれでもほとんど問題はないが、本演習の付録で紹介する[物理エンジンと組み合わせた際](./three_js_app_A_01.md#workA1(4)-GSAP)に不具合が生じるため、メソッドを使って姿勢を変化させている。
 
 ## work23 物体の等速運動（物体の親子関係生成によるワールド座標系での回転）
 
 - `ThreeJS-master/lec02/base20.html`を`ThreeJS-master/lec02/work23.html`というファイル名でコピーしなさい。
 
-`work22`では物体の`rotation`を変更することで物体を回転させた。このとき、物体のローカル座標軸を中心に回転していることに注目してほしい。  
+`work22`では物体の`rotateY`メソッドを使用することで物体を回転させた。
+このとき、物体のローカル座標軸を中心に回転していることに注目してほしい。  
 例えば、太陽系の CG を表現するようなシーンで地球が太陽の周囲を公転するシーンを想定する。このとき、太陽をワールド座標の中心に据えて地球は太陽を中心に回転させたい、と考えるのが自然である。  
 しかし、`work22`の方法では地球を自転させることはできても公転させる場合に`position`に対して面倒な計算が必要となる。
 
@@ -119,7 +129,6 @@ function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
   /* ↓↓↓work21～work24 の追記場所↓↓↓ */
   sphere.rotateY(deltaTime * THREE.Math.degToRad(30)); /* 球体を回転させれば、立方体もまとめて動く */
-  /* sphere.rotation.y += (deltaTime * THREE.Math.degToRad(30)); と書いても同じ */
   /* ↑↑↑work21～work24 の追記場所↑↑↑ */
 ...
 }
@@ -148,7 +157,7 @@ function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
   /* ↓↓↓work21～work24 の追記場所↓↓↓ */
   sphere.rotateY(deltaTime * THREE.Math.degToRad(30)); /* 球体を回転させれば、立方体もまとめて動く */
-  cube.rotation.y -= (deltaTime * THREE.Math.degToRad(90)); /* 自転 */
+  cube.rotateY(deltaTime * -THREE.Math.degToRad(90)); /* 自転 */
   /* ↑↑↑work21～work24 の追記場所↑↑↑ */
 ```
 

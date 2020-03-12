@@ -6,8 +6,8 @@
 
 ## Microsoft 3D ライブラリの活用
 
-付録 1 で拡張子`gltf`のモデルデータを利用した。
-ここでは手早く3D モデルを得る方法として Windows 10 で手軽に利用可能な「[3D ビューアー](https://www.microsoft.com/ja-jp/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab)」を通じてダウンロード可能な 3D モデルを Three.js 適したデータに変換する方法を紹介する。
+[付録 1](./three_js_app_A_01.md#workA1(2)-glTF-モデルのロード)で拡張子`gltf`のモデルデータを利用した。
+ここでは手早く3D モデルを得る方法として Windows 10 で利用できる「[3D ビューアー](https://www.microsoft.com/ja-jp/p/3d-viewer/9nblggh42ths?activetab=pivot:overviewtab)」を通じてダウンロード可能な 3D モデルを Three.js 適したデータに変換する方法を紹介する。
 
 3D ビューアーから利用できるモデルのファイルは`gltf`のバイナリ形式である、`glb`である。  
 得られるモデルは高品質なものの、ファイルサイズが数十メガバイトと大容量である。
@@ -57,7 +57,7 @@ Windows 10 の「 3D ビューア」を起動する。
 
 以上の手順は Visual Studio Code と任意の画像編集ソフトを使って実施する。
 
-## Visual Studio Code で`glb`ファイルからテクスチャと頂点データを抽出する
+## Visual Studio Code で glb ファイルからテクスチャと頂点データを抽出する
 
 まずは、`gltf`拡張機能をインストールする。  
 [準備の項](./three_js_prep_01.md)で「 Live Server 」をインストールしたときと同じ要領で実施する。
@@ -107,7 +107,7 @@ Visual Studio Code 上ではエラーが表示されるが、問題はない。
 
 ![gltf_vscode_08.png](./three_js_app_B_01/gltf_vscode_08.png)
 
-## 分離したデータの`glb`への統合
+## 分離したデータの glb への統合
 
 最後に、分離したテクスチャと頂点データを再度まとめなおす。
 Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリックし、ファイル名が表示されているタブを右クリックして「 Export to GLB 」を選択する。
@@ -138,10 +138,10 @@ Visual Studio Code で`gltf`ファイル（例では`Shuttle.gltf`）をクリ�
 オリジナルに比べると当然テクスチャ解像度低下による劣化があるが、本演習の用途ではこれで十分である。  
 また 1 ファイルで数十メガバイトものモデルデータをユーザにダウンロードさせるのはかなりのストレスになるので避けるのが妥当である。
 
-## Three.js で`glb`を読込む
+## Three.js で glb を読込む
 
 [THREE.GLTFLoader](https://threejs.org/docs/#examples/en/loaders/GLTFLoader)でロードし、シーンに追加すれば表示できる。  
-`Shuttle_min.glb`を`ThreeJS-master/assets/downloads/Shuttle_min.glb`となるように配置して、`ThreeJS-master/lecA2/appendix20.html`をこれまで同様に実行すれば、以下のようになる。
+`Shuttle_min.glb`を`ThreeJS-master/assets/downloads/Shuttle_min.glb`となるように配置して、`ThreeJS-master/lecB/appendixB0.html`をこれまで同様に実行すれば、以下のようになる。
 
 ![appendix20_1.png](./three_js_app_B_01/appendix20_1.png)
 
