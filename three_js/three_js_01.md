@@ -332,7 +332,7 @@ Three.js 公式ページの[SpotLight のサンプル](https://threejs.org/examp
 ```java
 /* ↓↓↓work17 の修正場所↓↓↓ */
 const plane = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.MeshPhongMaterial({ color: 0xFF00FF }));
-/* ↑↑↑work17 の追記場所↑↑↑ */
+/* ↑↑↑work17 の修正場所↑↑↑ */
 ```
 
 - `sphere`の`THREE.MeshPhongMaterial`において`wireframe`を`true`に変更する。
@@ -340,7 +340,7 @@ const plane = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.MeshPh
 ```java
 /* ↓↓↓work17 の修正場所↓↓↓ */
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(2.5, 20, 20), new THREE.MeshPhongMaterial({ color: 0x00FF00, wireframe: true }));
-/* ↑↑↑work17 の追記場所↑↑↑ */
+/* ↑↑↑work17 の修正場所↑↑↑ */
 ```
 
 - `cube`に与える`THREE.MeshPhongMaterial`の`color`を`0x0000FF`に変更する。
