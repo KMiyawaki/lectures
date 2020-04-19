@@ -67,7 +67,7 @@ const AUTO_SCROLL_DEBUG = true; // taDebugText を常に最新の行までスク
 ## UI 用のエリアを作る
 
 - `work31.html`のコメントを参照し、下記のコードを追記・修正して実行結果を確認しなさい。今回の編集場所は HTML 内である。
-- `<div id="glView" style="position: relative;height: 75%;">`の`height`属性の数値を`75%`にする。
+- `<div id="glView" style="position: relative;height: 75%;">`のように`height`属性の数値を`75%`にする。
 - `<div id="controller" ...>~</div>`の部分が追記されている。
 
 ```html
@@ -223,6 +223,7 @@ for (let e of elems) {
 /* ↓↓↓work31の追記・修正場所↓↓↓ */
 function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
+  /* ここからが追記 */
   if (arrows["up"].isPressed()) {
     taDebugText.value += "up\n";
   }
@@ -279,26 +280,26 @@ sphere.add(spotLight.target);
 
 ```javascript
 /* ↓↓↓work31の追記・修正場所↓↓↓ */
-const LINEAR = 3; // 3m/sec
-const ANGULAR = THREE.Math.degToRad(60); // 60deg/sec
+const LINEAR = 3; // 追記 3m/sec
+const ANGULAR = THREE.Math.degToRad(60); // 追記 60deg/sec
 
 function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
   if (arrows["up"].isPressed()) {
     taDebugText.value += "up\n";
-    sphere.translateOnAxis(mylib2020.FORWARD, LINEAR * deltaTime);
+    sphere.translateOnAxis(mylib2020.FORWARD, LINEAR * deltaTime); //追記
   }
   if (arrows["down"].isPressed()) {
     taDebugText.value += "down\n";
-    sphere.translateOnAxis(mylib2020.BACK, LINEAR * deltaTime);
+    sphere.translateOnAxis(mylib2020.BACK, LINEAR * deltaTime); //追記
   }
   if (arrows["left"].isPressed()) {
     taDebugText.value += "left\n";
-    sphere.rotateY(ANGULAR * deltaTime);
+    sphere.rotateY(ANGULAR * deltaTime); //追記
   }
   if (arrows["right"].isPressed()) {
     taDebugText.value += "right\n";
-    sphere.rotateY(-ANGULAR * deltaTime);
+    sphere.rotateY(-ANGULAR * deltaTime); //追記
   }
   /* ↑↑↑work31の追記・修正場所↑↑↑ */
 ```
@@ -402,19 +403,19 @@ function renderFrame() {
   const deltaTime = clock.getDelta(); /* 前フレームからの経過時間。物体の移動に使う。 */
   if (arrows["up"].isPressed()) {
     taDebugText.value += "up\n";
-    /* 修正 */
+    /* 修正↓ */
     if (mylib2020.checkCollision(sphere, blocks, mylib2020.FORWARD) == false) {
       sphere.translateOnAxis(mylib2020.FORWARD, LINEAR * deltaTime);
     }
-    /* 修正 */
+    /* 修正↑ */
   }
   if (arrows["down"].isPressed()) {
     taDebugText.value += "down\n";
-    /* 修正 */
+    /* 修正↓ */
     if (mylib2020.checkCollision(sphere, blocks, mylib2020.BACK) == false) {
       sphere.translateOnAxis(mylib2020.BACK, LINEAR * deltaTime);
     }
-    /* 修正 */
+    /* 修正↑ */
   }
 ```
 

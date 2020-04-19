@@ -30,6 +30,9 @@
     <textarea id="message" class="message" style="left: 20%;width: 78%">メッセージウィンドウ</textarea>
   </div>
   <!-- ↑↑↑ 追記 -->
+  <div id="controller" style="position: relative;height: 25%;background-color:chocolate">
+  <!-- ・・・省略 -->
+  </div>
 </div>
 ```
 
@@ -76,10 +79,11 @@ function renderFrame() {
     // taDebugText.value += "right\n";
     sphere.rotateY(-ANGULAR * deltaTime);
   }
-  // 追記
+  // 追記↓
   if (enc) {
     taDebugText.value += "Encounter!!\n";
   }
+  // 追記↑
   /* ↑↑↑work31の追記・修正場所↑↑↑ */
 ```
 
@@ -140,7 +144,7 @@ if (monster == null) { // 追記
     // taDebugText.value += "right\n";
     sphere.rotateY(-ANGULAR * deltaTime);
   }
-} // 追記
+} // 閉じ中括弧を追記
 if (enc) {
   taDebugText.value += 'Encounter!!\n';
   taMessage.value = '敵と遭遇した\n'; // 追記
@@ -159,7 +163,7 @@ if (enc) {
 
 敵と戦闘中かどうかは変数`monster`が`null`かどうかで判断できる。したがって、プッシュボタンを押したとき、`monster`が`null`でないならば戦闘の処理（今回はじゃんけん）を行えばよい。
 
-- プッシュボタンのイベントハンドラに以下のコードを追記しなさい。
+- プッシュボタンのイベントハンドラ`onPushButtonClicked`を以下のように実装しなさい。
 
 ```javascript
 /* ↓↓↓work31のプッシュボタンや十字キーに関する追記・修正場所↓↓↓ */
@@ -167,6 +171,7 @@ let monster = null;
 let winCount = 0;
 const divStatus = document.getElementById("status");
 function onPushButtonClicked() {
+  /* このように実装する↓ */
     taDebugText.value += this.id + ":Pushed. value=" + this.value + "\n";
     const hands = ["グー", "チョキ", "パー"];
     if (monster) { // 戦闘中
@@ -188,6 +193,7 @@ function onPushButtonClicked() {
         taDebugText.value += "monster:" + monsterHand + "\n";
         taDebugText.value += "you:" + yourHand + "\n";
     }
+  /* 実装終わり */
 }
 ```
 
