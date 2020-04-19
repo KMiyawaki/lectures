@@ -389,12 +389,14 @@ const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 - `cubeGeometry`および`cubeMaterial`のインスタンス生成部分を次のように書き換えなさい。`cubeGeometry`のサイズを元に戻していることと`cube`の位置も変更していることに注意。
 
 ```java
+/* ↓↓↓work17 の追記・修正場所↓↓↓ */
 const cubeGeometry = new THREE.BoxGeometry(3, 3, 3); /* Geometry の生成を分けて書くこともできる */
 const loader = new THREE.TextureLoader(); /* テクスチャをロードするための道具 */
 const mapTexture = loader.load("../assets/downloads/ReflectingTheLava.png"); /* 指定されたURLからテクスチャをロード */
 const cubeMaterial = new THREE.MeshPhongMaterial({ map: mapTexture }); /* map:テクスチャマッピング用画像を指定 */
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cube.position.set(0, 3, 0);
+/* ↑↑↑work17 の追記・修正場所↑↑↑ */
 ```
 
 - 実行結果
