@@ -361,7 +361,7 @@ gsap.fromTo(box.userData, // 変化する値を保存している JavaScript オ
 ```
 
 上記の例は、 GSAP のメソッドのうち[`gsap.fromTo()`](https://greensock.com/docs/v3/GSAP/gsap.fromTo())を使っている。
-`fromTo`の名前が示す通り、 JavaScript オブジェクトのあるキーの値を開始値から終了値まで変化させられる。
+`fromTo`の名前が示す通り、 JavaScript オブジェクトのあるプロパティの値を開始値から終了値まで変化させられる。
 上記例では、`box.userData.rotY`を 0 から 180 度まで変化させて、直方体の回転角度として使用している。
 第 1 引数は変化させたい値を持つ JavaScript オブジェクトを指定する。
 第 2 引数は変化させたいプロパティ名と、その開始値である。  
