@@ -85,7 +85,6 @@ C:\Users\[ユーザ名]\Documents\ThreeJS-master
 │  │      red-dragon-1549047184nu3.png
 │  │      ReflectingTheLava.png
 │  │      RockWall_orFloor_height.png
-│  │      Shuttle_min.glb
 │  │      sword_01.png
 │  │
 │  ├─models
