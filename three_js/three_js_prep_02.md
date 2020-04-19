@@ -476,8 +476,10 @@ pRef.name = "Hanako";
 ```html
 <!DOCTYPE html>
 <html>
-<title>Web Page Design</title>
 <head>
+<title>Web Page Design</title>
+</head>
+<body>
 <script>
 class Person{
     constructor(name, age){
@@ -510,8 +512,6 @@ function init() {
 }
 init();
 </script>
-</head>
-<body>
 </body>
 </html>
 ```
@@ -528,6 +528,9 @@ Hanako
 
 - [codingground](https://www.tutorialspoint.com/online_javascript_editor.php)
   - ブラウザで手軽に JavaScript のコードが試せる。
+  - 上記コードをコピー＆ペーストし、「 Preview 」ボタンを押すと実行できる。
+
+![coding_ground.png](./three_js_prep_02/coding_ground.png)
 
 - - -
 
