@@ -1,4 +1,4 @@
-# Three.js(lec03)
+# Three.js(lec03-2)
 
 [three_js/Home](./Home.md)
 
