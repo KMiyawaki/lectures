@@ -48,6 +48,7 @@ CATKIN_IGNORE
 
 #Visucal Studio Code
 .vscode
+*.code-workspace
 
 # DNN models
 /models/*
