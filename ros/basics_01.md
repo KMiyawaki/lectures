@@ -226,6 +226,14 @@ listener.py                               100%[=================================
 2020-10-07 15:40:19 (7.51 MB/s) - ‘listener.py’ saved [2406/2406]
 ```
 
+- ダウンロードした二つのファイルの上から２行目に`# -*- coding: utf-8 -*-`と追記し、日本語が使えるようにしておいてください。
+
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Software License Agreement (BSD License)
+```
+
 ### 問題(2)
 
 - ダウンロードした 2 つのファイルにユーザの実行権限をつけなさい。
