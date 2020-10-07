@@ -432,7 +432,7 @@ number = 0 # 追記
 ```python
 pub.publish(hello_str)
 pubInt32.publish(number) # 追記
-number = (number + 1) % 20 # 追記
+number = (number + 1) % 40 # 追記
 ```
 
 - `talker.py`を実行しなさい。
@@ -470,6 +470,15 @@ def callbackInt32(data): # 追記
 ```
 
 ## 応用問題(4)
+
+`listener.py`の`callbackInt32(data)`を受信したデータに応じて以下のような出力をするように変更してください。
+
+- `data.data`が3で割り切れるときは`Fizz`
+- `data.data`が5で割り切れるときは`Buzz`
+- `data.data`が3でも5で割り切れるときは`Fizz Buzz`
+- `data.data`が3でも5で割り切れないときは`data.data`をそのまま出力する。
+
+## 応用問題(5)
 
 - 2 人組になり[複数の PC で ROS の通信を行う設定](./basics_02.md)を行い、双方で`talker.py`と`listener.py`を動かし通信しなさい。
 - `talker.py`が出力するデータを好きな文字に変えて再び実行し、通信相手にメッセージを届けなさい。
