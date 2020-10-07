@@ -203,7 +203,28 @@ $ pwd
 
 - `scripts`ディレクトリに下記二つのファイルをダウンロード
   - [talker.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py)
+  
+```shell
+$ wget https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+--2020-10-07 15:38:36--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.228.133
+・・・
+talker.py                                 100%[==================================================================================>]   2.17K  --.-KB/s    in 0s      
+
+2020-10-07 15:38:37 (10.1 MB/s) - ‘talker.py’ saved [2217/2217]
+```
+
   - [listener.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py)
+
+```shell
+$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+--2020-10-07 15:40:18--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+Resolving raw.github.com (raw.github.com)... 151.101.228.133
+・・・
+listener.py                               100%[==================================================================================>]   2.35K  --.-KB/s    in 0s      
+
+2020-10-07 15:40:19 (7.51 MB/s) - ‘listener.py’ saved [2406/2406]
+```
 
 ### 問題(2)
 
