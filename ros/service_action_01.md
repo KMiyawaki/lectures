@@ -42,6 +42,11 @@ $ roscore
 
 ```shell
 $ rosrun turtlesim turtlesim_node
+```
+
+- さらに別ターミナルで下記を実行する。
+
+```shell
 $ rosservice list
 /clear
 /kill
