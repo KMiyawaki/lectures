@@ -27,6 +27,7 @@ SMACH からセンサデータを使う
 ## 問題(2)
 
 - ロボット前方に何か障害物を置いて、レーザでそれを検出し、障害物が除去されたら前進させなさい。
+  - Microbot 搭載のレーザ[YDLIDAR X4](https://www.ydlidar.com/products/view/5.html)は11メートルまでの障害物しか検出できません。11メートル以内の空間に何もない場合、その場所の距離はゼロとして返ってきます。このことに注意してください。
   - 上記で利用した`nav_msgs/Odometry`を使い，数メートル進ませるようにしなさい。
   - `WaitForLaserScanState`とは別に`WaitForDoorOpen`などを実装することが理想です。
 
