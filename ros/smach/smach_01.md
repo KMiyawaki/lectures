@@ -11,6 +11,7 @@
 - ROS のプログラミング環境を[セットアップ](https://github.com/KMiyawaki/setup_robot_programming)した PC（仮想環境、WSL 可）で行う。
 
 ```shell
+$ sudo apt update
 $ sudo apt-get install ros-melodic-smach
 $ sudo apt-get install ros-melodic-smach-viewer
 ```
