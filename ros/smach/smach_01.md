@@ -39,6 +39,17 @@ $ rosrun smach_viewer smach_viewer.py
 $ roscd my_microbot_apps/scripts
 $ pwd
 /home/[user name]/catkin_ws/src/my_microbot_apps/scripts
+$ wget https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_01/state_machine_simple.py
+--2020-10-22 14:51:33--  https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_01/state_machine_simple.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.228.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.228.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1323 (1.3K) [text/plain]
+Saving to: ‘state_machine_simple.py’
+
+state_machine_simple.py     100%[========================================>]   1.29K  --.-KB/s    in 0s      
+
+2020-10-22 14:51:34 (24.4 MB/s) - ‘state_machine_simple.py’ saved [1323/1323]
 $ chmod u+x state_machine_simple.py
 $ ls -l
 -rwxr--r-- 1 oit oit 1364  2月 11 13:03 state_machine_simple.py
