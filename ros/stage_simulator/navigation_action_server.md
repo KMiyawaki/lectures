@@ -14,7 +14,7 @@
 - スクリプトを格納するディレクトリを作る
 
 ```shell
-$ roscd roscd my_microbot_apps/scripts
+$ roscd my_microbot_apps/scripts
 ```
 
 - `scripts`に下記ファイルをダウンロード
