@@ -12,6 +12,21 @@ SMACH から Action を使う
 - 次のファイルを`~/catkin_ws/src/my_microbot_apps/scripts`にダウンロードし実行しなさい。
   - [state_machine_action_1.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_04/state_machine_action_1.py)
 
+```shell
+$ roscd my_microbot_apps/scripts/
+$ pwd
+/home/[user name]/catkin_ws/src/my_microbot_apps/scripts
+$ wget https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_04/state_machine_action_1.py
+--2020-10-28 12:09:25--  https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/smach/smach_04/state_machine_action_1.py
+・・・
+2020-10-28 12:09:26 (4.14 MB/s) - ‘state_machine_action_1.py’ saved [2568/2568]
+
+$ chmod u+x state_machine_action_1.py
+$ ls -l
+・・・
+-rwxr--r-- 1 oit oit 2568 Oct 28 12:09 state_machine_action_1.py
+```
+
 ## [SimpleActionState](http://wiki.ros.org/smach/Tutorials/Calling%20Actions)
 
 - `smach`から`action`クライアントの機能を簡単に呼び出すための状態。
