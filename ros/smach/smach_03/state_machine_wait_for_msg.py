@@ -12,14 +12,14 @@ import smach_ros
 
 
 class SleepState(smach.State):
-    def __init__(self, time_lilmit):
+    def __init__(self, time_limit):
         smach.State.__init__(self, outcomes=['ok'])
-        self.time_lilmit = time_lilmit
+        self.time_limit = time_limit
 
     def execute(self, userdata):
         rospy.loginfo('Executing state ' + self.__class__.__name__ +
-                      '. Sleeping ' + str(self.time_lilmit) + ' secs')
-        rospy.sleep(self.time_lilmit)
+                      '. Sleeping ' + str(self.time_limit) + ' secs')
+        rospy.sleep(self.time_limit)
         return 'ok'
 
 
@@ -40,23 +40,23 @@ class SensorMessageGetter(object):
 
 
 class WaitForLaserScan(smach.State):
-    def __init__(self, topic='/base_scan', time_lilmit=None, msg_wait=1.0):
+    def __init__(self, topic='/base_scan', time_limit=None, msg_wait=1.0):
         smach.State.__init__(self, outcomes=['ok', 'ng'])
         self.sensor_msg = SensorMessageGetter(
             topic, sensor_msgs.msg.LaserScan, msg_wait)
-        self.time_lilmit = time_lilmit
+        self.time_limit = time_limit
         self.end_time = None
 
-    def is_time_lilmit(self):
-        if self.time_lilmit is None or self.end_time is None:
+    def is_time_limit(self):
+        if self.time_limit is None or self.end_time is None:
             return False
         return rospy.Time.now() >= self.end_time
 
     def execute(self, userdata):
         self.end_time = None
-        if self.time_lilmit is not None:
-            self.end_time = rospy.Time.now() + rospy.Duration.from_sec(self.time_lilmit)
-        while self.is_time_lilmit() is False:
+        if self.time_limit is not None:
+            self.end_time = rospy.Time.now() + rospy.Duration.from_sec(self.time_limit)
+        while self.is_time_limit() is False:
             msg = self.sensor_msg.get_msg()
             if msg is not None:
                 rospy.loginfo('Recv sensor. frame_id = ' +
@@ -68,23 +68,23 @@ class WaitForLaserScan(smach.State):
 
 
 class WaitForOdometry(smach.State):
-    def __init__(self, topic='/odom', time_lilmit=None, msg_wait=1.0):
+    def __init__(self, topic='/odom', time_limit=None, msg_wait=1.0):
         smach.State.__init__(self, outcomes=['ok', 'ng'])
         self.sensor_msg = SensorMessageGetter(
             topic, nav_msgs.msg.Odometry, msg_wait)
-        self.time_lilmit = time_lilmit
+        self.time_limit = time_limit
         self.end_time = None
 
-    def is_time_lilmit(self):
-        if self.time_lilmit is None or self.end_time is None:
+    def is_time_limit(self):
+        if self.time_limit is None or self.end_time is None:
             return False
         return rospy.Time.now() >= self.end_time
 
     def execute(self, userdata):
         self.end_time = None
-        if self.time_lilmit is not None:
-            self.end_time = rospy.Time.now() + rospy.Duration.from_sec(self.time_lilmit)
-        while self.is_time_lilmit() is False:
+        if self.time_limit is not None:
+            self.end_time = rospy.Time.now() + rospy.Duration.from_sec(self.time_limit)
+        while self.is_time_limit() is False:
             msg = self.sensor_msg.get_msg()
             if msg is not None:
                 rospy.loginfo('Recv sensor. frame_id = ' +

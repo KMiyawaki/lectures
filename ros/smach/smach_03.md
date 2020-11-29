@@ -47,11 +47,11 @@ $ ls -l
 
 ```python
 class GoStraightOdomByDistance(smach.State):
-    def __init__(self, distance, linear_vel=0.4, cmd_vel="/cmd_vel", topic='/odom', time_lilmit=None, msg_wait=1.0):
+    def __init__(self, distance, linear_vel=0.4, cmd_vel="/cmd_vel", topic='/odom', time_limit=None, msg_wait=1.0):
         smach.State.__init__(self, outcomes=['ok', 'ng'])
         self.sensor_msg = SensorMessageGetter(
             topic, nav_msgs.msg.Odometry, msg_wait)
-        self.time_lilmit = time_lilmit
+        self.time_limit = time_limit
         self.end_time = None
         self.linear_vel = linear_vel
         self.cmd_vel = cmd_vel
