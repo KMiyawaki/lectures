@@ -69,9 +69,78 @@ class GoStraightOdomByDistance(smach.State):
 
 ## 問題(3)
 
+- 上記で利用した`nav_msgs/Odometry`を使い，指定した距離だけを進ませるクラス`TurnOdomByAngle`を作成しなさい。
+- まず、`GoStraightOdomByDistance`クラスをコピーし編集します。
+- コンストラクタは次の通り。
+
+```python
+class TurnOdomByAngle(smach.State):
+    def __init__(self, angle, angular_vel=math.radians(30), cmd_vel="/cmd_vel", topic='/odom', time_limit=None, msg_wait=1.0):
+        smach.State.__init__(self, outcomes=['ok', 'ng'])
+        self.sensor_msg = SensorMessageGetter(
+            topic, nav_msgs.msg.Odometry, msg_wait)
+        self.time_limit = time_limit
+        self.end_time = None
+        self.angular_vel = angular_vel
+        self.cmd_vel = cmd_vel
+        self.angle = angle
+```
+
+- プログラム冒頭に`from tf.transformations import euler_from_quaternion`と`import math`、`import angles`を追加しておくこと。
+
+### 角度計算の注意点
+
+- 角度の場合は距離のときと異なり、－180度～＋180度で表現される点に注意が必要です。
+- 例えばロボットが左周りにずっと回転し、＋180度を超えたとき、ロボットの姿勢は－179度、－178度・・・0度、＋1度・・・というように変化します。
+- 従って、距離のときと同じように最初の姿勢を覚えておいて、現在の姿勢から単に引き算しただけでは失敗するケースがあり、簡単なようで却って複雑になります。
+- 最も簡単な方法は1フレームごとに回転した角度を積分して行き、目標角を超えた時点で終了させることです。
+- ロボットの現在の姿勢の角度（ラジアン）を得る次のメソッドをクラスに追加して使用してください。
+  - `yaw`は物体の姿勢の表現の一つロール・ピッチ・ヨーのヨー角のことです。
+
+```python
+    def get_yaw(self, odom):
+        q = (odom.pose.pose.orientation.x,
+             odom.pose.pose.orientation.y,
+             odom.pose.pose.orientation.z,
+             odom.pose.pose.orientation.w)
+        euler = euler_from_quaternion(q)
+        return euler[2]
+```
+
+- フレームごとのヨー角（下記コードでは変数`yaw`）が得られたとき、前フレームでのヨー角（下記コードでは変数`yaw_pre`）との差分を次のコードで計算し、その絶対値を累積していってください。
+  - 絶対値を累積することを忘れないようにしてください。
+
+```python
+angles.normalize_angle(yaw - yaw_pre)
+```
+
+## 問題(4)
+
 - ロボット前方に何か障害物を置いて、レーザでそれを検出し、障害物が除去されたら前進させなさい。
   - Microbot 搭載のレーザ[YDLIDAR X4](https://www.ydlidar.com/products/view/5.html)は11メートルまでの障害物しか検出できません。11メートル以内の空間に何もない場合、その場所の距離はゼロとして返ってきます。このことに注意してください。
   - この課題は、ロボットに「ドアが開いたら部屋に入る」という行動をさせることを想定しています。
+
+## 問題(5)
+
+- `WaitForLaserScan`クラスをコピーし他のノードから`publish`された`std_msgs/String`を受け取って表示するクラス`WaitForText`を作成しましょう。
+- コンストラクタは次の通り。
+
+```python
+class WaitForText(smach.State):
+    def __init__(self, topic='/chatter', time_limit=None, msg_wait=1.0):
+        smach.State.__init__(self, outcomes=['ok', 'ng'])
+        self.sensor_msg = SensorMessageGetter(
+            topic, String, msg_wait)
+        self.time_limit = time_limit
+        self.end_time = None
+```
+
+- インポート文`from std_msgs.msg import String`を先頭に追加してください。
+- `execute`内の`msg = self.sensor_msg.get_msg()`で`None`以外が返却されたとき、`msg.data`が受け取ったテキストになります。
+- 動作確認には[ROS(1)](../basics_01.md)で作成した`talker.py`を使いましょう。
+- 受け取ったテキストに応じて遷移先が分岐するような状態遷移を作成しましょう。
+  - `straight`：1m進む。`back`：1m後退する。
+  - `turn_left`：90度回転する。`turn_right`：-90度回転する。
 
 ---
 
