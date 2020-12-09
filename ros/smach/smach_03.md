@@ -139,8 +139,8 @@ class WaitForText(smach.State):
 - `execute`内の`msg = self.sensor_msg.get_msg()`で`None`以外が返却されたとき、`msg.data`が受け取ったテキストになります。
 - 動作確認には[ROS(1)](../basics_01.md)で作成した`talker.py`を使いましょう。
 - 受け取ったテキストに応じて遷移先が分岐するような状態遷移を作成しましょう。
-  - `straight`：1m進む。`back`：1m後退する。
-  - `turn_left`：90度回転する。`turn_right`：-90度回転する。
+  - `straight_1.0`：1.0m進む。`back_1.0`：1.0m後退する。
+  - `turn_left_90`：90度回転する。`turn_right_90`：-90度回転する。
 
 ---
 
