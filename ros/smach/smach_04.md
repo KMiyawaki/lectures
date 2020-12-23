@@ -106,6 +106,14 @@ point:
 - 場所の名前は`living`、`dining`、`kitchen`、`bedroom`とする。
 - さらに、コマンドの実行が終了したら新たなコマンドの受信待ち状態に遷移させ、何度でもコマンドを受けられるようにすること。
 
+## 問題(3)
+
+- ロボットがコマンド受信時やエラー発生時にテキストでメッセージをトピックとして`publish`できるようにしなさい。
+  - （例）`recv command living`、`unknown command XXX`など。
+- トピック名は`robot_message`とし、型は[`std_msgs/String`](http://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html)で`publish`しなさい。
+- 動作テストは`$ rostopic echo /robot_message`としてロボットから発信されたメッセージを表示することで行いなさい。
+- 動作が確認できたら`talker.py`を`input`関数でキーボードからコマンド入力し、ロボットから受け取ったメッセージは画面に表示できるように改良しなさい。
+
 ---
 
 [smach/Home](Home.md)
