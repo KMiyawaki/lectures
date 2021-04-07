@@ -13,9 +13,9 @@
 - OS
   - 本演習では Windows10 を用いる。
 - ウェブブラウザ
-  - 本演習では Chrome ブラウザを使って説明する。演習の内容は バージョン: 80.0.3987.100（Official Build） （64 ビット）で確認している。
+  - 本演習では Chrome ブラウザを使って説明する。演習の内容は バージョン: 89.0.4389.114（Official Build） （64 ビット）で確認している。
 - エディタ
-  - 本演習では[Visual Studio Code](https://code.visualstudio.com/)を使って説明する。演習の内容はバージョン: 1.42.0 で確認している。
+  - 本演習では[Visual Studio Code](https://code.visualstudio.com/)を使って説明する。演習の内容はバージョン: 1.55.0 で確認している。
   - HTML と JavaScript を書くだけなので、notepad のような単なるテキストエディタも使える。
 - Web サーバー
   - 自分の PC にある HTML ファイルをダブルクリックして直接開くと、JavaScript からテクスチャ等を読み込む際に失敗する。
@@ -155,6 +155,9 @@ C:\Users\[ユーザ名]\Documents\ThreeJS-master
 ![work11_02.png](./three_js_prep_01/work11_02.png)
 
 ## Android 端末から HTML を閲覧する
+
+- 下記手順において、上手く行かない場合はWindowsのファイアウォールを無効にすること。
+  - 演習が終わったら元に戻すこと。
 
 Windows の[モバイルホットスポット](https://www.billionwallet.com/windows10/windows-use-your-pc-as-a-mobile-hotspot.html)機能を利用する。リンクを参照し設定すればよいが、多人数での演習ではネットワーク名が衝突する可能性が非常に高い。  
 **そこで、ネットワーク名の末尾に学籍番号の下 3 桁を追加すること。**  
