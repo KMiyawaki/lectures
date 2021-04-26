@@ -526,11 +526,8 @@ Hanako
 
 ## 参考
 
-- [codingground](https://www.tutorialspoint.com/online_javascript_editor.php)
+- [PLAYCODE](https://playcode.io/)
   - ブラウザで手軽に JavaScript のコードが試せる。
-  - 上記コードをコピー＆ペーストし、「 Preview 」ボタンを押すと実行できる。
-
-![coding_ground.png](./three_js_prep_02/coding_ground.png)
 
 - - -
 
