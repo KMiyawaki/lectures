@@ -89,9 +89,9 @@ if (x > 5 && x < 10) {
   taDebugText.value += "x > 5 && x < 10 は false\n";
 }
 if (x % 2 == 0) {
-  taDebugText.value += "xは偶数";
+  taDebugText.value += "xは偶数\n";
 } else {
-  taDebugText.value += "xは奇数";
+  taDebugText.value += "xは奇数\n";
 }
 function myAdd(arg1, arg2) {
   let ans = arg1 + arg2;
