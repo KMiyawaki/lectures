@@ -335,7 +335,7 @@ const plane = new THREE.Mesh(new THREE.PlaneGeometry(100, 100), new THREE.MeshPh
 /* ↑↑↑work17 の修正場所↑↑↑ */
 ```
 
-- `sphere`の`THREE.MeshPhongMaterial`において`wireframe`を`true`に変更する。
+- `sphere`の`THREE.MeshPhongMaterial`において`wireframe`を`true`に、`color`を`0x00FF00`に変更する。
 
 ```java
 /* ↓↓↓work17 の修正場所↓↓↓ */
