@@ -180,6 +180,9 @@ function onPushButtonClicked() {
         let win = false;
         taMessage.value += "モンスターは" + hands[monsterHand] + "を出した!\n";
         taMessage.value += "主人公は" + hands[yourHand] + "を出した!\n";
+        
+        /* ここで win に主人公の手とモンスターの手に応じた適切な勝敗の結果（true:勝ち、false:負け）を代入するようなコードを書く */
+        
         if(win){
           monster.remove(divGlView);
           monster = null;
