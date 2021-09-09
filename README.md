@@ -2,7 +2,7 @@
 
 ## [Model Courses](./model_course/Home.md)
 
-## [WSL](./wsl/install_wsl.md)
+## [WSL1](https://github.com/KMiyawaki/lecture_wsl1)
 
 ## [Linux](./unix/Home.md)
 
