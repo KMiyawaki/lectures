@@ -10,7 +10,7 @@
 
 ## [ROS](./ros/Home.md)
 
-## [Visual Studio Code](./vscode/visual_studio_code.md)
+## [Visual Studio Code](https://github.com/KMiyawaki/lecture_vscode/blob/main/README.md)
 
 ## [GIT](./git/Home.md)
 
