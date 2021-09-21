@@ -14,8 +14,7 @@
 - ターミナルを全て閉じて開き直し、以下のコマンドを実行。
 
 ```shell
-$ roscd my_microbot_apps/launch/simulation/
-$ roslaunch navigation.launch use_teleop:=true use_mouse:=false
+$ roslaunch oit_navigation_minibot_light_01 stage_navigation.launch
 ... logging to /home/[user name]/.ros/log/ebe20526-4944-11ea-a3d0-000c2924787d/roslaunch-ubuntu-16196.log
 Checking log directory for disk usage. This may take awhile.
 Press Ctrl-C to interrupt
@@ -42,12 +41,6 @@ SUMMARY
 
 ![2020-02-07_11-20-18.png](./stage_simulator_01/2020-02-07_11-20-18.png)
 
-- `Mouse Teleop`
-  - GUI でマウスによりロボットに速度を与えるソフト。
-  - `use_mouse:=false`のオプションを外すと起動できる。
-
-![2020-02-07_11-17-41.png](./stage_simulator_01/2020-02-07_11-17-41.png)
-
 ## ロボットのナビゲーション
 
 - ロボット用語としてのナビゲーションは、任意の位置にロボットを自律移動させることを指す。次の 2 つのステップから成る。
@@ -62,6 +55,7 @@ SUMMARY
 ### 自己位置推定
 
 - あらかじめ取得された地図の形と、ロボット搭載の LRF から得られたデータを比較することでロボットが現在地図上のどこにいるかを推定する。
+- `RViz`上でLRFのデータが壁の形と全く一致していない場合、つまり、ロボットが自分が地図の中でどこにいるか見失っているときに使う。
 - `RViz`上で`2D Pose Estimate`ボタンをクリックし、地図上のロボットがいるであろう場所から向いている方向に向かって左ドラッグして離す。
 
 ![2020-02-07_11-57-36.svg.png](./stage_simulator_01/2020-02-07_11-57-36.svg.png)
@@ -79,7 +73,10 @@ SUMMARY
 
 ![2020-02-07_11-58-27.svg.png](./stage_simulator_01/2020-02-07_11-58-27.svg.png)
 
+このとき`[ WARN] [1632265888.031145400, 502.600000000]: Off Map 6.105112, 4.825516`のような警告が出ることがあるが無視して良い。
+
 - 経路が計算され、ナビゲーションが始まる。ゴールに到着し、指定された方向を向くと終了する。
+- 経路によってはなかなかゴールに到着せず、回転が続くこともある。
 
 ![2020-02-07_11-58-53.png](./stage_simulator_01/2020-02-07_11-58-53.png)
 
