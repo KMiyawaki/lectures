@@ -1,4 +1,4 @@
-# Stage Simulator (2)
+# Stage Simulator (Advanced 1)
 
 [stage_simulator/Home](Home.md)
 
@@ -29,15 +29,15 @@ $ mkdir -p maps/simulator_files
 - 作成した`maps`ディレクトリに下記をダウンロード
 
   - リンクを右クリックし「名前をつけてリンク先を保存」。
-  - [HRC.world](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_02/HRC.world)
-  - [HRC.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_02/HRC.yaml)
+  - [HRC.world](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_01/HRC.world)
+  - [HRC.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_01/HRC.yaml)
   - [HRC.pgm](https://github.com/KMiyawaki/lectures/raw/master/ros/stage_simulator/stage_simulator/HRC.pgm)
 
 - 作成した`simulator_files`ディレクトリに下記をダウンロード
 
   - リンクを右クリックし「名前をつけてリンク先を保存」。
-  - [device.inc](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_02/device.inc)
-  - [map.inc](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_02/map.inc)
+  - [device.inc](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_01/device.inc)
+  - [map.inc](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_01/map.inc)
 
 - ダウンロードしたファイルの配置を確認する。
 
@@ -84,7 +84,7 @@ Stage 4.3.0
 - 明らかに縮尺がおかしいことを目盛（メートル単位）から確認しなさい。30m 四方の部屋となっている。
 - 確認したら、`Stage`を起動したターミナル上で`Ctrl+C`を押し、終了させなさい。
 
-![2017-12-18_10-23-44.png](./stage_simulator_02/2017-12-18_10-23-44.png)
+![2017-12-18_10-23-44.png](./stage_simulator_advanced_01/2017-12-18_10-23-44.png)
 
 - 画像に枠を付ける
 
@@ -114,7 +114,7 @@ $ stage HRC.world
 
 - 実行結果
 
-![2017-12-18_10-35-48.png](./stage_simulator_02/2017-12-18_10-35-48.png)
+![2017-12-18_10-35-48.png](./stage_simulator_advanced_01/2017-12-18_10-35-48.png)
 
 - つまり、`Stage`は地図画像のグレーの画素を無視するので、作成した占有格子地図をで使う際は画像に黒い枠が必要。
 

@@ -60,10 +60,10 @@ $ roslaunch [パッケージ名] launchファイル名
 $ roscd beginner_tutorials/
 $ mkdir launch
 $ cd launch
-$ emacs turtle.launch &
+$ touch turtle.launch # このファイルをVSCode等で編集する。touch はファイル作成のコマンド
 ```
 
-- `turtle.launch`の内容は次の通り。保存して`emacs`を終了。
+- `turtle.launch`の内容は次の通り。
 
 ```xml
 <launch>
@@ -131,17 +131,15 @@ $ roslaunch turtle.launch
 - 新たな`launch`ファイルを作成する。
 
 ```shell
-$ roscd beginner_tutorials/
-$ mkdir launch
-$ cd launch
-$ emacs pair.launch &
+$ roscd beginner_tutorials/launch
+$ touch pair.launch # このファイルを編集する。
 ```
 
-- `pair.launch`の内容は次の通り。保存して`emacs`を終了。
+- `pair.launch`の内容は次の通り。
 
 ```xml
 <launch>
-  <node name="talker_param" type="talker_param.py" pkg="beginner_tutorials" />
+  <node name="talker" type="talker.py" pkg="beginner_tutorials" />
   <node name="listener" type="listener.py" pkg="beginner_tutorials" />
 </launch>
 ```
@@ -182,17 +180,17 @@ data: "Good Bye 1535068295.05"
 
 ## 実習(4)
 
-- `pair.launch`を編集し、`talker_param.py`を起動している`node`タグを次のように変更しなさい。
+- `pair.launch`を編集し、`talker.py`を起動している`node`タグを次のように変更しなさい。
   - **param タグを追加するために node の終了タグが必要になったことに注意**
 
 ```xml
-  <node name="talker_param" type="talker_param.py" pkg="beginner_tutorials" />
+  <node name="talker" type="talker.py" pkg="beginner_tutorials" />
 ```
 
 を
 
 ```xml
-  <node name="talker_param" type="talker_param.py" pkg="beginner_tutorials">
+  <node name="talker" type="talker.py" pkg="beginner_tutorials">
     <param name="text" type="str" value="Hello ROS launch" />
   </node>
 ```
@@ -222,15 +220,14 @@ $ roslaunch beginner_tutorials pair.launch
 
 ---
 
-- `talker_param.py`を起動している`node`タグを次のように変更しなさい。
+- `talker.py`を起動している`node`タグを次のように変更しなさい。
 
 ```xml
-  <node name="talker_param" type="talker_param.py" pkg="beginner_tutorials">
+  <node name="talker" type="talker.py" pkg="beginner_tutorials">
     <param name="text" type="str" value="$(find beginner_tutorials)" />
   </node>
 ```
 
-- 変更を保存して`emacs`を終了させなさい。
 - これまで同様`pair.launch`を実行しなさい。
 - 実行結果
 

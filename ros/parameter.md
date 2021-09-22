@@ -12,7 +12,17 @@
   - [talker.py](https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/talker.py)
   - [listener.py](https://raw.githubusercontent.com/ros/ros_tutorials/indigo-devel/rospy_tutorials/001_talker_listener/listener.py)
   - **実行権限の付与を忘れないように。** `chmod u+x ファイル名`
-- 出力例
+
+ファイル取得と実行権限付与をまとめると以下のコマンドになる。
+
+```shell
+$ roscd beginner_tutorials/scripts
+$ wget https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py -O talker.py
+$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py -O listener.py
+$ chmod u+x talker.py listener.py
+```
+
+ファイルを取得できたら実行すること。以下は実行時の出力例。
 
 ```shell
 [INFO] [1534992351.137028]: hello world 1534992351.14
@@ -31,44 +41,40 @@
 
 ## 実習(1)（準備運動）
 
-- `talker.py`をコピーし`talker_param.py`を作成して下記の変更を加えなさい。
-- 関数`talker()`に仮引数`text`を追加しなさい。`text`には文字列が与えられることを想定しています。
-- `rospy.init_node`の呼び出し箇所を次のように変更しなさい。
-
-```python
-rospy.init_node('talker_param', anonymous=False)
-```
+- `talker.py`に下記の変更を加えなさい。
+- 関数`talker`に仮引数`text`を追加しなさい。`text`には文字列が与えられることを想定しています。
 
 ---
 
-- 関数`main()`において関数`talker()`を実引数`"Good Morning"`を与えて呼び出すように変更しなさい。
-- `talker_param.py`実行時に次のような出力が得られるように関数`talker()`を変更しなさい。
+- 関数`main()`において関数`talker`を実引数`"Good Morning"`を与えて呼び出すように変更しなさい。
+- `talker.py`実行時に次のような出力が得られるように関数`talker`を変更しなさい。
 
 ```shell
-[INFO] [1534992351.137028]: Good Morning 1534992351.14（数字は気にしない）
+[INFO] [1534992351.137028]: Good Morning 1534992351.14 # 数字は気にしない
 ```
 
-- 関数`main()`において関数`talker()`を実引数`"Good Bye"`を与えて呼び出すと、次のよう出力がなされることを確認しなさい。
+- 関数`main()`において関数`talker`を実引数`"Good Bye"`を与えて呼び出すと、次のよう出力がなされることを確認しなさい。
   - **talker 関数の内容を変更してはいけない。**
 
 ```shell
-[INFO] [1534992351.137028]: Good Bye 1534992351.14（数字は気にしない）
+[INFO] [1534992351.137028]: Good Bye 1534992351.14 # 数字は気にしない
 ```
 
 ---
 
 ## 実習(2)
 
-- `rospy.init_node('talker_param', anonymous=False)`の下に次のコードを追加しなさい。
+- `rospy.init_node('talker', anonymous=False)`の部分で`anonymous=False`となっていなければ修正しなさい。
+- その下に次のコードを追加しなさい。
 
 ```python
 text = rospy.get_param("~text", text)
 ```
 
-- 次のコマンドで`talker_param.py`を起動して結果を確認しなさい。
+- 次のコマンドで`talker.py`を起動して結果を確認しなさい。
 
 ```shell
-$ rosrun beginner_tutorials talker_param.py _text:="Happy Halloween"
+$ rosrun beginner_tutorials talker.py _text:="Happy Halloween"
 ```
 
 - 出力例
@@ -111,7 +117,7 @@ $ rosparam list
 /rosdistro
 /rosversion
 ・・・
-/talker_param/text
+/talker/text
 ```
 
 ---
@@ -122,7 +128,7 @@ $ rosparam list
 - 続けて、次のコマンドを実行しなさい。
 
 ```shell
-$ rosparam get /talker_param/text
+$ rosparam get /talker/text
 Happy Halloween
 ```
 

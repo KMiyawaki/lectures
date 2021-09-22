@@ -14,15 +14,15 @@ $ mkdir move_base
 ```
 
 - `move_base`ディレクトリに下記のファイルをダウンロードする。
-  - [costmap_common.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_common.yaml)
-  - [costmap_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_global.yaml)
-  - [costmap_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/costmap_local.yaml)
-  - [move_base.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/move_base.launch)
-  - [move_base.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/move_base.yaml)
-  - [planner_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/planner_global.yaml)
-  - [planner_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/planner_local.yaml)
+  - [costmap_common.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/costmap_common.yaml)
+  - [costmap_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/costmap_global.yaml)
+  - [costmap_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/costmap_local.yaml)
+  - [move_base.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/move_base.launch)
+  - [move_base.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/move_base.yaml)
+  - [planner_global.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/planner_global.yaml)
+  - [planner_local.yaml](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/planner_local.yaml)
 - `launch/simulation`ディレクトリに下記のファイルをダウンロードする。
-  - [navigation.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_and_ros_navigation/navigation.launch)
+  - [navigation.launch](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/stage_simulator_advanced_04/navigation.launch)
 - `navigation.launch`を実行する。
 
 ```shell
@@ -37,13 +37,13 @@ $ roslaunch navigation.launch
 
 - RViz 上の`Add`ボタンで`Map`を追加し、`topic`を`/move_base/local_costmap/costmap`に、`color scheme`を`costmap`にする。
 
-![2017-12-18_17-41-21.png](./stage_simulator_and_ros_navigation/2017-12-18_17-41-21.png)
+![2017-12-18_17-41-21.png](./stage_simulator_advanced_04/2017-12-18_17-41-21.png)
 
 - RViz 上の`Add`ボタンで`Path`を追加し、`topic`を`/move_base/DWAPlannerROS/global_plan`に、`color`を黄色にする。
 
-![2017-12-18_17-45-40.png](./stage_simulator_and_ros_navigation/2017-12-18_17-45-40.png)
+![2017-12-18_17-45-40.png](./stage_simulator_advanced_04/2017-12-18_17-45-40.png)
 
-![2017-12-18_17-46-11.png](./stage_simulator_and_ros_navigation/2017-12-18_17-46-11.png)
+![2017-12-18_17-46-11.png](./stage_simulator_advanced_04/2017-12-18_17-46-11.png)
 
 - 同じ要領で`Path`を追加し、`topic`を`/move_base/DWAPlannerROS/local_plan`に、`color`を赤にする。
 - 同じ要領で`Path`を追加し、`topic`を`/move_base/NavfnROS/plan`に、`color`を青にする。

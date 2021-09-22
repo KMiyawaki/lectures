@@ -4,6 +4,20 @@
 
 ---
 
+## 準備
+
+以下のコマンドで必要なソフトをインストールしておくこと。
+
+```shell
+$ sudo apt-get install -y ros-melodic-turtlesim
+[sudo] password for [ユーザ名]: # パスワード入力 
+Reading package lists... Done
+Building dependency tree       
+ ...
+Unpacking ros-melodic-turtlesim (0.9.3-1bionic.20210505.020231) ...
+Setting up ros-melodic-turtlesim (0.9.3-1bionic.20210505.020231) ...
+```
+
 ## ROS とは
 
 - Robot Operating System の略
@@ -213,11 +227,12 @@ $ pwd
 /home/ユーザ名/catkin_ws/src/beginner_tutorials/scripts
 ```
 
-- `scripts`ディレクトリに下記二つのファイルをダウンロード
+- `scripts`ディレクトリに下記二つのファイルをダウンロードする。リンククリックでも良いが、ダウンロード用コマンド`wget`の実行例をリンクの後に記載しているので、それを使っても良い。
   - [talker.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py)
-  
+  - [listener.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py)
+
 ```shell
-$ wget https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
+$ wget https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py -O talker.py
 --2020-10-07 15:38:36--  https://raw.githubusercontent.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/talker.py
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.228.133
 ・・・
@@ -226,10 +241,8 @@ talker.py                                 100%[=================================
 2020-10-07 15:38:37 (10.1 MB/s) - ‘talker.py’ saved [2217/2217]
 ```
 
-  - [listener.py](https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py)
-
 ```shell
-$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
+$ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py -O listener.py
 --2020-10-07 15:40:18--  https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
 Resolving raw.github.com (raw.github.com)... 151.101.228.133
 ・・・
@@ -238,7 +251,7 @@ listener.py                               100%[=================================
 2020-10-07 15:40:19 (7.51 MB/s) - ‘listener.py’ saved [2406/2406]
 ```
 
-- ダウンロードした二つのファイルの上から２行目に`# -*- coding: utf-8 -*-`と追記し、日本語が使えるようにしておいてください。
+- VSCode でダウンロードした二つのファイルの上から２行目に`# -*- coding: utf-8 -*-`と追記し、日本語が使えるようにしておく。
 
 ```python
 #!/usr/bin/env python
@@ -262,9 +275,11 @@ $ chmod u+x listener.py
 ```shell
 $ ls -l
 合計 8
--rwxrw-r-- 1 robocup2020 robocup2020 2406  2月 12 12:43 listener.py
--rwxrw-r-- 1 robocup2020 robocup2020 2217  2月 12 12:43 talker.py
+-rwxrw-r-- 1 oit oit 2406  2月 12 12:43 listener.py
+-rwxrw-r-- 1 oit oit 2217  2月 12 12:43 talker.py
 ```
+
+先頭の`-rwxr`で、`x`が実行権限があることを示している。
 
 ---
 
@@ -381,6 +396,18 @@ def talker():
         pub.publish(hello_str) # hello_str をパブリッシュ。
         rate.sleep()
 ```
+
+### 補足
+
+以下のプログラムは見慣れない文かもしれない。
+
+```python
+        hello_str = "hello world %s" % rospy.get_time()
+```
+
+これは[文字列フォーマット操作](https://docs.python.org/ja/2.7/library/stdtypes.html#string-formatting)と呼ばれる書き方で、数値等を`printf`と同じ感覚で文字列に埋め込むことができるものである。
+
+- [利用例](https://python.civic-apps.com/string-format/)
 
 ---
 

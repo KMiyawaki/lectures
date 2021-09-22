@@ -4,42 +4,62 @@
 
 ---
 
+## シミュレータを起動する
+
+前頁[Stage Simulator (1)](./stage_simulator_01.md)に従って、シミュレータを起動しておく。
+
+## ロボットをコマンドで動かす
+
+- 下記コマンドを入力するが、`Tab`キーを活用するので説明を聞くこと。
+- コマンドを実行するとロボットが前進し、いつかは壁にぶつかって停止する。
+  - `Ctrl+C`でコマンドの実行を停止する。
+
+```shell
+$ rostopic pub /cmd_vel geometry_msgs/Twist "linear:
+ x: 0.3
+ y: 0.0
+ z: 0.0
+angular:
+ x: 0.0
+ y: 0.0
+ z: 0.0"  -r 10
+```
+
+終わったら、一旦シミュレータを終了させておくこと。
+
 ## move_base にコマンドを送る
 
 - `move_base`は`ROS navigation`メタパッケージの全体 ( SLAM 以外) を束ねるものである。
 
   - [move_base](http://wiki.ros.org/move_base)
   - 現状でも`/cmd_vel`に速度をパブリッシュすればロボットを動かせる。しかし今やりたいのは、`move_base`が持つ、大域的・局所的な経路計画と障害物回避機能である。
+  - この機能は`ROS`の`Action Server`という仕組みを使って実装されている。簡単にいうと、他の実行プログラムの機能をあたかも関数のように呼び出せる機能で、トピックを使った通信より信頼のおけるものとなっている。
 
-- スクリプトを格納するディレクトリを作る
+- スクリプトを格納するディレクトリがなければ作る。
 
 ```shell
-$ roscd my_microbot_apps/scripts
+$ roscd beginner_tutorials
+$ ls|grep scripts
+scripts # このディレクトリがあれば良い。
+$ cd scripts
 ```
 
-- `scripts`に下記ファイルをダウンロード
-  - [simple_navigation_local_goals.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/navigation_action_server/simple_navigation_local_goals.py)
-  - 実行権限を付けておくこと。
+- `scripts`に下記ファイルをダウンロードする。リンククリック->右クリック保存もしくは、リンクの下方に記述してある`wget`コマンドで取得する。
+  - [simple_navigation.py](https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/navigation_action_server/simple_navigation.py)
 
 ```shell
-$ wget https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/navigation_action_server/simple_navigation_local_goals.py
+$ wget https://raw.githubusercontent.com/KMiyawaki/lectures/master/ros/stage_simulator/navigation_action_server/simple_navigation.py
 ・・・
-simple_navigation_local_goals.py                         100%[===============================================================================================================================>]   1.16K  --.-KB/s    in 0s      
+simple_navigation.py                         100%[===============================================================================================================================>]   1.16K  --.-KB/s    in 0s      
 
 2020-10-13 07:47:48 (27.9 MB/s) - ‘simple_navigation_local_goals.py’ saved [1191/1191]
 ```
 
-- [Stage Simulator (1)](./stage_simulator_01.md)で使用した`navigation.launch`を起動しておく。
+- 実行権限を付けておくこと。
+- シミュレータを起動しておいてからスクリプトを実行する。
 
 ```shell
-$ roscd my_microbot_apps/launch/simulation/
-$ roslaunch navigation.launch use_teleop:=true use_mouse:=false map_name:=sample_02
-```
-
-- スクリプトを実行する。
-
-```shell
-$ rosrun my_microbot_apps simple_navigation_local_goals.py
+$ rosrun beginner_tutorials simple_navigation.py
 [INFO] [1581057085.133475, 13.100000]: Waiting for the move_base action server to come up
 [INFO] [1581057085.369557, 13.300000]: The server comes up
 [INFO] [1581057085.370793, 13.300000]: Sending goal
@@ -47,33 +67,26 @@ $ rosrun my_microbot_apps simple_navigation_local_goals.py
 ```
 
 - ロボットが少し前進し停止するはず。
-- スクリプトを別名でコピーし編集する。
-
-```shell
-$ roscd my_microbot_apps/scripts
-$ cp simple_navigation_local_goals.py simple_navigation_global_goals.py
-```
-
-- 編集箇所は次の通り
+- スクリプトを編集する。編集箇所は次の通り。
 
 ```python
 coord_type = "base_link" # ロボットローカル座標系
 を
 coord_type = "map" # マップ座標系
 にして、
-goal.target_pose.pose.position.x = 4.0 #（x 座標変更）
-goal.target_pose.pose.position.y = 3.0 # (y 座標追記)
+goal.target_pose.pose.position.x = 7.0 #（x 座標変更）
+goal.target_pose.pose.position.y = 4.0 # (y 座標追記）
 ```
 
 ## 課題
 
-- 以下の課題は`simple_navigation_global_goals.py`に順番に実装して行けば良い。
+- 以下の課題は`simple_navigation.py`に順番に実装して行けば良い。
 
 ### 課題（１）
 
 - 任意の目標地点にロボットを自律移動させる関数`goto_point`を作成し、`main`関数で使用しなさい。返却値はなし。仮引数は`actionlib.SimpleActionClient`のインスタンス`ac`、目標地点の座標`x, y`
-  - 関数化するのは`simple_navigation_local_goals.py`でいうと、下記の範囲である。
-    - [20行目](https://github.com/KMiyawaki/lectures/blob/master/ros/stage_simulator/navigation_action_server/simple_navigation_local_goals.py#L20)～[36行目](https://github.com/KMiyawaki/lectures/blob/master/ros/stage_simulator/navigation_action_server/simple_navigation_local_goals.py#L36)
+  - 関数化するのは`simple_navigation.py`でいうと、下記の範囲である。
+    - [20行目](https://github.com/KMiyawaki/lectures/blob/master/ros/stage_simulator/navigation_action_server/simple_navigation.py#L20)～[36行目](https://github.com/KMiyawaki/lectures/blob/master/ros/stage_simulator/navigation_action_server/simple_navigation.py#L36)
 
 ### 課題（２）
 
@@ -81,7 +94,7 @@ goal.target_pose.pose.position.y = 3.0 # (y 座標追記)
   - このように最終目的地に至るまでのサブゴールをウェイポイントと呼びます。
   - 本来、ウェイポイントで停止して欲しくはないですが、現状では止まってしまう問題があります。
 - 目標地点の座標は`Stage`上の座標軸からではなく、下記の方法で読み取ること。
-  - [マップ上の座標の調べ方](https://github.com/KMiyawaki/lectures/blob/master/ros/smach/smach_04.md#%E3%83%9E%E3%83%83%E3%83%97%E4%B8%8A%E3%81%AE%E5%BA%A7%E6%A8%99%E3%81%AE%E8%AA%BF%E3%81%B9%E6%96%B9)
+  - [マップ上の座標の調べ方](../how_to_get_coordinates.md)
 
 ### 課題（３）
 
@@ -113,7 +126,7 @@ goal.target_pose.pose.position.y = 3.0 # (y 座標追記)
 
 ### `Stage`のシミュレータ上に障害物を置く方法
 
-- 地図を編集して障害物を作っているのではない点に注意。
+- 地図を編集して障害物を作っているのではない点に注意。なお、現在のシミュレータにはもともと障害物を置いてある。
 
 ```shell
 $ roscd oit_navigation_test/maps
