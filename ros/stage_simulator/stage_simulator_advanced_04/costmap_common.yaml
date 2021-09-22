@@ -1,9 +1,0 @@
-obstacle_range: 3.0
-raytrace_range: 3.0
-transform_tolerance: 1.0
-
-# robot_radius: 0.4
-footprint: [[-0.45, -0.25], [-0.45, 0.25], [0.15, 0.25], [0.15, -0.25]]
-footprint_padding: 0.1
-
-unknown_cost_value: 0
