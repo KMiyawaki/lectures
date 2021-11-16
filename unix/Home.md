@@ -5,7 +5,7 @@
 ---
 
 - [UNIX 入門](./basics_01.md)
-- [ssh](./ssh.md)
+- [ssh](https://github.com/KMiyawaki/lecture_ros/blob/main/ssh.md)
 
 ---
 
