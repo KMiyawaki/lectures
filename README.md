@@ -10,7 +10,7 @@
 
 ## [Visual Studio Code](https://github.com/KMiyawaki/lecture_vscode/blob/main/README.md)
 
-## [GIT](./git/Home.md)
+## [GIT](https://github.com/KMiyawaki/lecture_git)
 
 ## [Three.js](./three_js/Home.md)
 
